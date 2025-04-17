@@ -6603,6 +6603,16 @@
 		)
 		(uuid "122979b4-e7c7-4c02-857d-fc73cea63f31")
 	)
+	(text "NOTE: This discharges VBUS\nwhen unplugged, if removed\nensure there is another path\nto discharge VBUS."
+		(exclude_from_sim no)
+		(at 29.464 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1aa859a3-42ba-4b16-8102-f8e940bcb751")
+	)
 	(text "Note that the LCD bus connection is MSB to MSB,\nso in general STM32's LCD_X(n) -> lcd.x(n-2) since\nthe STM32 has an 8 bit per channel LCD controller"
 		(exclude_from_sim no)
 		(at 374.142 166.624 0)
