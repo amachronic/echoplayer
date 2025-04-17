@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "8f4aee07-e845-43ad-99fa-ff16a8612b78")
 	(paper "A4")
 	(title_block
@@ -12,9 +12,13 @@
 	)
 	(lib_symbols
 		(symbol "Switch:SW_Push"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -95,10 +99,9 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
-					)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
 					(stroke
 						(width 0)
 						(type default)
@@ -107,9 +110,10 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -155,10 +159,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "echoplayer:SW_Push_MountingPin"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -241,30 +248,6 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.524) (xy -1.27 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 0.508 2.54) (xy 3.048 2.54) (xy 3.048 -1.143) (xy -3.048 -1.143) (xy -3.048 2.54) (xy -0.508 2.54)
 					)
 					(stroke
@@ -287,9 +270,33 @@
 						(type none)
 					)
 				)
+				(polyline
+					(pts
+						(xy 1.27 -1.524) (xy -1.27 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(circle
 					(center 2.032 0)
 					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -366,10 +373,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "echoplayer:SW_SPDT_MountingPin"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -462,7 +472,7 @@
 					)
 				)
 				(circle
-					(center 2.032 -2.54)
+					(center 2.032 2.54)
 					(radius 0.4572)
 					(stroke
 						(width 0)
@@ -473,7 +483,7 @@
 					)
 				)
 				(circle
-					(center 2.032 2.54)
+					(center 2.032 -2.54)
 					(radius 0.4572)
 					(stroke
 						(width 0)
@@ -497,24 +507,6 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at -5.08 0 0)
 					(length 2.54)
 					(name "B"
@@ -525,24 +517,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -568,8 +542,56 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "Contact pad buttons designed to 10x3xH5mm spec, eg:\nhttps://www.aliexpress.com/item/1005003589789322.html"
+		(exclude_from_sim no)
+		(at 138.43 69.596 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(href "https://www.aliexpress.com/item/1005003589789322.html")
+		)
+		(uuid "23715d16-7844-4c12-bc08-891b73cec12a")
 	)
 	(no_connect
 		(at 76.2 90.17)
@@ -591,21 +613,9 @@
 		(at 210.82 110.49)
 		(uuid "e256a8fd-22fb-40fe-9a0a-5f845f74c749")
 	)
-	(text "Contact pad buttons designed to 10x3xH5mm spec, eg:\nhttps://www.aliexpress.com/item/1005003589789322.html"
-		(exclude_from_sim no)
-		(at 138.43 69.596 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(href "https://www.aliexpress.com/item/1005003589789322.html")
-		)
-		(uuid "23715d16-7844-4c12-bc08-891b73cec12a")
-	)
 	(hierarchical_label "button_right"
 		(shape passive)
 		(at 165.1 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -617,7 +627,6 @@
 	(hierarchical_label "button_a"
 		(shape passive)
 		(at 119.38 86.36 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -629,7 +638,6 @@
 	(hierarchical_label "button_hold"
 		(shape passive)
 		(at 81.28 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -641,7 +649,6 @@
 	(hierarchical_label "level_down"
 		(shape passive)
 		(at 154.94 96.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -653,7 +660,6 @@
 	(hierarchical_label "level_left"
 		(shape passive)
 		(at 154.94 106.68 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -665,7 +671,6 @@
 	(hierarchical_label "button_power"
 		(shape passive)
 		(at 81.28 86.36 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -677,7 +682,6 @@
 	(hierarchical_label "level_b"
 		(shape passive)
 		(at 109.22 96.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -689,7 +693,6 @@
 	(hierarchical_label "level_select"
 		(shape passive)
 		(at 205.74 96.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -701,7 +704,6 @@
 	(hierarchical_label "button_b"
 		(shape passive)
 		(at 119.38 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -713,7 +715,6 @@
 	(hierarchical_label "button_x"
 		(shape passive)
 		(at 119.38 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -725,7 +726,6 @@
 	(hierarchical_label "level_power"
 		(shape passive)
 		(at 71.12 86.36 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -737,7 +737,6 @@
 	(hierarchical_label "level_up"
 		(shape passive)
 		(at 154.94 86.36 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -749,7 +748,6 @@
 	(hierarchical_label "button_start"
 		(shape passive)
 		(at 215.9 86.36 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -761,7 +759,6 @@
 	(hierarchical_label "button_vol+"
 		(shape passive)
 		(at 215.9 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -773,7 +770,6 @@
 	(hierarchical_label "button_left"
 		(shape passive)
 		(at 165.1 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -785,7 +781,6 @@
 	(hierarchical_label "level_vol+"
 		(shape passive)
 		(at 205.74 106.68 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -797,7 +792,6 @@
 	(hierarchical_label "button_vol-"
 		(shape passive)
 		(at 215.9 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -809,7 +803,6 @@
 	(hierarchical_label "level_hold"
 		(shape passive)
 		(at 71.12 114.3 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -821,7 +814,6 @@
 	(hierarchical_label "button_y"
 		(shape passive)
 		(at 119.38 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -833,7 +825,6 @@
 	(hierarchical_label "button_select"
 		(shape passive)
 		(at 215.9 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -845,7 +836,6 @@
 	(hierarchical_label "button_down"
 		(shape passive)
 		(at 165.1 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -857,7 +847,6 @@
 	(hierarchical_label "level_y"
 		(shape passive)
 		(at 109.22 116.84 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -869,7 +858,6 @@
 	(hierarchical_label "button_up"
 		(shape passive)
 		(at 165.1 86.36 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -881,7 +869,6 @@
 	(hierarchical_label "level_x"
 		(shape passive)
 		(at 109.22 106.68 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -893,7 +880,6 @@
 	(hierarchical_label "level_right"
 		(shape passive)
 		(at 154.94 116.84 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -905,7 +891,6 @@
 	(hierarchical_label "level_a"
 		(shape passive)
 		(at 109.22 86.36 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -917,7 +902,6 @@
 	(hierarchical_label "level_vol-"
 		(shape passive)
 		(at 205.74 121.92 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -929,7 +913,6 @@
 	(hierarchical_label "level_start"
 		(shape passive)
 		(at 205.74 86.36 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
