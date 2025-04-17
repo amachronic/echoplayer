@@ -6,7 +6,7 @@ and designed with free software. It's primarily designed to run
 [Rockbox](https://www.rockbox.org), a free music player firmware
 with support for many codecs, and a wide array of features.
 
-KiCAD 8.0 was used for the electrical design and PCB layout.
+KiCAD 9.0 was used for the electrical design and PCB layout.
 The (unfinished) 3D-printable case is designed using FreeCAD 1.0.
 All designs are available under the CERN-OHL-S v2 license.
 
