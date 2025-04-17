@@ -69,10 +69,10 @@ and fixing mechanical design issues.
 
 ### Known issues
 
-- The backlight cannot be disabled, power is supplied to the LEDs
-  even when the boost converter is disabled.
-- The current limit on the backlight LED driver is set too low
-  (20 mA paralleled to 4 LEDs, should be 20 mA per LED).
+- ~~The backlight cannot be disabled, power is supplied to the LEDs
+  even when the boost converter is disabled.~~
+- ~~The current limit on the backlight LED driver is set too low
+  (20 mA paralleled to 4 LEDs, should be 20 mA per LED).~~
 - Reference designators in the schematics don't make much sense,
   there are gaps in the numbering and samed-valued components are
   not in contiguous ranges.
