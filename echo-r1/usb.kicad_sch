@@ -2260,9 +2260,9 @@
 		)
 		(uuid "3a6e608d-169c-4df6-b90d-9cee4a95b650")
 	)
-	(text "To drain VBUS when not connected\nMaybe use a larger resistance?"
+	(text "NOTE: VBUS is discharged\nby the ADC voltage divider\nwhen unplugged"
 		(exclude_from_sim no)
-		(at 101.092 131.318 0)
+		(at 96.266 137.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3330,16 +3330,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 142.24) (xy 99.06 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbf59ad4-4633-4958-84cf-07a3c850dc3e")
-	)
-	(wire
-		(pts
 			(xy 114.3 101.6) (xy 114.3 104.14)
 		)
 		(stroke
@@ -3367,16 +3357,6 @@
 			(type default)
 		)
 		(uuid "d1444bd8-be42-4648-a263-d2daaef95d8c")
-	)
-	(wire
-		(pts
-			(xy 99.06 137.16) (xy 99.06 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d180f023-b7cf-4c12-8299-186ecee6912a")
 	)
 	(wire
 		(pts
@@ -3497,16 +3477,6 @@
 			(type default)
 		)
 		(uuid "f5716c64-31bb-4c8f-b175-4123891d9c6a")
-	)
-	(wire
-		(pts
-			(xy 99.06 134.62) (xy 96.52 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fece2054-3920-44e8-a155-16e9d8e3de63")
 	)
 	(label "ulpi.d2"
 		(at 185.42 104.14 0)
@@ -3840,17 +3810,6 @@
 			(justify right)
 		)
 		(uuid "b2c553bc-c08b-404b-ada0-5d4dfb17264d")
-	)
-	(hierarchical_label "power_vbus"
-		(shape output)
-		(at 96.52 134.62 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b5e391b3-e6e4-4d3a-9aac-951d88091708")
 	)
 	(hierarchical_label "power_io"
 		(shape input)
@@ -5083,72 +5042,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 99.06 144.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a1135930-f80a-4164-938e-db0622766ea4")
-		(property "Reference" "#PWR031"
-			(at 99.06 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 99.06 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 99.06 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 99.06 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 99.06 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "39142f1d-9738-44cb-875e-090c2d6ed65d")
-		)
-		(instances
-			(project ""
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/2bbed0e1-7a0b-4278-85a9-f432ea240e72"
-					(reference "#PWR031")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 142.24 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5818,85 +5711,6 @@
 			(project ""
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/2bbed0e1-7a0b-4278-85a9-f432ea240e72"
 					(reference "#PWR036")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small_US")
-		(at 99.06 139.7 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fe8afd93-e8b9-4647-b4e1-c96ad8bcfc23")
-		(property "Reference" "R13"
-			(at 101.6 138.4299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100 kΩ"
-			(at 101.6 140.9699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 99.06 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 99.06 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small US symbol"
-			(at 99.06 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C60491"
-			(at 99.06 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e9ea9cc1-bbfc-4330-9fcf-31524c8e56b4")
-		)
-		(pin "2"
-			(uuid "40d2bea5-7635-44a5-b5a8-4ba731604c4e")
-		)
-		(instances
-			(project ""
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/2bbed0e1-7a0b-4278-85a9-f432ea240e72"
-					(reference "R13")
 					(unit 1)
 				)
 			)
