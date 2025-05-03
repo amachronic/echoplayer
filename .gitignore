@@ -32,3 +32,6 @@ fp-info-cache
 
 # LibreOffice lock files
 *.ods#
+
+# FreeCAD backup files
+*.FCBak
