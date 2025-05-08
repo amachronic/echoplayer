@@ -7,9 +7,8 @@ and designed with free software. It's primarily designed to run
 with support for many codecs, and a wide array of features.
 
 KiCAD 8.0 was used for the electrical design and PCB layout.
-The planned 3D-printable case will be designed using FreeCAD.
-The designs themselves are available under the CERN-OHL-S v2
-license.
+The (unfinished) 3D-printable case is designed using FreeCAD 1.0.
+All designs are available under the CERN-OHL-S v2 license.
 
 The current version of the Echo player is called the Echo R1.
 In the future, there could be new player models if there are
@@ -62,17 +61,11 @@ when it starts to wear out.
 ### Status
 
 The Rev1 prototype PCB is complete but has some problems (see the
-list of known issues below). A 3D-printable case for the Rev1 is
-planned, but CAD files aren't available yet.
+list of known issues below). The 3D-printed case for the Rev1 is
+unfinished.
 
-Development is currently focused on two areas:
-
-- Porting Rockbox to the Rev1 board to identify any issues with
-  the hardware design.
-- Designing a case to test general usability and ergonomics, and 
-  find issues with the mechanical design of the PCB.
-
-The next revision will be focused on addressing issues from Rev1.
+Development is currently focused on development of the Rev2 PCB
+and fixing mechanical design issues.
 
 ### Known issues
 
@@ -83,6 +76,12 @@ The next revision will be focused on addressing issues from Rev1.
 - Reference designators in the schematics don't make much sense,
   there are gaps in the numbering and samed-valued components are
   not in contiguous ranges.
+- Mounting screws are placed haphazardly and only two of them
+  proved to be usable.
+- The placement of the LCD and LCD connector is very awkward and
+  makes it hard to diassemble the machine non-destructively.
+- The lack of mounting holes also makes it difficult to connect
+  front and back halves of the case securely.
 
 ## License
 
