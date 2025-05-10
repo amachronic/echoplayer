@@ -11,89 +11,6 @@
 		(comment 1 "Author: Aidan MacDonald")
 	)
 	(lib_symbols
-		(symbol "Mechanical:MountingHole"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim yes)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "H"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "MountingHole"
-				(at 0 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Mounting Hole without connection"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "mounting hole"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "MountingHole*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "MountingHole_0_1"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 1.27)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+1V8"
 			(power)
 			(pin_numbers
@@ -678,17 +595,11 @@
 	(bus_alias "i2s"
 		(members "dplay" "drec" "bclk" "wclk" "mclk")
 	)
-	(bus_alias "rgb"
-		(members "r[0..5]" "g[0..5]" "b[0..5]" "dotclk" "hsync" "vsync" "de")
+	(bus_alias "lcdmcu8"
+		(members "d[7..0]" "dcx" "wrx" "cs")
 	)
 	(bus_alias "sdmmc4"
 		(members "d[3..0]" "cmd" "clk")
-	)
-	(bus_alias "spi"
-		(members "sda" "scl" "cs")
-	)
-	(bus_alias "ulpi"
-		(members "d[7..0]" "nxt" "dir" "stp" "clk")
 	)
 	(text "POWER must be active high\nto power on the machine.\n\nSELECT is active high so\nit can set the BOOT0 pin\nlevel."
 		(exclude_from_sim no)
@@ -725,12 +636,6 @@
 		(uuid "28a1cdd7-18b4-4bfe-bee3-2784bfae38e9")
 	)
 	(junction
-		(at 50.8 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "36c36fdd-a32c-4d92-9ad8-653a299af1e0")
-	)
-	(junction
 		(at 246.38 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -753,12 +658,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4ed5d70c-ab37-4a13-ac56-e3fd97683569")
-	)
-	(junction
-		(at 50.8 35.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "57f2b98c-3a5d-490c-8c38-e19a1412c051")
 	)
 	(junction
 		(at 35.56 66.04)
@@ -892,26 +791,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 60.96) (xy 116.84 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "028829e2-15ed-4f85-90e8-12cb1a916002")
-	)
-	(wire
-		(pts
-			(xy 50.8 45.72) (xy 50.8 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0465b280-efdc-4339-bf94-acb88db873be")
-	)
-	(wire
-		(pts
 			(xy 243.84 91.44) (xy 246.38 91.44)
 		)
 		(stroke
@@ -919,16 +798,6 @@
 			(type default)
 		)
 		(uuid "05b28784-2c2b-4f9b-9a98-430e90b14f00")
-	)
-	(wire
-		(pts
-			(xy 106.68 88.9) (xy 116.84 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06957c26-011e-41b2-9e6e-6996edc0eb4f")
 	)
 	(bus
 		(pts
@@ -972,7 +841,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 35.56) (xy 50.8 45.72)
+			(xy 50.8 30.48) (xy 50.8 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1092,16 +961,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 30.48) (xy 50.8 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2dda146a-3c2d-40c5-98d5-ecb2c931fa8d")
-	)
-	(wire
-		(pts
 			(xy 193.04 88.9) (xy 203.2 88.9)
 		)
 		(stroke
@@ -1212,16 +1071,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 119.38) (xy 203.2 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f0be1c9-d2ad-4b46-bab2-ef795406b6b6")
-	)
-	(wire
-		(pts
 			(xy 27.94 40.64) (xy 27.94 22.86)
 		)
 		(stroke
@@ -1229,16 +1078,6 @@
 			(type default)
 		)
 		(uuid "50732be0-79fd-4536-aebf-44d206a8fd40")
-	)
-	(bus
-		(pts
-			(xy 106.68 83.82) (xy 116.84 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "511f5ff7-64a7-4dd5-bc88-b9771799af8f")
 	)
 	(wire
 		(pts
@@ -1289,16 +1128,6 @@
 			(type default)
 		)
 		(uuid "5cc8b54e-d1c4-4fec-bc1d-d776b3a15551")
-	)
-	(wire
-		(pts
-			(xy 106.68 101.6) (xy 116.84 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "608f4a4b-bbe2-4e55-af3b-911dea9f069a")
 	)
 	(wire
 		(pts
@@ -1369,16 +1198,6 @@
 			(type default)
 		)
 		(uuid "69b7a607-bc85-460e-b2a0-406b39afc063")
-	)
-	(wire
-		(pts
-			(xy 50.8 45.72) (xy 116.84 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7512211c-c6dc-48e8-9dcf-52367ff06973")
 	)
 	(wire
 		(pts
@@ -1622,16 +1441,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 35.56) (xy 116.84 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9778648f-0d17-4f9e-a052-18ecf7d74a56")
-	)
-	(wire
-		(pts
 			(xy 193.04 66.04) (xy 203.2 66.04)
 		)
 		(stroke
@@ -1720,16 +1529,6 @@
 		)
 		(uuid "a996106b-b907-4ada-b512-98d3372ea5b0")
 	)
-	(wire
-		(pts
-			(xy 106.68 91.44) (xy 116.84 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abccb8e9-cf04-4c03-852c-658d7d9d6c0b")
-	)
 	(bus
 		(pts
 			(xy 106.68 116.84) (xy 116.84 116.84)
@@ -1809,16 +1608,6 @@
 			(type default)
 		)
 		(uuid "b528e720-d641-4d5d-96a2-0bfb148d4094")
-	)
-	(bus
-		(pts
-			(xy 193.04 35.56) (xy 203.2 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9b644ce-90ba-42db-a0e9-2da8a7325c21")
 	)
 	(wire
 		(pts
@@ -1960,36 +1749,6 @@
 		)
 		(uuid "d7080f0d-2fda-4cb6-88ef-a1e055ee566b")
 	)
-	(bus
-		(pts
-			(xy 193.04 38.1) (xy 203.2 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7daf91f-eea0-425e-8969-4765181ad011")
-	)
-	(wire
-		(pts
-			(xy 106.68 99.06) (xy 116.84 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d82295c6-c774-4add-b104-ea16efe69e1c")
-	)
-	(wire
-		(pts
-			(xy 106.68 96.52) (xy 116.84 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da1bc661-96f6-4617-88d4-15ddc72eec95")
-	)
 	(wire
 		(pts
 			(xy 243.84 76.2) (xy 246.38 76.2)
@@ -2109,7 +1868,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "08d4c385-c600-4732-8dfe-a7632603e563")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR02"
 			(at 27.94 26.67 0)
 			(effects
 				(font
@@ -2159,7 +1918,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#PWR01")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -2175,7 +1934,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15167e77-a7a3-429e-b34c-79edfb861683")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR05"
 			(at 50.8 34.29 0)
 			(effects
 				(font
@@ -2226,81 +1985,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 78.74 182.88 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "51010fbb-fdd5-4b86-a6b1-917d31718448")
-		(property "Reference" "H5"
-			(at 76.2 181.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "M2_Screw"
-			(at 76.2 184.1499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
-			(at 78.74 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 78.74 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 78.74 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
-			(at 78.74 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "echo-r1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "H5")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -2316,7 +2001,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "669092c2-f5ba-4be8-895b-0a8fa4b5fd37")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR06"
 			(at 58.42 26.67 0)
 			(effects
 				(font
@@ -2367,7 +2052,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#PWR05")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -2382,7 +2067,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7073afb4-d3d9-401a-be3a-f2d15f413abb")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR09"
 			(at 259.08 34.29 0)
 			(effects
 				(font
@@ -2432,7 +2117,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#PWR08")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -2448,7 +2133,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "794160f0-7af1-485b-b582-3ad88bab340b")
-		(property "Reference" "#FLG07"
+		(property "Reference" "#FLG01"
 			(at 17.78 28.575 0)
 			(effects
 				(font
@@ -2498,7 +2183,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#FLG07")
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -2514,7 +2199,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "828863fd-f1d9-456b-af50-2e43a27a0dfc")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR01"
 			(at 17.78 36.83 0)
 			(effects
 				(font
@@ -2564,80 +2249,7 @@
 		(instances
 			(project ""
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#PWR053")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 83.82 187.96 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a75b311-6358-4814-9a68-293d3e8f23c4")
-		(property "Reference" "H4"
-			(at 86.36 186.6899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "M2_Screw"
-			(at 86.36 189.2299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
-			(at 83.82 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 83.82 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 83.82 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
-			(at 83.82 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "echo-r1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "H4")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -2653,7 +2265,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a30a8fc9-d09d-40be-963c-d52dd4e5ec1d")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR04"
 			(at 43.18 26.67 0)
 			(effects
 				(font
@@ -2704,154 +2316,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 78.74 187.96 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a56d0add-3dad-448d-acea-fa91c93f2219")
-		(property "Reference" "H6"
-			(at 76.2 186.6899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "M2_Screw"
-			(at 76.2 189.2299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
-			(at 78.74 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 78.74 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 78.74 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
-			(at 78.74 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "echo-r1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "H6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 58.42 182.88 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "a7f06460-ce9c-4020-8619-cc8567995109")
-		(property "Reference" "H1"
-			(at 55.88 181.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DPad_Pivot"
-			(at 55.88 184.1499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_4mm"
-			(at 58.42 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 58.42 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 58.42 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
-			(at 58.42 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "H1")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -2868,7 +2333,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c072a3a8-63e5-444c-ab31-0accf600d755")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR08"
 			(at 251.46 26.67 0)
 			(effects
 				(font
@@ -2919,7 +2384,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#PWR07")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -2935,7 +2400,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c6a71237-b6c2-47f2-9e22-f8e33537deb8")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR03"
 			(at 35.56 34.29 0)
 			(effects
 				(font
@@ -2986,80 +2451,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 83.82 182.88 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d190fce9-df48-4f08-84af-a47803473fdd")
-		(property "Reference" "H3"
-			(at 86.36 181.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "M2_Screw"
-			(at 86.36 184.1499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
-			(at 83.82 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 83.82 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 83.82 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
-			(at 83.82 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "H3")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -3075,7 +2467,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fad85604-d47a-413b-9767-cd9286f5750c")
-		(property "Reference" "#PWR058"
+		(property "Reference" "#PWR07"
 			(at 246.38 107.95 0)
 			(effects
 				(font
@@ -3125,80 +2517,7 @@
 		(instances
 			(project ""
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#PWR058")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 58.42 187.96 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "fe1f799f-5a46-45b0-a777-a690abab4373")
-		(property "Reference" "H2"
-			(at 55.88 186.6899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Volume_Pivot"
-			(at 55.88 189.2299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_4mm"
-			(at 58.42 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 58.42 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 58.42 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
-			(at 58.42 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "echo-r1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "H2")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -4018,36 +3337,6 @@
 				(justify left top)
 			)
 		)
-		(pin "usb_dfu_d+" bidirectional
-			(at 116.84 91.44 180)
-			(uuid "941b4409-6fdc-4676-b60d-bcbcec21c4c2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "swd_swo" output
-			(at 193.04 119.38 0)
-			(uuid "4b4f32bd-cd0a-4914-bb68-20732dc6e91d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "usb_dfu_d-" bidirectional
-			(at 116.84 88.9 180)
-			(uuid "382b2937-3f95-4c4f-aa73-862b01cd51e3")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "swd_io" bidirectional
 			(at 193.04 114.3 0)
 			(uuid "95ff8fa8-da53-494f-8063-8bfaaedca7ee")
@@ -4086,26 +3375,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-		(pin "usb_dfu_vbus" input
-			(at 116.84 35.56 180)
-			(uuid "ee46279e-d686-4419-ab36-fed83d7f7b1d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "mcoclk_24m" output
-			(at 116.84 96.52 180)
-			(uuid "b0f7045c-52ee-438e-8745-f3a8762a2307")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "button_power" input
@@ -4208,39 +3477,9 @@
 				(justify left)
 			)
 		)
-		(pin "reg_1v8_en" output
-			(at 116.84 60.96 180)
-			(uuid "f718ead0-10d4-423c-9499-4a1256c28ef9")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "~{codec_avdd_en}" output
 			(at 116.84 152.4 180)
 			(uuid "10e0981b-d62f-4405-b12d-0469ead64f3e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "~{usbphy_pwr_en}" output
-			(at 116.84 101.6 180)
-			(uuid "8694683b-ba03-4020-a255-2af86070c245")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "~{usbphy_reset}" output
-			(at 116.84 99.06 180)
-			(uuid "9515972a-3dca-4448-9aa7-dbd29d137139")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4378,26 +3617,6 @@
 				(justify right)
 			)
 		)
-		(pin "lcd_rgb{rgb}" output
-			(at 193.04 35.56 0)
-			(uuid "6b4eb8bd-30dc-4f98-a572-b2058ff6b81f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "lcd_ctl{spi}" output
-			(at 193.04 38.1 0)
-			(uuid "5f25af5c-059d-4c27-bfae-3a82e8606ef1")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "sdmmc{sdmmc4}" bidirectional
 			(at 116.84 116.84 180)
 			(uuid "a846be69-a8cc-4189-acf8-94ae199441e5")
@@ -4428,29 +3647,9 @@
 				(justify left)
 			)
 		)
-		(pin "ulpi{ulpi}" bidirectional
-			(at 116.84 83.82 180)
-			(uuid "7b7cd5b0-459d-4215-81bf-9194cac16a8d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "power_vbat" input
 			(at 116.84 43.18 180)
 			(uuid "06d15a71-de76-4936-9905-e23b605f9d8b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "power_vbus" input
-			(at 116.84 45.72 180)
-			(uuid "4b29df70-2653-4b1d-88c6-76fa2b8ac61c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4491,6 +3690,56 @@
 		(pin "hp_micbutton+" input
 			(at 116.84 144.78 180)
 			(uuid "a956c948-6b4e-4468-8fce-2cc7ca2bebb8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "lcd_mcu{mcu8}" output
+			(at 193.04 35.56 0)
+			(uuid "df44d3a7-30dd-404c-b553-9cb7418dbd93")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "power_1v8" input
+			(at 116.84 35.56 180)
+			(uuid "7d45eeca-ca8c-4cf3-bded-9fe9ad363c2f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "usb_vbus" input
+			(at 116.84 45.72 180)
+			(uuid "6e0f98ef-5161-4c41-94ac-c2dddd13f863")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "usb_d-" bidirectional
+			(at 116.84 88.9 180)
+			(uuid "6e27cf2e-6eda-4bb7-925d-c0a51737c478")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "usb_d+" bidirectional
+			(at 116.84 91.44 180)
+			(uuid "dea7b335-9f01-4041-897d-a09fe0aa4498")
 			(effects
 				(font
 					(size 1.27 1.27)
