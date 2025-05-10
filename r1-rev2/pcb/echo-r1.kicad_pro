@@ -531,125 +531,6 @@
         "via_diameter": 0.45,
         "via_drill": 0.3,
         "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.15,
-        "diff_pair_gap": 0.175,
-        "diff_pair_width": 0.15,
-        "line_style": 0,
-        "microvia_diameter": 0.45,
-        "microvia_drill": 0.3,
-        "name": "fmc",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "via_diameter": 0.45,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.15,
-        "diff_pair_gap": 0.175,
-        "diff_pair_width": 0.15,
-        "line_style": 0,
-        "microvia_diameter": 0.45,
-        "microvia_drill": 0.3,
-        "name": "lcd_ctl",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "via_diameter": 0.45,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.15,
-        "diff_pair_gap": 0.175,
-        "diff_pair_width": 0.15,
-        "line_style": 0,
-        "microvia_diameter": 0.45,
-        "microvia_drill": 0.3,
-        "name": "lcd_rgb",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "via_diameter": 0.45,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.15,
-        "diff_pair_gap": 0.175,
-        "diff_pair_width": 0.15,
-        "line_style": 0,
-        "microvia_diameter": 0.45,
-        "microvia_drill": 0.3,
-        "name": "power",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 3,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "via_diameter": 0.45,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.15,
-        "diff_pair_gap": 0.175,
-        "diff_pair_width": 0.15,
-        "line_style": 0,
-        "microvia_diameter": 0.45,
-        "microvia_drill": 0.3,
-        "name": "sdmmc",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 4,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "via_diameter": 0.45,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.15,
-        "diff_pair_gap": 0.175,
-        "diff_pair_width": 0.15,
-        "line_style": 0,
-        "microvia_diameter": 0.45,
-        "microvia_drill": 0.3,
-        "name": "ulpi",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 5,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "via_diameter": 0.45,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.15,
-        "diff_pair_gap": 0.175,
-        "diff_pair_width": 0.15,
-        "line_style": 0,
-        "microvia_diameter": 0.45,
-        "microvia_drill": 0.3,
-        "name": "usb",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 6,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "via_diameter": 0.45,
-        "via_drill": 0.3,
-        "wire_width": 6
       }
     ],
     "meta": {
@@ -657,56 +538,7 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": [
-      {
-        "netclass": "lcd_rgb",
-        "pattern": "/*/lcd_rgb.*"
-      },
-      {
-        "netclass": "lcd_ctl",
-        "pattern": "/*/lcd_ctl.*"
-      },
-      {
-        "netclass": "fmc",
-        "pattern": "/cpu/fmc_*"
-      },
-      {
-        "netclass": "sdmmc",
-        "pattern": "/*/sdmmc.*"
-      },
-      {
-        "netclass": "ulpi",
-        "pattern": "/*/ulpi.*"
-      },
-      {
-        "netclass": "usb",
-        "pattern": "/*/usb*+"
-      },
-      {
-        "netclass": "usb",
-        "pattern": "/*/usb*-"
-      },
-      {
-        "netclass": "power",
-        "pattern": "/audio/*vdd"
-      },
-      {
-        "netclass": "power",
-        "pattern": "/power/power_vsys"
-      },
-      {
-        "netclass": "power",
-        "pattern": "/usb/power_io_sw"
-      },
-      {
-        "netclass": "power",
-        "pattern": "/lcd/led_[ak]"
-      },
-      {
-        "netclass": "power",
-        "pattern": "1V8|3V3*|VBAT|VBUS|GND"
-      }
-    ]
+    "netclass_patterns": []
   },
   "pcbnew": {
     "last_paths": {
@@ -863,32 +695,8 @@
       "power"
     ],
     [
-      "c020fa84-f297-4039-9c60-d9e3fd4535ed",
-      "cpu"
-    ],
-    [
-      "2bbed0e1-7a0b-4278-85a9-f432ea240e72",
-      "usb"
-    ],
-    [
-      "36f6adaf-1713-488c-a8b8-43e5711e2802",
-      "sd"
-    ],
-    [
       "dae5d6c8-3920-4253-a171-1dbab60b78bd",
       "audio"
-    ],
-    [
-      "3e33f8a5-6407-4dea-a250-9525ef1f5456",
-      "lcd"
-    ],
-    [
-      "6b02ec5e-a793-4374-8df4-66bff795e3fc",
-      "button"
-    ],
-    [
-      "d2206635-e25c-4708-8837-2c1da84812e6",
-      "debug"
     ]
   ],
   "text_variables": {}

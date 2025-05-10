@@ -7,7 +7,7 @@
 	(title_block
 		(title "Power supply / battery charger")
 		(date "2024-11-14")
-		(rev "Rev1")
+		(rev "Rev2")
 		(comment 1 "Author: Aidan MacDonald")
 	)
 	(lib_symbols
@@ -5636,7 +5636,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22 µF"
+		(property "Value" "4.7 µF"
 			(at 121.92 107.9562 0)
 			(effects
 				(font
@@ -5949,7 +5949,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22 µF"
+		(property "Value" "4.7 µF"
 			(at 121.92 64.7762 0)
 			(effects
 				(font

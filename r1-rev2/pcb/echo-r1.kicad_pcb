@@ -174,7 +174,6 @@
 	)
 	(net 0 "")
 	(net 1 "GND")
-	(net 2 "3V3")
 	(gr_rect
 		(start 118.5 55)
 		(end 178.5 155)
@@ -232,8 +231,8 @@
 		)
 	)
 	(zone
-		(net 2)
-		(net_name "3V3")
+		(net 0)
+		(net_name "")
 		(layer "In2.Cu")
 		(uuid "1aa5044c-2691-4695-a213-306c201e3d0e")
 		(hatch edge 0.5)
