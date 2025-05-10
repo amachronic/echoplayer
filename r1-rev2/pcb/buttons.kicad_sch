@@ -931,7 +931,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "047171a9-818f-4e96-9584-e00dd15ed988")
-		(property "Reference" "SW6"
+		(property "Reference" "SW4"
 			(at 114.3 88.9 0)
 			(effects
 				(font
@@ -992,7 +992,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW6")
+					(reference "SW4")
 					(unit 1)
 				)
 			)
@@ -1008,7 +1008,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2837ce11-17f3-44cf-baae-12f21cbd707b")
-		(property "Reference" "SW13"
+		(property "Reference" "SW12"
 			(at 210.82 88.9 0)
 			(effects
 				(font
@@ -1069,7 +1069,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW13")
+					(reference "SW12")
 					(unit 1)
 				)
 			)
@@ -1085,7 +1085,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "395bdb1c-0ea2-4374-a077-51ab12d569cc")
-		(property "Reference" "SW1"
+		(property "Reference" "SW7"
 			(at 160.02 78.74 0)
 			(effects
 				(font
@@ -1146,7 +1146,7 @@
 		(instances
 			(project ""
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW1")
+					(reference "SW7")
 					(unit 1)
 				)
 			)
@@ -1162,7 +1162,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "497c9a6f-9ed4-4465-a0f1-078bff18f310")
-		(property "Reference" "SW10"
+		(property "Reference" "SW5"
 			(at 114.3 99.06 0)
 			(effects
 				(font
@@ -1223,7 +1223,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW10")
+					(reference "SW5")
 					(unit 1)
 				)
 			)
@@ -1239,7 +1239,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53ff164f-864a-4fe8-9b1e-17a2c544ca69")
-		(property "Reference" "SW7"
+		(property "Reference" "SW13"
 			(at 210.82 99.06 0)
 			(effects
 				(font
@@ -1303,7 +1303,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW7")
+					(reference "SW13")
 					(unit 1)
 				)
 			)
@@ -1319,7 +1319,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5d13d0c7-e4bd-4985-8f87-e81c9f73252e")
-		(property "Reference" "SW14"
+		(property "Reference" "SW2"
 			(at 76.2 105.41 0)
 			(effects
 				(font
@@ -1386,7 +1386,7 @@
 		(instances
 			(project ""
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW14")
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -1402,7 +1402,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "72f38370-eaa8-4f64-8854-9ffb0312a38f")
-		(property "Reference" "SW9"
+		(property "Reference" "SW1"
 			(at 76.2 78.74 0)
 			(effects
 				(font
@@ -1466,7 +1466,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW9")
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -1482,7 +1482,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c3ebcf7-db4d-4f49-8cfe-3c8b9cfcbea7")
-		(property "Reference" "SW12"
+		(property "Reference" "SW11"
 			(at 210.82 78.74 0)
 			(effects
 				(font
@@ -1543,7 +1543,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW12")
+					(reference "SW11")
 					(unit 1)
 				)
 			)
@@ -1559,7 +1559,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8e769640-b2fc-4f40-a93f-84dfe24c751d")
-		(property "Reference" "SW8"
+		(property "Reference" "SW14"
 			(at 210.82 114.3 0)
 			(effects
 				(font
@@ -1623,7 +1623,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW8")
+					(reference "SW14")
 					(unit 1)
 				)
 			)
@@ -1639,7 +1639,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aef9f068-eb64-4771-94df-ca60f509f082")
-		(property "Reference" "SW4"
+		(property "Reference" "SW10"
 			(at 160.02 109.22 0)
 			(effects
 				(font
@@ -1700,7 +1700,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW4")
+					(reference "SW10")
 					(unit 1)
 				)
 			)
@@ -1716,7 +1716,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b1c57765-ba64-48c6-ba26-052ffd347a0c")
-		(property "Reference" "SW11"
+		(property "Reference" "SW6"
 			(at 114.3 109.22 0)
 			(effects
 				(font
@@ -1777,7 +1777,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW11")
+					(reference "SW6")
 					(unit 1)
 				)
 			)
@@ -1793,7 +1793,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ef5a7af2-a155-40aa-aee5-a4f64b595d0d")
-		(property "Reference" "SW3"
+		(property "Reference" "SW9"
 			(at 160.02 99.06 0)
 			(effects
 				(font
@@ -1854,7 +1854,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW3")
+					(reference "SW9")
 					(unit 1)
 				)
 			)
@@ -1870,7 +1870,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f152aa34-b6d8-4234-88f4-4215542d9f9d")
-		(property "Reference" "SW5"
+		(property "Reference" "SW3"
 			(at 114.3 78.74 0)
 			(effects
 				(font
@@ -1931,7 +1931,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW5")
+					(reference "SW3")
 					(unit 1)
 				)
 			)
@@ -1947,7 +1947,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fede7971-518b-40c2-b2ee-4b42ae819d8d")
-		(property "Reference" "SW2"
+		(property "Reference" "SW8"
 			(at 160.02 88.9 0)
 			(effects
 				(font
@@ -2008,7 +2008,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/6b02ec5e-a793-4374-8df4-66bff795e3fc"
-					(reference "SW2")
+					(reference "SW8")
 					(unit 1)
 				)
 			)
