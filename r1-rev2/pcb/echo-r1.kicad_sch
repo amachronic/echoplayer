@@ -14410,15 +14410,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" ""
-			(at 66.04 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "99f8930b-8841-4169-baff-bbb380bbe6aa")
 		)
@@ -14480,15 +14471,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 480.06 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 480.06 118.11 0)
 			(effects
 				(font
@@ -14832,15 +14814,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 210.82 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "ef7cf26f-3117-41ae-9080-7e1d6564a9d0")
 		)
@@ -14903,15 +14876,6 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 231.14 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C2933159"
 			(at 231.14 101.6 0)
 			(effects
 				(font
@@ -15056,15 +15020,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C25905"
-			(at 68.58 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "101c8347-7854-4420-a58c-ea26fd6f2e24")
 		)
@@ -15126,15 +15081,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 478.79 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 478.79 82.55 0)
 			(effects
 				(font
@@ -15213,15 +15159,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 438.15 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "afc3a641-c331-4b3b-baa1-9584eaec3945")
 		)
@@ -15291,15 +15228,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 504.19 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "700afa76-5911-4f22-9b6c-1d41176bb01a")
 		)
@@ -15361,15 +15289,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 441.96 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 441.96 91.44 0)
 			(effects
 				(font
@@ -15596,15 +15515,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C191023"
-			(at 35.56 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "82842baa-8fba-4e62-87d1-6186807904ee")
 		)
@@ -15666,15 +15576,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 101.6 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C91606"
 			(at 101.6 182.88 0)
 			(effects
 				(font
@@ -15769,15 +15670,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C191023"
-			(at 35.56 22.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "2f6c2c1b-956c-491d-a06e-ca8968aad725")
 		)
@@ -15848,15 +15740,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 478.79 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "393d7156-9180-4fad-8c56-c9a1d4dbe861")
 		)
@@ -15917,15 +15800,6 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 149.86 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C720477"
 			(at 149.86 237.49 0)
 			(effects
 				(font
@@ -16268,15 +16142,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C2933159"
-			(at 254 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "358f6626-8f51-49e2-8d75-e7d31048a641")
 		)
@@ -16413,15 +16278,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 476.25 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "655c22e4-c658-4d58-8e2f-75c70454fbb0")
 		)
@@ -16482,15 +16338,6 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 111.76 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
 			(at 111.76 228.6 0)
 			(effects
 				(font
@@ -16560,15 +16407,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 441.96 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 441.96 82.55 0)
 			(effects
 				(font
@@ -16713,15 +16551,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 497.84 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "8fd3386e-9eb6-4769-91e4-0939edd9f77c")
 		)
@@ -16783,15 +16612,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 440.69 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 440.69 119.38 0)
 			(effects
 				(font
@@ -16862,15 +16682,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 436.88 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 436.88 127 0)
 			(effects
 				(font
@@ -17015,15 +16826,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161328"
-			(at 246.38 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "bcb52784-09dc-489f-94c3-b3a756b020df")
 		)
@@ -17092,15 +16894,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" ""
-			(at 66.04 248.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "dcf26190-abf5-4943-b75f-1cf16bc077ac")
 		)
@@ -17161,15 +16954,6 @@
 			)
 		)
 		(property "Description" "Two pin crystal"
-			(at 252.73 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C97606"
 			(at 252.73 25.4 0)
 			(effects
 				(font
@@ -17379,15 +17163,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 504.19 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "f4d7ea62-8da9-463a-ae89-01ed3345a112")
 		)
@@ -17457,15 +17232,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 480.06 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "b13a0684-018c-4633-845f-11472cc1cf01")
 		)
@@ -17516,7 +17282,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2110111130_XKB-Connection-TS-1010-C-A_C692458.pdf"
 			(at 149.86 242.57 0)
 			(effects
 				(font
@@ -17526,15 +17292,6 @@
 			)
 		)
 		(property "Description" "Generic push-button switch, two contact pins and shield pin(s)"
-			(at 149.86 247.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C318941"
 			(at 149.86 247.65 0)
 			(effects
 				(font
@@ -17616,15 +17373,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C60490"
-			(at 35.56 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "ae35173f-0c00-4507-967d-c5ede8f0b56c")
 		)
@@ -17685,15 +17433,6 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 27.94 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C431541"
 			(at 27.94 256.54 0)
 			(effects
 				(font
@@ -17910,15 +17649,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 476.25 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "c4caf90a-1c5b-41c4-b281-1064b935c13d")
 		)
@@ -18114,15 +17844,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 500.38 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 500.38 118.11 0)
 			(effects
 				(font
@@ -18331,15 +18052,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C720505"
-			(at 119.38 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "4"
 			(uuid "b9e6e10f-c548-4463-83d3-6fab07febcfa")
 		)
@@ -18414,7 +18126,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2110111130_XKB-Connection-TS-1010-C-A_C692458.pdf"
 			(at 27.94 223.52 0)
 			(effects
 				(font
@@ -18424,15 +18136,6 @@
 			)
 		)
 		(property "Description" "Generic push-button switch, two contact pins and shield pin(s)"
-			(at 27.94 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C318941"
 			(at 27.94 228.6 0)
 			(effects
 				(font
@@ -18580,15 +18283,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C541337"
-			(at 259.08 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "871d4758-aae3-4269-b72d-1745060cb5a1")
 		)
@@ -18651,15 +18345,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 259.08 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C161328"
 			(at 259.08 30.48 0)
 			(effects
 				(font
@@ -18738,15 +18423,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C60491"
-			(at 139.7 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "26e8cd64-b497-4737-a034-7e63a239d267")
 		)
@@ -18807,15 +18483,6 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 149.86 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C720477"
 			(at 149.86 227.33 0)
 			(effects
 				(font
@@ -18960,15 +18627,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 474.98 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "b6c27ecf-b1e9-40a3-8b26-23e3b994f279")
 		)
@@ -19105,15 +18763,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 436.88 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "abb81401-a8b6-4c3b-9808-170178bc2cfd")
 		)
@@ -19164,7 +18813,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2311091734_UMW-Youtai-Semiconductor-Co---Ltd--AO3401A_C347476.pdf"
+		(property "Datasheet" "~"
 			(at 147.32 180.34 0)
 			(effects
 				(font
@@ -19174,15 +18823,6 @@
 			)
 		)
 		(property "Description" "P-MOSFET transistor, gate/source/drain"
-			(at 147.32 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C347476"
 			(at 147.32 180.34 0)
 			(effects
 				(font
@@ -19280,15 +18920,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C191023"
-			(at 35.56 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "f58434e9-0215-434b-897e-821f1d21266e")
 		)
@@ -19339,7 +18970,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2110111130_XKB-Connection-TS-1010-C-A_C692458.pdf"
 			(at 149.86 257.81 0)
 			(effects
 				(font
@@ -19349,15 +18980,6 @@
 			)
 		)
 		(property "Description" "Generic push-button switch, two contact pins and shield pin(s)"
-			(at 149.86 262.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C318941"
 			(at 149.86 262.89 0)
 			(effects
 				(font
@@ -19636,15 +19258,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C60491"
-			(at 139.7 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "5c8d4730-136b-41f2-89f5-60942c317826")
 		)
@@ -19707,15 +19320,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 480.06 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 480.06 63.5 0)
 			(effects
 				(font
@@ -19860,15 +19464,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C25905"
-			(at 63.5 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "326e6e00-f45c-41f6-8d39-01fcb73f4112")
 		)
@@ -19931,15 +19526,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 474.98 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 474.98 97.79 0)
 			(effects
 				(font
@@ -20150,15 +19736,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C60491"
-			(at 231.14 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "a67bd572-ca4c-4040-8d6e-9e6e49c8ca73")
 		)
@@ -20295,15 +19872,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 471.17 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "f6343277-aab1-4ffd-913b-5b82aad53a18")
 		)
@@ -20372,15 +19940,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" ""
-			(at 111.76 259.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "1d6116f3-0f99-47fd-bb88-d63b2e5f64ac")
 		)
@@ -20441,15 +20000,6 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 66.04 259.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
 			(at 66.04 259.08 0)
 			(effects
 				(font
@@ -20587,15 +20137,6 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 254 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C23150"
 			(at 254 111.76 0)
 			(effects
 				(font
@@ -21295,15 +20836,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 438.15 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "b07d4e68-6708-4312-bb0d-dd3bb33505f3")
 		)
@@ -21366,15 +20898,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 246.38 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C541337"
 			(at 246.38 71.12 0)
 			(effects
 				(font
@@ -21517,15 +21040,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C165948"
-			(at 30.48 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "S1"
 			(uuid "cfbdee0a-cf3c-46f6-bf38-1af8fc482e7c")
 		)
@@ -21641,15 +21155,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 500.38 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "dab9c8ef-f2b6-4078-ad37-8e24148f14a6")
 		)
@@ -21720,15 +21225,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 458.47 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "f616d7be-4ad1-4b45-bd7b-79625dcccf7e")
 		)
@@ -21790,15 +21286,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 441.96 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 441.96 67.31 0)
 			(effects
 				(font
@@ -22506,15 +21993,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 478.79 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "1689102b-6d59-48a1-bfac-90df78e010e2")
 		)
@@ -22577,15 +22055,6 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 30.48 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C60490"
 			(at 30.48 93.98 0)
 			(effects
 				(font
@@ -22731,15 +22200,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 438.15 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "10b23ac7-d884-4606-8856-04a40f7157f7")
 		)
@@ -22801,15 +22261,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 501.65 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 501.65 40.64 0)
 			(effects
 				(font
@@ -22904,15 +22355,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C191023"
-			(at 35.56 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "6901e478-8ab9-497e-b1a6-3d69947f07f3")
 		)
@@ -22974,15 +22416,6 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 203.2 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C2897388"
 			(at 203.2 106.68 0)
 			(effects
 				(font
@@ -23136,15 +22569,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C37635376"
-			(at 252.73 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "b4b153c1-11be-4a15-8b45-e0284797a03b")
 		)
@@ -23219,15 +22643,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" ""
-			(at 111.76 248.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "6b3587fc-9587-438b-a578-5d291a1e081f")
 		)
@@ -23288,15 +22703,6 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 66.04 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
 			(at 66.04 228.6 0)
 			(effects
 				(font
@@ -23375,15 +22781,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 198.12 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "3e8026ee-0f33-4769-a039-859646ff85d3")
 		)
@@ -23446,15 +22843,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 223.52 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 223.52 78.74 0)
 			(effects
 				(font
@@ -23533,15 +22921,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 466.09 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "cf07be44-2f8c-4eb7-a917-25af40ba0d36")
 		)
@@ -23602,15 +22981,6 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 111.76 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" ""
 			(at 111.76 238.76 0)
 			(effects
 				(font

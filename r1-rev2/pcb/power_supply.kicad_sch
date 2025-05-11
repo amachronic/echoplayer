@@ -3939,15 +3939,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C60491"
-			(at 114.3 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "76c827e5-da91-48b6-b372-21eb07d9295d")
 		)
@@ -4010,15 +4001,6 @@
 			)
 		)
 		(property "Description" "Constant-current/constant-voltage linear charger for single cell lithium-ion batteries with 2.9V Trickle Charge, 4.5V to 6.5V VDD, -40 to +85 degree Celsius, TSOT-23-5"
-			(at 223.52 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C725791"
 			(at 223.52 58.42 0)
 			(effects
 				(font
@@ -4108,15 +4090,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C5157937"
-			(at 129.54 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "4"
 			(uuid "467b6f54-63af-4590-824a-2d7fcccac382")
 		)
@@ -4198,15 +4171,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C60490"
-			(at 236.22 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "ba6c839f-3631-4aa9-a4fd-e922b7e2fafa")
 		)
@@ -4276,15 +4240,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C2933159"
-			(at 149.86 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "0fbc58d1-427a-438c-954c-07f9534ed3e5")
 		)
@@ -4335,7 +4290,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410010330_Murata-Electronics-DFE201610E-1R0M-P2_C161082.pdf"
+		(property "Datasheet" "~"
 			(at 142.24 93.98 0)
 			(effects
 				(font
@@ -4345,15 +4300,6 @@
 			)
 		)
 		(property "Description" "Inductor, small symbol"
-			(at 142.24 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C161082"
 			(at 142.24 93.98 0)
 			(effects
 				(font
@@ -4412,7 +4358,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410010330_Murata-Electronics-DFE201610E-1R0M-P2_C161082.pdf"
+		(property "Datasheet" "~"
 			(at 142.24 50.8 0)
 			(effects
 				(font
@@ -4422,15 +4368,6 @@
 			)
 		)
 		(property "Description" "Inductor, small symbol"
-			(at 142.24 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C161082"
 			(at 142.24 50.8 0)
 			(effects
 				(font
@@ -4489,7 +4426,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2311091734_UMW-Youtai-Semiconductor-Co---Ltd--AO3401A_C347476.pdf"
+		(property "Datasheet" "~"
 			(at 66.04 109.22 0)
 			(effects
 				(font
@@ -4499,15 +4436,6 @@
 			)
 		)
 		(property "Description" "P-MOSFET transistor, gate/source/drain"
-			(at 66.04 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C347476"
 			(at 66.04 109.22 0)
 			(effects
 				(font
@@ -4589,15 +4517,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C41378737"
-			(at 60.96 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "cc0d0a86-a701-409d-9176-3e97f3eed46a")
 		)
@@ -4666,15 +4585,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 162.56 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C86816"
 			(at 162.56 101.6 0)
 			(effects
 				(font
@@ -4819,15 +4729,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C2933159"
-			(at 152.4 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "7c65a26e-39cf-4c53-8fbe-7b568f1d1931")
 		)
@@ -4964,15 +4865,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C60491"
-			(at 114.3 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "77bc5cfe-e2ec-4116-bd54-b5545e5adf3c")
 		)
@@ -5035,15 +4927,6 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 147.32 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C3000725"
 			(at 147.32 109.22 0)
 			(effects
 				(font
@@ -5122,15 +5005,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C23150"
-			(at 147.32 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "26ab5513-b46c-469b-8ec2-a73ba5e5bf8f")
 		)
@@ -5193,15 +5067,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 162.56 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C86816"
 			(at 162.56 58.42 0)
 			(effects
 				(font
@@ -5347,15 +5212,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C5157937"
-			(at 129.54 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "4"
 			(uuid "45537606-520b-4398-99b1-8b2d69666414")
 		)
@@ -5429,15 +5285,6 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 236.22 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C114762"
 			(at 236.22 50.8 0)
 			(effects
 				(font
@@ -5648,15 +5495,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C52923"
-			(at 233.68 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "ea22453f-4680-4c2a-80f3-54badeba9907")
 		)
@@ -5719,15 +5557,6 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 149.86 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C2933159"
 			(at 149.86 55.88 0)
 			(effects
 				(font
@@ -5806,15 +5635,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C86816"
-			(at 119.38 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "b5ec848c-8b98-4894-9e57-e5e894412261")
 		)
@@ -5876,15 +5696,6 @@
 		)
 		(property "Description" "Ideal Diode With Input Polarity Protection 1.5 - 5.5V  Input Voltage, 1.5A Output Current, Ron 141 mOhm, SC-70-6"
 			(at 55.88 112.014 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C2869734"
-			(at 55.88 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5966,15 +5777,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 213.36 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C52923"
 			(at 213.36 104.14 0)
 			(effects
 				(font
@@ -6119,15 +5921,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C86816"
-			(at 119.38 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "30f72775-7f08-4b02-9129-921900ec6fa1")
 		)
@@ -6188,15 +5981,6 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 71.12 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C60491"
 			(at 71.12 96.52 0)
 			(effects
 				(font
@@ -6266,15 +6050,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 203.2 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C69335"
 			(at 203.2 60.96 0)
 			(effects
 				(font
@@ -6418,15 +6193,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C5446"
-			(at 223.52 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "59e31d18-31b8-49dc-bcb8-afa170b19ab7")
 		)
@@ -6492,15 +6258,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 248.92 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C69335"
 			(at 248.92 60.96 0)
 			(effects
 				(font

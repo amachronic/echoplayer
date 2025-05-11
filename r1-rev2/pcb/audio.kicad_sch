@@ -4332,15 +4332,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 93.98 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "eb7b09cb-0354-4c72-a6f1-ad88e746fac7")
 		)
@@ -4402,15 +4393,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 129.54 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C91606"
 			(at 129.54 55.88 0)
 			(effects
 				(font
@@ -4558,15 +4540,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C91606"
-			(at 68.58 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "bf12dc56-2e64-4956-9582-b2f0b0d08ba3")
 		)
@@ -4617,7 +4590,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2311091734_UMW-Youtai-Semiconductor-Co---Ltd--AO3401A_C347476.pdf"
+		(property "Datasheet" "~"
 			(at 132.08 27.94 0)
 			(effects
 				(font
@@ -4627,15 +4600,6 @@
 			)
 		)
 		(property "Description" "P-MOSFET transistor, gate/source/drain"
-			(at 132.08 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C347476"
 			(at 132.08 27.94 0)
 			(effects
 				(font
@@ -4782,15 +4746,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C91606"
-			(at 99.06 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "b6a5cf7f-d3f0-4226-a13b-f20d7b825a04")
 		)
@@ -4923,15 +4878,6 @@
 			)
 		)
 		(property "Description" "Low-Power Stereo Audio Codec for Portable Audio and Telephony, VQFN-32"
-			(at 104.14 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C181753"
 			(at 104.14 124.46 0)
 			(effects
 				(font
@@ -5168,15 +5114,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C85973"
-			(at 142.24 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "1f729500-f6e9-4b96-a4eb-e1495b4404f8")
 		)
@@ -5237,15 +5174,6 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small US symbol"
-			(at 195.58 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C72485"
 			(at 195.58 132.08 0)
 			(effects
 				(font
@@ -5322,15 +5250,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C5372851"
-			(at 231.14 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "T"
 			(uuid "57b3680c-c6ed-4d97-9320-6e587d6d846c")
 		)
@@ -5399,15 +5318,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 154.94 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 154.94 55.88 0)
 			(effects
 				(font
@@ -5553,15 +5463,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C77020"
-			(at 63.5 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "f507c69d-af33-464b-a2f4-7572b2a890b0")
 		)
@@ -5632,15 +5533,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C60491"
-			(at 124.46 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "90ded803-ef0c-450c-b055-0051ddce07af")
 		)
@@ -5701,15 +5593,6 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small US symbol"
-			(at 195.58 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C72485"
 			(at 195.58 137.16 0)
 			(effects
 				(font
@@ -5788,15 +5671,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C60491"
-			(at 76.2 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "503d896e-5325-41b8-9316-d3b256917d63")
 		)
@@ -5857,15 +5731,6 @@
 			)
 		)
 		(property "Description" "Audio Jack, 4 Poles (TRRS)"
-			(at 231.14 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C5372851"
 			(at 231.14 129.54 0)
 			(effects
 				(font
@@ -5949,15 +5814,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C91606"
-			(at 160.02 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "ef868fba-68c2-4da9-a035-49c5140039db")
 		)
@@ -6018,15 +5874,6 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 193.04 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C114762"
 			(at 193.04 66.04 0)
 			(effects
 				(font
@@ -6097,15 +5944,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 124.46 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C77020"
 			(at 124.46 55.88 0)
 			(effects
 				(font
@@ -6230,7 +6068,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2311091734_UMW-Youtai-Semiconductor-Co---Ltd--AO3401A_C347476.pdf"
+		(property "Datasheet" "~"
 			(at 83.82 27.94 0)
 			(effects
 				(font
@@ -6240,15 +6078,6 @@
 			)
 		)
 		(property "Description" "P-MOSFET transistor, gate/source/drain"
-			(at 83.82 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C347476"
 			(at 83.82 27.94 0)
 			(effects
 				(font
@@ -6388,15 +6217,6 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 73.66 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C60491"
 			(at 73.66 152.4 0)
 			(effects
 				(font
