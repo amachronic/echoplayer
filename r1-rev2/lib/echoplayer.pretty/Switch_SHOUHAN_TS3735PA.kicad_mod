@@ -1,0 +1,144 @@
+(footprint "Switch_SHOUHAN_TS3735PA"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "3.7mm x 0.35mm SPST dome switch, SMD")
+	(tags "smd dome swich spst")
+	(property "Reference" "REF**"
+		(at 0 -3.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "fc240bf8-c8a5-4773-be7d-7df86637e508")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Switch_SHOUHAN_TS3735PA"
+		(at 0 3.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "0c84373d-3029-4288-b825-e0861540da03")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_1912111437_SHOU-HAN-TS3735PA-250gf_C393946.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "00808124-209d-462a-83a6-e6fef0012155")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "3.7mm x 0.35mm SPST dome switch, SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7a7f808b-2277-40e4-b191-52e2adbb6e29")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -2 -2)
+		(end 2 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "6654eb15-b1e4-4530-83ee-6323c5424dd8")
+	)
+	(fp_rect
+		(start -2.1 -2.5)
+		(end 2.1 2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "a747612a-3218-43e4-8bae-f7c23da0a2d3")
+	)
+	(fp_rect
+		(start -1.85 -1.85)
+		(end 1.85 1.85)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "9547e257-3df0-42e5-a4fa-fea0ca22a878")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0.8 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "5ed91d30-b933-440f-a0d4-d2b5088d833c")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "53795ad4-db39-4c7a-8549-9c70376fbe27")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.35 -1.525)
+		(size 0.65 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "06a4de87-8d07-4925-9984-865059297682")
+	)
+	(pad "1" smd rect
+		(at 1.35 -1.525)
+		(size 0.65 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "0ce99b0f-f571-4ed6-b5c9-142f265d91e5")
+	)
+	(pad "2" smd rect
+		(at -1.35 1.525)
+		(size 0.65 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "8ffb86b0-29a4-44a7-aa2f-8fe0559073b9")
+	)
+	(pad "2" smd rect
+		(at 1.35 1.525)
+		(size 0.65 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "5679337a-a8a5-4b8e-a8bb-132e17e0a16d")
+	)
+	(embedded_fonts no)
+)
