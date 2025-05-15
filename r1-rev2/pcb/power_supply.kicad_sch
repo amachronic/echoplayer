@@ -2162,7 +2162,7 @@
 	)
 	(text "TODO: height TBD\nprobably 4.6mm\nor 6.0mm"
 		(exclude_from_sim no)
-		(at 43.434 63.754 0)
+		(at 63.754 70.104 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2385,6 +2385,12 @@
 		(uuid "905bedc1-c029-409d-bd4a-c4582c2851e1")
 	)
 	(junction
+		(at 71.12 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9cb813ea-c1c7-4f13-bf54-f6910d8d89ac")
+	)
+	(junction
 		(at 147.32 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2397,7 +2403,7 @@
 		(uuid "a3ab6f0f-73af-4677-b225-6245f384577e")
 	)
 	(junction
-		(at 68.58 58.42)
+		(at 58.42 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "badc842c-2e31-4cfd-bfcd-474c75161da2")
@@ -2427,7 +2433,7 @@
 		(uuid "db9b3161-06e1-4311-87f7-9ff85084adb1")
 	)
 	(no_connect
-		(at 60.96 68.58)
+		(at 50.8 68.58)
 		(uuid "c9d9e456-8645-4ca0-957a-4a9e3a5906c1")
 	)
 	(wire
@@ -2629,6 +2635,16 @@
 			(type default)
 		)
 		(uuid "207572f0-f368-4f28-b44c-35eba78b62a8")
+	)
+	(wire
+		(pts
+			(xy 71.12 55.88) (xy 71.12 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22b9bf3c-6e94-47ac-8501-2acf8ba065f1")
 	)
 	(wire
 		(pts
@@ -2952,7 +2968,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 63.5) (xy 71.12 63.5)
+			(xy 55.88 63.5) (xy 73.66 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3062,7 +3078,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 60.96) (xy 68.58 60.96)
+			(xy 55.88 60.96) (xy 58.42 60.96)
 		)
 		(stroke
 			(width 0)
@@ -3162,7 +3178,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 58.42) (xy 71.12 58.42)
+			(xy 58.42 58.42) (xy 71.12 58.42)
 		)
 		(stroke
 			(width 0)
@@ -3312,6 +3328,16 @@
 	)
 	(wire
 		(pts
+			(xy 71.12 58.42) (xy 73.66 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd0b4371-76aa-42ce-997b-b69ad8ecfc73")
+	)
+	(wire
+		(pts
 			(xy 149.86 60.96) (xy 149.86 63.5)
 		)
 		(stroke
@@ -3362,7 +3388,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 58.42) (xy 68.58 58.42)
+			(xy 55.88 58.42) (xy 58.42 58.42)
 		)
 		(stroke
 			(width 0)
@@ -3452,7 +3478,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 58.42) (xy 68.58 60.96)
+			(xy 58.42 58.42) (xy 58.42 60.96)
 		)
 		(stroke
 			(width 0)
@@ -3639,7 +3665,7 @@
 	)
 	(hierarchical_label "power_vbat"
 		(shape output)
-		(at 71.12 63.5 0)
+		(at 73.66 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4290,7 +4316,7 @@
 	)
 	(symbol
 		(lib_id "echoplayer:GT-BTP30003")
-		(at 60.96 60.96 0)
+		(at 50.8 60.96 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4299,7 +4325,7 @@
 		(dnp no)
 		(uuid "37327b30-3729-4a94-885d-0d720761951f")
 		(property "Reference" "J1"
-			(at 62.23 55.626 0)
+			(at 52.07 55.626 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4308,7 +4334,7 @@
 			)
 		)
 		(property "Value" "GT-BTP30003-xxxA-16A"
-			(at 73.152 53.34 0)
+			(at 62.992 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4317,7 +4343,7 @@
 			)
 		)
 		(property "Footprint" "echoplayer:Conn_GT-BTP30003-xxxxA-016A"
-			(at 60.96 60.96 0)
+			(at 50.8 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4326,7 +4352,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409091552_G-Switch-GT-BTP30003-0460A-016A_C41378737.pdf"
-			(at 60.96 60.96 0)
+			(at 50.8 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4335,7 +4361,7 @@
 			)
 		)
 		(property "Description" "3-pin blade/shrapnel battery connector, SMD, vertical mount with mounting pin"
-			(at 60.96 60.96 0)
+			(at 50.8 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4848,7 +4874,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 71.12 58.42 90)
+		(at 73.66 58.42 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4857,7 +4883,7 @@
 		(fields_autoplaced yes)
 		(uuid "8d76f002-0b2b-4c30-9d7a-7d168ab793a9")
 		(property "Reference" "#PWR011"
-			(at 77.47 58.42 0)
+			(at 80.01 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4866,7 +4892,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 74.93 58.4199 90)
+			(at 77.47 58.4199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4875,7 +4901,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 71.12 58.42 0)
+			(at 73.66 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4884,7 +4910,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 58.42 0)
+			(at 73.66 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4893,7 +4919,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 71.12 58.42 0)
+			(at 73.66 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4990,6 +5016,72 @@
 			(project ""
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/48d39f5c-11a4-46cd-927a-56a9c6ae42fa"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 71.12 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "95d37b74-3daf-41b2-9eec-9ba52600cc10")
+		(property "Reference" "#FLG010"
+			(at 71.12 53.975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 71.12 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 71.12 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 71.12 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1c14d761-b2ea-4dfb-adf9-ed8844b9a7f7")
+		)
+		(instances
+			(project "echo-r1"
+				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/48d39f5c-11a4-46cd-927a-56a9c6ae42fa"
+					(reference "#FLG010")
 					(unit 1)
 				)
 			)
