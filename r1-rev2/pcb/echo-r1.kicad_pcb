@@ -3,17 +3,17 @@
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(general
-		(thickness 1.0524)
+		(thickness 1.06)
 		(legacy_teardrops no)
 	)
 	(paper "A4")
 	(layers
-		(0 "F.Cu" signal)
+		(0 "F.Cu" mixed)
 		(4 "In1.Cu" power "F.Gnd")
-		(6 "In2.Cu" power "F.Pwr")
-		(8 "In3.Cu" mixed "B.Inner")
+		(6 "In2.Cu" power "I.Gnd")
+		(8 "In3.Cu" mixed "I.Cu")
 		(10 "In4.Cu" power "B.Gnd")
-		(2 "B.Cu" signal)
+		(2 "B.Cu" mixed)
 		(9 "F.Adhes" user "F.Adhesive")
 		(11 "B.Adhes" user "B.Adhesive")
 		(13 "F.Paste" user)
@@ -62,7 +62,7 @@
 				(type "prepreg")
 				(thickness 0.0994)
 				(material "3313*1")
-				(epsilon_r 4.5)
+				(epsilon_r 4.1)
 				(loss_tangent 0.02)
 			)
 			(layer "In1.Cu"
@@ -82,7 +82,7 @@
 			)
 			(layer "dielectric 3"
 				(type "prepreg")
-				(thickness 0.2028)
+				(thickness 0.2104)
 				(material "7268*1")
 				(epsilon_r 4.5)
 				(loss_tangent 0.02)
@@ -106,7 +106,7 @@
 				(type "prepreg")
 				(thickness 0.0994)
 				(material "3313*1")
-				(epsilon_r 4.5)
+				(epsilon_r 4.1)
 				(loss_tangent 0.02)
 			)
 			(layer "B.Cu"
@@ -129,8 +129,8 @@
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
-		(aux_axis_origin 121 152.5)
-		(grid_origin 121 152.5)
+		(aux_axis_origin 121.5 152)
+		(grid_origin 121.5 152)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -175,28 +175,112 @@
 	(net 0 "")
 	(net 1 "GND")
 	(gr_rect
-		(start 118.5 55)
-		(end 178.5 155)
+		(start 121 56.5)
+		(end 176 152.5)
 		(stroke
 			(width 0.1)
-			(type default)
+			(type solid)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+		(uuid "73cb3865-8fe2-411c-9f96-719b58037535")
+	)
+	(gr_rect
+		(start 118.5 54.5)
+		(end 178.5 154.5)
+		(stroke
+			(width 0.1)
+			(type solid)
 		)
 		(fill no)
 		(layer "Dwgs.User")
 		(uuid "e8e2ed34-d68d-41a1-ae64-68eac362fef7")
 	)
-	(gr_rect
-		(start 121 57.5)
-		(end 176 152.5)
+	(gr_arc
+		(start 121.5 59)
+		(mid 122.085786 57.585786)
+		(end 123.5 57)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
-		(fill no)
 		(layer "Edge.Cuts")
-		(uuid "17b1ace7-bc1d-4f94-825a-34986e154769")
+		(uuid "4b02b50f-6563-451a-85fa-3dad64d5629a")
 	)
-	(gr_text "Stackup: JLC06101H-3313"
+	(gr_arc
+		(start 123.5 152)
+		(mid 122.085786 151.414214)
+		(end 121.5 150)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5663064f-69b1-423d-96a8-2a89a49b427c")
+	)
+	(gr_line
+		(start 121.5 59)
+		(end 121.5 150)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "7aef10f2-b1a0-43a1-a6ca-e11a0af21d69")
+	)
+	(gr_line
+		(start 173.5 57)
+		(end 123.5 57)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "a2980594-8bde-477b-86d5-a2ccc616b8f5")
+	)
+	(gr_arc
+		(start 173.5 57)
+		(mid 174.914214 57.585786)
+		(end 175.5 59)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "bb0f80cf-c47b-4813-923f-c95bf2c61a3a")
+	)
+	(gr_line
+		(start 175.499999 150)
+		(end 175.5 59)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d8c69696-bd74-470c-97ee-07e5d7b585f0")
+	)
+	(gr_arc
+		(start 175.499999 150)
+		(mid 174.914213 151.414214)
+		(end 173.499999 152)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f555eafe-f86e-45d9-9c22-09e671baa088")
+	)
+	(gr_line
+		(start 123.5 152)
+		(end 173.5 152)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f8bb6fbe-d46f-401e-a4e3-669c7d1ecf62")
+	)
+	(gr_text "Stackup: JLC06101H-3313, 1mm"
 		(at 118.75 53.5 0)
 		(layer "Cmts.User")
 		(uuid "a2e7877e-266f-4ee4-980d-c9f190d0dce0")
@@ -211,7 +295,7 @@
 	(zone
 		(net 1)
 		(net_name "GND")
-		(layers "In1.Cu" "In4.Cu")
+		(layers "In1.Cu" "In2.Cu" "In4.Cu")
 		(uuid "00af64ff-38e3-4b15-90a2-547b5b082922")
 		(hatch edge 0.5)
 		(priority 1)
@@ -226,29 +310,7 @@
 		)
 		(polygon
 			(pts
-				(xy 121 57.5) (xy 176 57.5) (xy 176 152.5) (xy 121 152.5)
-			)
-		)
-	)
-	(zone
-		(net 0)
-		(net_name "")
-		(layer "In2.Cu")
-		(uuid "1aa5044c-2691-4695-a213-306c201e3d0e")
-		(hatch edge 0.5)
-		(priority 14)
-		(connect_pads yes
-			(clearance 0.25)
-		)
-		(min_thickness 0.25)
-		(filled_areas_thickness no)
-		(fill
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-		)
-		(polygon
-			(pts
-				(xy 121 57.5) (xy 176 57.5) (xy 176 152.5) (xy 121 152.5)
+				(xy 121.5 57) (xy 175.5 57) (xy 175.5 152) (xy 121.5 152)
 			)
 		)
 	)
