@@ -12025,6 +12025,10 @@
 		(uuid "ed85de19-1891-4e9a-a4bc-c89c964ba818")
 	)
 	(no_connect
+		(at 302.26 154.94)
+		(uuid "f511568e-0075-4cc1-873a-06f8cc33928f")
+	)
+	(no_connect
 		(at 393.7 127)
 		(uuid "fda69888-2c51-48be-ae0e-2898542a3fae")
 	)
@@ -16908,16 +16912,6 @@
 	)
 	(wire
 		(pts
-			(xy 289.56 154.94) (xy 302.26 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1fa3e1d-9efe-4374-a02d-ad4d86d3ff1f")
-	)
-	(wire
-		(pts
 			(xy 228.6 30.48) (xy 233.68 30.48)
 		)
 		(stroke
@@ -17386,16 +17380,6 @@
 		)
 		(uuid "1fd7e6cb-0112-4f1f-ab1d-16eb2dc8557a")
 	)
-	(label "backlight_pwr_en"
-		(at 289.56 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2078a185-00f7-4b2d-9c7c-de661c827ec4")
-	)
 	(label "xspi.d4"
 		(at 292.1 109.22 0)
 		(effects
@@ -17775,16 +17759,6 @@
 			(justify left bottom)
 		)
 		(uuid "4e7d3285-740a-4885-9a01-96bb1a862547")
-	)
-	(label "backlight_pwr_en"
-		(at 142.24 152.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4f976acf-f980-4cdc-8dae-730ab45131f4")
 	)
 	(label "sdmmc_pwr_en"
 		(at 292.1 180.34 0)
@@ -18725,6 +18699,16 @@
 			(justify right bottom)
 		)
 		(uuid "d9197b64-d3b3-4228-8564-d9f540db060c")
+	)
+	(label "backlight_pwm"
+		(at 142.24 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "da06eb85-ee1c-4975-94cb-85b8e14349bc")
 	)
 	(label "xspi.cs"
 		(at 223.52 43.18 0)
