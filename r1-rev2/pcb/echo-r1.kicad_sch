@@ -28303,8 +28303,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ILI9342C"
-			(at 152.4 114.046 0)
+		(property "Value" "AFC07-S30ECA-00"
+			(at 142.24 114.046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28312,7 +28312,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "echoplayer:Conn_Jushuo_AFC07-S30ECA-00_RTL"
 			(at 165.1 71.12 0)
 			(effects
 				(font
