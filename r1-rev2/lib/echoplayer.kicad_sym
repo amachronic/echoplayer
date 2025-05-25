@@ -3439,7 +3439,7 @@
 						)
 					)
 				)
-				(number "A2"
+				(number "B1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3476,6 +3476,25 @@
 					)
 				)
 				(number "A4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at -10.16 -7.62 0)
+				(length 2.54)
+				(hide yes)
+				(name "RFU"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A2"
 					(effects
 						(font
 							(size 1.27 1.27)

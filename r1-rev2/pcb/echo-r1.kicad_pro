@@ -147,7 +147,7 @@
           "td_onpthpad": true,
           "td_onroundshapesonly": false,
           "td_onsmdpad": true,
-          "td_ontrackend": false,
+          "td_ontrackend": true,
           "td_onvia": true
         }
       ],
@@ -255,28 +255,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "lib_symbol_mismatch|1041400|1244600|3b779ea1-bbc4-4f39-ae20-f768da369818|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "lib_symbol_mismatch|1320800|457200|941bdeb3-12c2-4158-88d2-7ecd742727bd|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "lib_symbol_mismatch|1320800|889000|16f1bb64-bfdc-4114-bdb1-253e573ffc25|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "lib_symbol_mismatch|1397000|1371600|12d38c82-f62e-4172-990b-0dd1328cb900|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "lib_symbol_mismatch|3479800|1498600|e3af7ba4-fe92-430a-99e5-2d742126374e|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -513,7 +492,7 @@
       {
         "bus_width": 12,
         "clearance": 0.1,
-        "diff_pair_gap": 0.175,
+        "diff_pair_gap": 0.2,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.15,
         "line_style": 0,
@@ -527,6 +506,20 @@
         "via_diameter": 0.45,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.1,
+        "diff_pair_gap": 0.2,
+        "diff_pair_width": 0.15,
+        "microvia_diameter": 0.45,
+        "microvia_drill": 0.3,
+        "name": "XSPI",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.1,
+        "via_diameter": 0.45,
+        "via_drill": 0.3
       }
     ],
     "meta": {
@@ -534,7 +527,12 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "XSPI",
+        "pattern": "/xspi.*"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -569,21 +567,15 @@
       "fields_ordered": [
         {
           "group_by": false,
-          "label": "Datasheet",
-          "name": "Datasheet",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Footprint",
-          "name": "Footprint",
-          "show": true
-        },
-        {
-          "group_by": false,
           "label": "Qty",
           "name": "${QUANTITY}",
-          "show": true
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
+          "show": false
         },
         {
           "group_by": false,
@@ -592,9 +584,15 @@
           "show": true
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "Value",
           "name": "Value",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Footprint",
+          "name": "Footprint",
           "show": true
         },
         {
@@ -630,10 +628,10 @@
       ],
       "filter_string": "",
       "group_symbols": true,
-      "include_excluded_from_bom": false,
+      "include_excluded_from_bom": true,
       "name": "",
-      "sort_asc": false,
-      "sort_field": "Datasheet"
+      "sort_asc": true,
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
