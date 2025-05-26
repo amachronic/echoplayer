@@ -11610,12 +11610,6 @@
 		(uuid "925f5b49-fe40-4c22-a784-85274dd75131")
 	)
 	(junction
-		(at 299.72 200.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "951c1d4d-daec-4ba2-8620-911397cf4554")
-	)
-	(junction
 		(at 284.48 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11646,12 +11640,6 @@
 		(uuid "a42c723f-9a87-434e-9525-27273470f158")
 	)
 	(junction
-		(at 302.26 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a4b77fe7-c337-4bb8-829f-5da8ca0d6278")
-	)
-	(junction
 		(at 353.06 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11674,12 +11662,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a6fb93af-73c5-4f9c-a145-13d18e95a725")
-	)
-	(junction
-		(at 299.72 203.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a7bcc0fd-59d3-433c-9398-804ff66ec0c8")
 	)
 	(junction
 		(at 81.28 236.22)
@@ -11832,6 +11814,12 @@
 		(uuid "cf6eda8e-1b76-4e7e-bb14-b9b587cc4623")
 	)
 	(junction
+		(at 299.72 203.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d063e378-e834-425b-9184-1201ca128f55")
+	)
+	(junction
 		(at 358.14 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11962,6 +11950,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f6fa8bce-65b2-48c0-bace-01682eff8346")
+	)
+	(junction
+		(at 299.72 200.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f83c0826-fa6e-4f63-ae99-caee020db1c8")
 	)
 	(junction
 		(at 53.34 50.8)
@@ -12723,16 +12717,6 @@
 	)
 	(wire
 		(pts
-			(xy 289.56 200.66) (xy 292.1 200.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2020a0f6-f040-455d-b721-4cb9e24ab9a5")
-	)
-	(wire
-		(pts
 			(xy 66.04 231.14) (xy 93.98 231.14)
 		)
 		(stroke
@@ -13193,16 +13177,6 @@
 	)
 	(wire
 		(pts
-			(xy 289.56 203.2) (xy 299.72 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3abb680c-505d-4537-be2c-cec099fae7cd")
-	)
-	(wire
-		(pts
 			(xy 157.48 91.44) (xy 160.02 91.44)
 		)
 		(stroke
@@ -13603,16 +13577,6 @@
 	)
 	(wire
 		(pts
-			(xy 302.26 81.28) (xy 302.26 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4adfb2d7-096c-47ad-ac10-bc83c9b38134")
-	)
-	(wire
-		(pts
 			(xy 243.84 71.12) (xy 246.38 71.12)
 		)
 		(stroke
@@ -13730,16 +13694,6 @@
 			(type default)
 		)
 		(uuid "5272cd4c-409a-4b4a-8478-bad1c3c34c58")
-	)
-	(wire
-		(pts
-			(xy 299.72 200.66) (xy 299.72 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "52899981-09c8-4d6e-a9ca-4ce9bb6c6ff9")
 	)
 	(wire
 		(pts
@@ -13990,16 +13944,6 @@
 			(type default)
 		)
 		(uuid "6066a4ed-cfb8-4854-bde8-b778ced8122f")
-	)
-	(wire
-		(pts
-			(xy 298.45 78.74) (xy 302.26 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60ed40ef-ab3a-40bb-b6e8-3f43a273552f")
 	)
 	(wire
 		(pts
@@ -14483,16 +14427,6 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 48.26) (xy 355.6 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "769f84f1-eae3-4638-9fad-20e091645ddf")
-	)
-	(wire
-		(pts
 			(xy 104.14 43.18) (xy 119.38 43.18)
 		)
 		(stroke
@@ -14660,16 +14594,6 @@
 			(type default)
 		)
 		(uuid "7f79296e-25fb-4279-b8b1-0e3e2489246f")
-	)
-	(wire
-		(pts
-			(xy 355.6 55.88) (xy 355.6 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7f940fee-6881-4e12-bac4-2b99c1a74fb1")
 	)
 	(wire
 		(pts
@@ -15210,6 +15134,16 @@
 			(type default)
 		)
 		(uuid "947541f0-882f-4edb-b9aa-dfebecdbde19")
+	)
+	(wire
+		(pts
+			(xy 355.6 48.26) (xy 355.6 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94db59f3-db85-42a4-a61f-d03b370e98ad")
 	)
 	(wire
 		(pts
@@ -16553,6 +16487,16 @@
 	)
 	(wire
 		(pts
+			(xy 292.1 81.28) (xy 302.26 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da498959-9ae9-47cb-9898-c2ba79c51138")
+	)
+	(wire
+		(pts
 			(xy 347.98 241.3) (xy 347.98 243.84)
 		)
 		(stroke
@@ -16663,6 +16607,16 @@
 	)
 	(wire
 		(pts
+			(xy 289.56 200.66) (xy 299.72 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e114b42b-855b-40a8-80ec-9b4616268f93")
+	)
+	(wire
+		(pts
 			(xy 66.04 142.24) (xy 66.04 144.78)
 		)
 		(stroke
@@ -16700,6 +16654,16 @@
 			(type default)
 		)
 		(uuid "e41c41ad-578b-4d29-b1a4-dc32834fe5ce")
+	)
+	(wire
+		(pts
+			(xy 299.72 200.66) (xy 299.72 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4861237-9a92-4c06-b8c6-a06358b79b16")
 	)
 	(wire
 		(pts
@@ -16880,16 +16844,6 @@
 			(type default)
 		)
 		(uuid "edc24848-494e-4a49-a440-db7491d7f744")
-	)
-	(wire
-		(pts
-			(xy 358.14 48.26) (xy 358.14 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee63fde8-6d69-49fa-b28b-b12ff408ff8e")
 	)
 	(wire
 		(pts
@@ -17123,16 +17077,6 @@
 	)
 	(wire
 		(pts
-			(xy 297.18 81.28) (xy 302.26 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4e72f64-fe03-4e3f-8f91-8f101c550cdf")
-	)
-	(wire
-		(pts
 			(xy 309.88 20.32) (xy 307.34 20.32)
 		)
 		(stroke
@@ -17320,16 +17264,6 @@
 			(type default)
 		)
 		(uuid "fb3b38f8-8294-47d5-bc54-d13a5c77239b")
-	)
-	(wire
-		(pts
-			(xy 297.18 200.66) (xy 299.72 200.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb7cac2e-f461-4471-8b25-0f681a916283")
 	)
 	(wire
 		(pts
@@ -17940,16 +17874,6 @@
 			(justify left bottom)
 		)
 		(uuid "51dd27c5-44b8-4185-a367-90c4ffbb5a5d")
-	)
-	(label "dvdd"
-		(at 298.45 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "529bf18e-81e1-4707-9035-3aa04ae5f6c1")
 	)
 	(label "button_b"
 		(at 403.86 81.28 180)
@@ -19021,16 +18945,6 @@
 		)
 		(uuid "f526a7c9-7ffd-465c-be36-834754c2f202")
 	)
-	(label "vcap"
-		(at 289.56 203.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f5cbeee5-5a2b-49f4-82e7-195cd47d1324")
-	)
 	(label "lo_detect"
 		(at 403.86 167.64 180)
 		(effects
@@ -19060,16 +18974,6 @@
 			(justify left bottom)
 		)
 		(uuid "f8f9fa59-eeb0-4720-8bd3-a793e9d79129")
-	)
-	(label "vddldo"
-		(at 358.14 48.26 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f905eeb6-d2e1-41c9-80f9-e155f92feefc")
 	)
 	(label "codec.bclk"
 		(at 292.1 190.5 0)
@@ -25027,76 +24931,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:NetTie_2")
-		(at 294.64 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "73a70227-39ed-4a7e-b597-e36e2de536a6")
-		(property "Reference" "NT10"
-			(at 294.64 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "NetTie_2"
-			(at 294.64 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "echoplayer:NetTie_0.15mm_SMD"
-			(at 294.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 294.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Net tie, 2 pins"
-			(at 294.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ca70d98f-4023-4730-a963-4e2077487ee4")
-		)
-		(pin "2"
-			(uuid "93d31e11-adf2-4e7c-b04c-e8c384a61aa8")
-		)
-		(instances
-			(project "echo-r1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "NT10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 58.42 73.66 0)
 		(unit 1)
@@ -29200,72 +29034,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 289.56 203.2 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d0c3074e-90db-4871-8b4b-92e12dd2707c")
-		(property "Reference" "#FLG0105"
-			(at 287.655 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 284.226 201.168 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 289.56 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 289.56 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 289.56 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "595e92fa-6de7-44ff-b432-6097f1e9fcc4")
-		)
-		(instances
-			(project "echo-r1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#FLG0105")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 22.86 218.44 270)
 		(unit 1)
@@ -29786,72 +29554,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 358.14 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "db37f3c3-0820-439e-a492-77ad8800157a")
-		(property "Reference" "#FLG0107"
-			(at 358.14 46.355 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 360.172 42.926 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 358.14 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 358.14 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 358.14 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fb611012-e233-4742-8a16-387a60263f7c")
-		)
-		(instances
-			(project "echo-r1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "#FLG0107")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 317.5 25.4 0)
 		(unit 1)
@@ -29915,76 +29617,6 @@
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
 					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:NetTie_2")
-		(at 355.6 53.34 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e16ef526-0877-446d-b09e-54b95a0ea439")
-		(property "Reference" "NT5"
-			(at 360.68 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "NetTie_2"
-			(at 358.14 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "echoplayer:NetTie_0.15mm_SMD"
-			(at 355.6 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 355.6 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Net tie, 2 pins"
-			(at 355.6 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "196c1148-a101-4d05-a361-0463bb483b4a")
-		)
-		(pin "2"
-			(uuid "d994c1c8-5a40-4d5d-9c99-6383ae5628b5")
-		)
-		(instances
-			(project "echo-r1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "NT5")
 					(unit 1)
 				)
 			)
@@ -30819,76 +30451,6 @@
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
 					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:NetTie_2")
-		(at 294.64 200.66 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eaef55ff-de6c-4ee5-a4c1-5c6811e3eaff")
-		(property "Reference" "NT4"
-			(at 294.64 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "NetTie_2"
-			(at 294.64 198.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "echoplayer:NetTie_0.15mm_SMD"
-			(at 294.64 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 294.64 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Net tie, 2 pins"
-			(at 294.64 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aeb42c22-bb06-47e4-bac2-0a5aef435583")
-		)
-		(pin "2"
-			(uuid "ae9e3f06-1f30-4122-a532-ffedfab66e1b")
-		)
-		(instances
-			(project ""
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "NT4")
 					(unit 1)
 				)
 			)
