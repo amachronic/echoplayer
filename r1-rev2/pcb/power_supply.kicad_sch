@@ -4466,7 +4466,7 @@
 				)
 			)
 		)
-		(property "Value" "1 µH"
+		(property "Value" "2.2 µH"
 			(at 144.78 83.82 90)
 			(effects
 				(font
@@ -4474,7 +4474,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Changjiang_FNR3015S"
 			(at 144.78 86.36 0)
 			(effects
 				(font
@@ -4534,7 +4534,7 @@
 				)
 			)
 		)
-		(property "Value" "1 µH"
+		(property "Value" "2.2 µH"
 			(at 144.78 40.64 90)
 			(effects
 				(font
@@ -4542,7 +4542,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Changjiang_FNR3015S"
 			(at 144.78 43.18 0)
 			(effects
 				(font

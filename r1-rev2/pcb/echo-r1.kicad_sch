@@ -27777,7 +27777,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Changjiang_FNR3015S"
 			(at 312.42 20.32 0)
 			(effects
 				(font
