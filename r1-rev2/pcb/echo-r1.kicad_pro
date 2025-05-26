@@ -508,6 +508,12 @@
         "wire_width": 6
       },
       {
+        "name": "Codec",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
         "clearance": 0.1,
         "diff_pair_gap": 0.2,
         "diff_pair_width": 0.15,
@@ -515,7 +521,7 @@
         "microvia_drill": 0.3,
         "name": "XSPI",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1,
         "via_diameter": 0.45,
@@ -531,6 +537,10 @@
       {
         "netclass": "XSPI",
         "pattern": "/xspi.*"
+      },
+      {
+        "netclass": "Codec",
+        "pattern": "/codec.*"
       }
     ]
   },
