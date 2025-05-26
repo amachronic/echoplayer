@@ -10916,6 +10916,16 @@
 		)
 		(uuid "32a00f1a-dd45-4c72-a698-febb64f1eb95")
 	)
+	(text "To meet power-up\nrequirements"
+		(exclude_from_sim no)
+		(at 228.346 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "35a7b5d4-1f5a-4f7c-98a2-205e54d0adaf")
+	)
 	(text "[see adc_calcs.ods]"
 		(exclude_from_sim no)
 		(at 228.6 249.936 0)
@@ -11268,6 +11278,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "23297f53-9d4b-40fe-9ac6-faf59876dcf0")
+	)
+	(junction
+		(at 231.14 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "278b404a-4a27-4e4f-9253-c68e918bce08")
 	)
 	(junction
 		(at 386.08 53.34)
@@ -13437,6 +13453,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 63.5) (xy 231.14 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45ab4f3a-e80a-4d57-84ec-1bf7929c7e2a")
+	)
+	(wire
+		(pts
 			(xy 58.42 40.64) (xy 58.42 43.18)
 		)
 		(stroke
@@ -13454,6 +13480,16 @@
 			(type default)
 		)
 		(uuid "4670e06a-a880-463c-b81a-80b26be35ffa")
+	)
+	(wire
+		(pts
+			(xy 228.6 76.2) (xy 228.6 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46b02b9c-e95d-4faa-904d-b9734b187e95")
 	)
 	(wire
 		(pts
@@ -14014,6 +14050,16 @@
 			(type default)
 		)
 		(uuid "6214bf9c-46d0-45b3-8592-a16bc232af2c")
+	)
+	(wire
+		(pts
+			(xy 236.22 78.74) (xy 228.6 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62752ece-2e2a-4ee5-9a1f-36b23a1bf5d1")
 	)
 	(wire
 		(pts
@@ -14947,7 +14993,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 60.96) (xy 233.68 60.96)
+			(xy 220.98 60.96) (xy 231.14 60.96)
 		)
 		(stroke
 			(width 0)
@@ -14964,6 +15010,26 @@
 			(type default)
 		)
 		(uuid "8b7fc48a-3888-4d5e-94ae-3455dfa7c74d")
+	)
+	(wire
+		(pts
+			(xy 104.14 45.72) (xy 119.38 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bea0e05-353e-423d-86fc-47c5918bc604")
+	)
+	(wire
+		(pts
+			(xy 289.56 210.82) (xy 289.56 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c5683ae-ec0c-4d94-8a3e-b50c0cb8dbde")
 	)
 	(wire
 		(pts
@@ -15557,6 +15623,16 @@
 	)
 	(wire
 		(pts
+			(xy 299.72 210.82) (xy 289.56 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac6092ca-05f5-41da-8597-a3d5229c02c9")
+	)
+	(wire
+		(pts
 			(xy 284.48 76.2) (xy 302.26 76.2)
 		)
 		(stroke
@@ -15797,6 +15873,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 60.96) (xy 231.14 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9ab7e49-0d01-4d5e-8bce-1b7588fc4383")
+	)
+	(wire
+		(pts
 			(xy 165.1 203.2) (xy 157.48 203.2)
 		)
 		(stroke
@@ -15974,6 +16060,16 @@
 			(type default)
 		)
 		(uuid "c117588d-79cb-4c31-902b-8b9e77054ad3")
+	)
+	(wire
+		(pts
+			(xy 231.14 60.96) (xy 233.68 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c13f9bc8-33e8-41db-905d-60f7117e4af6")
 	)
 	(wire
 		(pts
@@ -17375,6 +17471,16 @@
 		)
 		(uuid "17f225d1-b41d-4f09-bba5-e23c4cfd006a")
 	)
+	(label "swd.nrst"
+		(at 220.98 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "18183a72-0677-4668-88df-783dfe92983f")
+	)
 	(label "rtc_wakeup"
 		(at 17.78 30.48 0)
 		(effects
@@ -17436,7 +17542,7 @@
 		(uuid "208d842f-e062-4154-88e7-2843dfaa9f6a")
 	)
 	(label "xspi_reset"
-		(at 223.52 60.96 0)
+		(at 220.98 60.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18105,6 +18211,16 @@
 		)
 		(uuid "6ee36eaa-7212-49bb-bc6f-8e948264fc2b")
 	)
+	(label "xspi.cs"
+		(at 236.22 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "73a606d2-4a92-4944-95ee-2338378eede1")
+	)
 	(label "osc24m_out"
 		(at 251.46 139.7 0)
 		(effects
@@ -18384,6 +18500,16 @@
 			(justify right bottom)
 		)
 		(uuid "a14e9bc4-b8cf-4867-a299-4c44b22285a1")
+	)
+	(label "swd.nrst"
+		(at 119.38 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a1ba05d1-c066-4d54-8b2c-6b5c52ef84f0")
 	)
 	(label "sdmmc.clk"
 		(at 403.86 187.96 180)
@@ -18794,6 +18920,16 @@
 			(justify right bottom)
 		)
 		(uuid "e36ae3e9-57f2-417e-9975-1d0c1b424de3")
+	)
+	(label "swd.nrst"
+		(at 299.72 210.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e61af43a-6050-4f8b-b298-e518f28e164d")
 	)
 	(label "sdmmc_detect"
 		(at 116.84 218.44 180)
@@ -19255,7 +19391,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "045e9f63-d71f-4d72-ba33-e4e3dc8dacbb")
-		(property "Reference" "C15"
+		(property "Reference" "C16"
 			(at 370.84 19.05 0)
 			(effects
 				(font
@@ -19307,7 +19443,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C15")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -19857,7 +19993,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0f4edd03-ab2a-4479-81e5-6a33deded293")
-		(property "Reference" "C20"
+		(property "Reference" "C21"
 			(at 386.08 29.718 0)
 			(effects
 				(font
@@ -19909,7 +20045,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C20")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -20199,7 +20335,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1746ea78-e93b-4d76-a5d9-e169c8faacbe")
-		(property "Reference" "C23"
+		(property "Reference" "C24"
 			(at 396.24 29.718 0)
 			(effects
 				(font
@@ -20251,7 +20387,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C23")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -20267,7 +20403,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "17eef9b1-5552-4655-8393-a6b6f831568f")
-		(property "Reference" "C32"
+		(property "Reference" "C33"
 			(at 345.44 19.05 0)
 			(effects
 				(font
@@ -20319,7 +20455,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C32")
+					(reference "C33")
 					(unit 1)
 				)
 			)
@@ -20610,6 +20746,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+1V8")
+		(at 228.6 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1f41cbbe-7b50-4863-8ec1-69fa8daa57aa")
+		(property "Reference" "#PWR0189"
+			(at 228.6 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+1V8"
+			(at 228.6 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 228.6 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V8\""
+			(at 228.6 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1287d47e-001d-4d07-b694-d9aac2895a9f")
+		)
+		(instances
+			(project "echo-r1"
+				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
+					(reference "#PWR0189")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 66.04 261.62 0)
 		(mirror y)
@@ -20619,7 +20821,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1f425f57-29ad-4282-98fc-2a5ef0a6f3e1")
-		(property "Reference" "C55"
+		(property "Reference" "C56"
 			(at 63.5 260.3562 0)
 			(effects
 				(font
@@ -20673,7 +20875,147 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C55")
+					(reference "C56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:NetTie_2")
+		(at 223.52 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "24442204-e6d6-441a-bebd-82aae31ea75d")
+		(property "Reference" "NT11"
+			(at 223.52 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 223.52 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "echoplayer:NetTie_0.15mm_SMD"
+			(at 223.52 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 223.52 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Net tie, 2 pins"
+			(at 223.52 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2d75e1c6-667d-47f3-a154-d537d3f90409")
+		)
+		(pin "2"
+			(uuid "3bca3ba4-e81f-42bb-87e6-02cd990a9305")
+		)
+		(instances
+			(project "echo-r1"
+				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
+					(reference "NT11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 289.56 215.9 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "246966f7-acb5-41f9-bdfc-6f31eb122e0d")
+		(property "Reference" "C11"
+			(at 287.02 214.6362 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100 nF"
+			(at 287.02 217.1762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 289.56 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 289.56 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 289.56 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c59eff25-2b51-4872-b043-3ddfc4ad076c")
+		)
+		(pin "1"
+			(uuid "9bfd93eb-d5cd-44b1-b09f-34bd822d33f9")
+		)
+		(instances
+			(project "echo-r1"
+				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -20689,7 +21031,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "24c68fdb-1ba3-4797-a344-ca5c38f53857")
-		(property "Reference" "C22"
+		(property "Reference" "C23"
 			(at 391.16 19.05 0)
 			(effects
 				(font
@@ -20741,7 +21083,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C22")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -21472,7 +21814,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "359ac002-6ff9-4838-bc36-df5108c9876c")
-		(property "Reference" "C14"
+		(property "Reference" "C15"
 			(at 365.76 29.718 0)
 			(effects
 				(font
@@ -21524,7 +21866,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C14")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -21745,7 +22087,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3e1f2687-c44d-4d82-85da-9a77f64fa23f")
-		(property "Reference" "C30"
+		(property "Reference" "C31"
 			(at 294.64 49.53 0)
 			(effects
 				(font
@@ -21797,7 +22139,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C30")
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -22169,7 +22511,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4509035d-9006-4772-8043-91de38da3aa5")
-		(property "Reference" "C19"
+		(property "Reference" "C20"
 			(at 381 49.53 0)
 			(effects
 				(font
@@ -22221,7 +22563,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C19")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -22901,6 +23243,142 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 228.6 73.66 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4e82bc9c-b1d8-447d-8ba0-ef8df8e08ca4")
+		(property "Reference" "R27"
+			(at 226.06 72.3899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "68 kΩ"
+			(at 226.06 74.9299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 228.6 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 228.6 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 228.6 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c4297b1d-e878-4cfb-a66c-2e24b1ffaf84")
+		)
+		(pin "1"
+			(uuid "97e85eb4-559a-4efb-91aa-094f836282e3")
+		)
+		(instances
+			(project "echo-r1"
+				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
+					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 289.56 218.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f52f626-3d84-4a82-af15-a0bc5c36e9ce")
+		(property "Reference" "#PWR0188"
+			(at 289.56 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 289.56 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 289.56 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 289.56 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 289.56 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "27c56da0-0433-4761-ab11-c13062a79220")
+		)
+		(instances
+			(project "echo-r1"
+				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
+					(reference "#PWR0188")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 353.06 25.4 0)
 		(mirror y)
@@ -22910,7 +23388,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4febf6a4-fa7c-4224-9227-1ad8bba90ab2")
-		(property "Reference" "C41"
+		(property "Reference" "C42"
 			(at 353.06 29.718 0)
 			(effects
 				(font
@@ -22962,7 +23440,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C41")
+					(reference "C42")
 					(unit 1)
 				)
 			)
@@ -23045,7 +23523,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5396f425-b920-478e-8f3b-25145bdfe9eb")
-		(property "Reference" "C47"
+		(property "Reference" "C48"
 			(at 307.34 32.258 0)
 			(effects
 				(font
@@ -23097,7 +23575,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C47")
+					(reference "C48")
 					(unit 1)
 				)
 			)
@@ -23248,7 +23726,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "56fb9b92-1ea4-457a-b6bf-b149c2cc8a37")
-		(property "Reference" "C48"
+		(property "Reference" "C49"
 			(at 358.14 19.05 0)
 			(effects
 				(font
@@ -23300,7 +23778,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C48")
+					(reference "C49")
 					(unit 1)
 				)
 			)
@@ -23386,7 +23864,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5bcc339b-60bc-4501-84d2-d07e50c92d5f")
-		(property "Reference" "C12"
+		(property "Reference" "C13"
 			(at 314.96 60.198 0)
 			(effects
 				(font
@@ -23438,7 +23916,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C12")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -23528,7 +24006,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5e39f83e-f39f-40ef-8c30-5a9ab84d3957")
-		(property "Reference" "C18"
+		(property "Reference" "C19"
 			(at 381 19.05 0)
 			(effects
 				(font
@@ -23580,7 +24058,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C18")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -23924,7 +24402,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "691d26d4-9814-4183-82c8-c7baaa788079")
-		(property "Reference" "C29"
+		(property "Reference" "C30"
 			(at 279.4 49.53 0)
 			(effects
 				(font
@@ -23976,7 +24454,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C29")
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -24058,7 +24536,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6dce5b07-a4a7-405e-91d0-a2e1c6098a27")
-		(property "Reference" "C40"
+		(property "Reference" "C41"
 			(at 299.72 32.258 0)
 			(effects
 				(font
@@ -24110,7 +24588,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C40")
+					(reference "C41")
 					(unit 1)
 				)
 			)
@@ -24351,7 +24829,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "719e4ff2-0264-4312-b45e-6d6c46b9f7ec")
-		(property "Reference" "C17"
+		(property "Reference" "C18"
 			(at 375.92 60.198 0)
 			(effects
 				(font
@@ -24403,7 +24881,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C17")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -24419,7 +24897,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7290eb5f-73bc-4546-bec3-172c4ec8248c")
-		(property "Reference" "C11"
+		(property "Reference" "C12"
 			(at 299.72 60.198 0)
 			(effects
 				(font
@@ -24471,7 +24949,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C11")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -25824,7 +26302,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8cea2ab0-c339-435b-bfb0-a594f1e2345b")
-		(property "Reference" "C16"
+		(property "Reference" "C17"
 			(at 375.92 29.718 0)
 			(effects
 				(font
@@ -25876,7 +26354,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C16")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -27969,7 +28447,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bfc76d70-bb34-4502-9ce0-6007f8338cf7")
-		(property "Reference" "C39"
+		(property "Reference" "C40"
 			(at 292.1 32.258 0)
 			(effects
 				(font
@@ -28021,7 +28499,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C39")
+					(reference "C40")
 					(unit 1)
 				)
 			)
@@ -28172,7 +28650,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c0bd470a-f902-4178-b8d6-5cb89f18c33a")
-		(property "Reference" "C13"
+		(property "Reference" "C14"
 			(at 340.36 29.718 0)
 			(effects
 				(font
@@ -28224,7 +28702,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C13")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -28375,7 +28853,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c6a3fdfb-863e-4615-809e-c4c97becf609")
-		(property "Reference" "C21"
+		(property "Reference" "C22"
 			(at 386.08 60.198 0)
 			(effects
 				(font
@@ -28427,7 +28905,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C21")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -29247,7 +29725,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "da00269c-cf4f-4b1a-8918-9f8f462a2a76")
-		(property "Reference" "C28"
+		(property "Reference" "C29"
 			(at 60.96 44.4562 0)
 			(effects
 				(font
@@ -29301,7 +29779,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C28")
+					(reference "C29")
 					(unit 1)
 				)
 			)
@@ -30218,7 +30696,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e77d51a2-745e-4f94-b1b6-ed8466fcd20a")
-		(property "Reference" "C31"
+		(property "Reference" "C32"
 			(at 309.88 49.53 0)
 			(effects
 				(font
@@ -30270,7 +30748,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C31")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -30719,7 +31197,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f0a9e9b4-9d6b-4032-a09a-fa7fd88c0b66")
-		(property "Reference" "C42"
+		(property "Reference" "C43"
 			(at 401.32 19.05 0)
 			(effects
 				(font
@@ -30771,7 +31249,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C42")
+					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -31468,7 +31946,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fdfc3db2-7f46-4c18-bb31-b40304761290")
-		(property "Reference" "C33"
+		(property "Reference" "C34"
 			(at 391.16 49.53 0)
 			(effects
 				(font
@@ -31520,7 +31998,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "C33")
+					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -31711,6 +32189,16 @@
 		(pin "power_ldo_vbat_3v0" output
 			(at 104.14 33.02 0)
 			(uuid "193e4459-f64c-4e9c-866f-abd5ceb7a78b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "pwr_good" tri_state
+			(at 104.14 45.72 0)
+			(uuid "0b53ecd3-eb2e-476f-82bc-5b0d2f4cf692")
 			(effects
 				(font
 					(size 1.27 1.27)
