@@ -1233,24 +1233,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at -23.368 29.972 0)
+			(property "Reference" "U3"
+				(at 10.922 -32.004 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Value" "TLV320AIC3104"
-				(at 0 2.54 0)
+				(at 18.034 -29.718 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "Package_DFN_QFN:Texas_RHB0032E_VQFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm"
-				(at 0 -27.94 0)
+			(property "Footprint" "Package_DFN_QFN:Texas_RHB0032E_VQFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm_ThermalVias"
+				(at 0 -30.48 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1268,7 +1269,7 @@
 				)
 			)
 			(property "Description" "Low-Power Stereo Audio Codec for Portable Audio and Telephony, VQFN-32"
-				(at 0 2.54 0)
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1650,7 +1651,7 @@
 						)
 					)
 				)
-				(pin output line
+				(pin passive line
 					(at 27.94 20.32 180)
 					(length 2.54)
 					(name "HPLCOM"
@@ -5605,7 +5606,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18d4de39-cdd1-41b9-9767-72d92e433c4a")
-		(property "Reference" "NT6"
+		(property "Reference" "NT5"
 			(at 218.44 40.64 0)
 			(effects
 				(font
@@ -5659,7 +5660,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/dae5d6c8-3920-4253-a171-1dbab60b78bd"
-					(reference "NT6")
+					(reference "NT5")
 					(unit 1)
 				)
 			)
@@ -6016,7 +6017,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a5a55b5-155d-46dc-8d76-baacd17eb81d")
-		(property "Reference" "NT7"
+		(property "Reference" "NT6"
 			(at 218.44 43.18 0)
 			(effects
 				(font
@@ -6070,7 +6071,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/dae5d6c8-3920-4253-a171-1dbab60b78bd"
-					(reference "NT7")
+					(reference "NT6")
 					(unit 1)
 				)
 			)

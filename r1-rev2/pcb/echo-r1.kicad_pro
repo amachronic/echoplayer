@@ -255,7 +255,20 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "lib_symbol_mismatch|1041400|1244600|3b779ea1-bbc4-4f39-ae20-f768da369818|00000000-0000-0000-0000-000000000000|||",
+        "Updated pin functions to avoid ERC errors"
+      ],
+      [
+        "lib_symbol_mismatch|1397000|1371600|12d38c82-f62e-4172-990b-0dd1328cb900|00000000-0000-0000-0000-000000000000|||",
+        "Updated pin functions to fix ERC errors"
+      ],
+      [
+        "lib_symbol_mismatch|3429000|1498600|e3af7ba4-fe92-430a-99e5-2d742126374e|00000000-0000-0000-0000-000000000000|||",
+        "Modified default pin functions to fix ERC errors"
+      ]
+    ],
     "meta": {
       "version": 0
     },
