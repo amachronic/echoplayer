@@ -2150,12 +2150,6 @@
 		(uuid "14e11ebc-c75f-497f-aa7a-7a9ae07e3cbb")
 	)
 	(junction
-		(at 213.36 91.44)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "230e22a9-a5ca-4d64-8157-09e24ae95ae3")
-	)
-	(junction
 		(at 121.92 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2319,7 +2313,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 88.9) (xy 213.36 91.44)
+			(xy 213.36 88.9) (xy 213.36 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2646,6 +2640,16 @@
 			(type default)
 		)
 		(uuid "469f6b71-34cf-405a-82c0-48b1bc002c00")
+	)
+	(wire
+		(pts
+			(xy 210.82 91.44) (xy 215.9 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46b153db-a2b8-4568-a5df-174b712d21ac")
 	)
 	(wire
 		(pts
@@ -3319,16 +3323,6 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 91.44) (xy 215.9 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d4565733-f4d0-4132-b95d-f1fd06971e62")
-	)
-	(wire
-		(pts
 			(xy 226.06 99.06) (xy 226.06 104.14)
 		)
 		(stroke
@@ -3476,16 +3470,6 @@
 			(type default)
 		)
 		(uuid "f2b6001c-7454-43bf-8ae4-db36efbf4fb3")
-	)
-	(wire
-		(pts
-			(xy 213.36 91.44) (xy 213.36 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7f9bcf5-3f8c-4695-85d0-aae1b45cc620")
 	)
 	(wire
 		(pts
@@ -3639,6 +3623,17 @@
 			(justify left)
 		)
 		(uuid "1f3898d8-e33f-4e8b-b8d5-cc93abd3a5d8")
+	)
+	(hierarchical_label "audio_reg_en"
+		(shape input)
+		(at 210.82 91.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "395baf95-c132-4496-a692-ee35b247e8e8")
 	)
 	(hierarchical_label "reg_en"
 		(shape input)
