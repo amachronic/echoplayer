@@ -12767,6 +12767,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 30.48) (xy 63.5 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ab37a36-00a6-42e3-94fb-69621bc30c28")
+	)
+	(wire
+		(pts
 			(xy 152.4 104.14) (xy 154.94 104.14)
 		)
 		(stroke
@@ -13127,7 +13137,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 93.98) (xy 60.96 93.98)
+			(xy 45.72 91.44) (xy 60.96 91.44)
 		)
 		(stroke
 			(width 0)
@@ -16877,7 +16887,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 27.94) (xy 63.5 27.94)
+			(xy 48.26 27.94) (xy 63.5 27.94)
 		)
 		(stroke
 			(width 0)
@@ -17174,16 +17184,6 @@
 			(type default)
 		)
 		(uuid "e7a0229b-1a79-47a8-8da6-f56665b56a69")
-	)
-	(wire
-		(pts
-			(xy 45.72 91.44) (xy 60.96 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e88a82e6-230d-4cc8-9174-37400362fcd3")
 	)
 	(wire
 		(pts
@@ -17846,7 +17846,7 @@
 		(uuid "1793fc6a-36d9-4b03-801f-981ad978c9a7")
 	)
 	(label "chg_enable"
-		(at 50.8 27.94 0)
+		(at 48.26 27.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18526,7 +18526,7 @@
 		(uuid "633f264e-d85e-4eb1-a675-db55b6629e02")
 	)
 	(label "codec_dvdd_en"
-		(at 45.72 93.98 0)
+		(at 45.72 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18926,7 +18926,7 @@
 		(uuid "a5bcbd88-7e50-4399-9441-2a924b0f6f4d")
 	)
 	(label "codec_avdd_en"
-		(at 45.72 91.44 0)
+		(at 48.26 30.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21097,7 +21097,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1cceef5b-dccc-4421-9da7-5050d7a14a40")
-		(property "Reference" "Q6"
+		(property "Reference" "Q5"
 			(at 165.1 257.81 90)
 			(effects
 				(font
@@ -21152,7 +21152,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "Q6")
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -23819,7 +23819,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4e82bc9c-b1d8-447d-8ba0-ef8df8e08ca4")
-		(property "Reference" "R27"
+		(property "Reference" "R26"
 			(at 220.98 72.3899 0)
 			(effects
 				(font
@@ -23873,7 +23873,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "R27")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -32186,7 +32186,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f2c4afe0-67e8-4e9c-b6d4-4965251b7ace")
-		(property "Reference" "R28"
+		(property "Reference" "R27"
 			(at 154.94 267.9699 0)
 			(effects
 				(font
@@ -32240,7 +32240,7 @@
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
-					(reference "R28")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -33061,6 +33061,16 @@
 				(justify right)
 			)
 		)
+		(pin "audio_reg_en" input
+			(at 63.5 30.48 180)
+			(uuid "6c682ce9-3f62-45bb-ac5c-3591989c6441")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "echo-r1"
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0"
@@ -33173,18 +33183,8 @@
 				(justify left)
 			)
 		)
-		(pin "~{avdd_en}" tri_state
-			(at 60.96 91.44 180)
-			(uuid "55c0fb79-bfd6-48ca-b2b9-8e12e2a4b2f6")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "~{dvdd_en}" tri_state
-			(at 60.96 93.98 180)
+			(at 60.96 91.44 180)
 			(uuid "44e5b572-ab95-4b7f-8f54-bab090c04dff")
 			(effects
 				(font
