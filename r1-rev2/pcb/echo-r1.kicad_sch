@@ -23575,7 +23575,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "38x2mm"
+		(property "Value" "17x2mm"
 			(at 172.72 227.3299 0)
 			(effects
 				(font
@@ -23584,7 +23584,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "echoplayer:Slot_38x2mm"
+		(property "Footprint" "echoplayer:Slot_17x2mm"
 			(at 175.26 226.06 0)
 			(effects
 				(font
