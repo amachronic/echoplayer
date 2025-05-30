@@ -27648,7 +27648,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 205.74 22.86 0)
 			(effects
 				(font
@@ -28057,7 +28057,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "echoplayer:microSD_XUNPU_TF-102-15"
 			(at 135.89 248.92 0)
 			(effects
 				(font
@@ -28066,7 +28066,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411220153_XUNPU-TF-102-15_C266609.pdf"
 			(at 165.1 241.3 0)
 			(effects
 				(font
@@ -32341,7 +32341,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 			(at 205.74 83.82 0)
 			(effects
 				(font
