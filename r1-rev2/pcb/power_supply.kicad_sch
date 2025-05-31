@@ -5034,8 +5034,8 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x02"
-			(at 44.958 38.1 0)
+		(property "Value" "BATT"
+			(at 41.148 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
