@@ -521,24 +521,106 @@
         "wire_width": 6
       },
       {
-        "name": "Codec",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "name": "ADC signals",
+        "pcb_color": "rgb(30, 144, 255)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "Audio signals",
+        "pcb_color": "rgb(0, 250, 154)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)"
       },
       {
-        "clearance": 0.1,
-        "diff_pair_gap": 0.2,
-        "diff_pair_width": 0.15,
-        "microvia_diameter": 0.45,
-        "microvia_drill": 0.3,
-        "name": "XSPI",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.1,
-        "via_diameter": 0.45,
-        "via_drill": 0.3
+        "name": "Buttons",
+        "pcb_color": "rgb(0, 255, 255)",
+        "priority": 7,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "HSE oscillator",
+        "pcb_color": "rgb(255, 0, 255)",
+        "priority": 6,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "I2C bus",
+        "pcb_color": "rgb(0, 0, 255)",
+        "priority": 11,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "I2S bus",
+        "pcb_color": "rgb(176, 48, 96)",
+        "priority": 12,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "LCD 8080 bus",
+        "pcb_color": "rgb(75, 0, 130)",
+        "priority": 15,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "LCD backlight PWM",
+        "pcb_color": "rgb(255, 255, 0)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "LCD backlight power",
+        "pcb_color": "rgb(240, 230, 140)",
+        "priority": 16,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "LSE oscillator",
+        "pcb_color": "rgb(238, 130, 238)",
+        "priority": 5,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "Power",
+        "pcb_color": "rgb(192, 192, 192)",
+        "priority": 8,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "SDMMC1 bus",
+        "pcb_color": "rgb(255, 69, 0)",
+        "priority": 10,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "SDMMC2 bus",
+        "pcb_color": "rgb(255, 165, 0)",
+        "priority": 9,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "SWD port",
+        "pcb_color": "rgb(47, 79, 79)",
+        "priority": 4,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "UART port",
+        "pcb_color": "rgb(139, 69, 19)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "USB HS data",
+        "pcb_color": "rgb(127, 255, 0)",
+        "priority": 13,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "XSPI bus",
+        "pcb_color": "rgb(0, 128, 0)",
+        "priority": 14,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
       }
     ],
     "meta": {
@@ -548,12 +630,108 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "XSPI",
-        "pattern": "/xspi.*"
+        "netclass": "LCD backlight power",
+        "pattern": "/lcd_led_[ak]"
       },
       {
-        "netclass": "Codec",
-        "pattern": "/codec.*"
+        "netclass": "LCD 8080 bus",
+        "pattern": "/lcd[.].*"
+      },
+      {
+        "netclass": "XSPI bus",
+        "pattern": "/xspi[.].*"
+      },
+      {
+        "netclass": "USB HS data",
+        "pattern": "/usb_hs_d[+-]"
+      },
+      {
+        "netclass": "USB HS data",
+        "pattern": "/usb_d[+-]"
+      },
+      {
+        "netclass": "I2S bus",
+        "pattern": "/codec[.].*"
+      },
+      {
+        "netclass": "I2C bus",
+        "pattern": "/codec_ctl[.].*"
+      },
+      {
+        "netclass": "SDMMC1 bus",
+        "pattern": "/sdmmc_ext[.].*"
+      },
+      {
+        "netclass": "SDMMC2 bus",
+        "pattern": "/sdmmc_int[.].*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "GND|VBUS|VBAT|\\+\\dV\\d.*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/sdmmc_.*_pwr"
+      },
+      {
+        "netclass": "Buttons",
+        "pattern": "/button_.*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/v..smps"
+      },
+      {
+        "netclass": "LSE oscillator",
+        "pattern": "/osc32k_.*"
+      },
+      {
+        "netclass": "HSE oscillator",
+        "pattern": "/osc24m_.*"
+      },
+      {
+        "netclass": "SWD port",
+        "pattern": "/swd[.].*"
+      },
+      {
+        "netclass": "UART port",
+        "pattern": "/uart_.*"
+      },
+      {
+        "netclass": "ADC signals",
+        "pattern": "/adc_.*"
+      },
+      {
+        "netclass": "LCD backlight PWM",
+        "pattern": "/backlight_pwm"
+      },
+      {
+        "netclass": "ADC signals",
+        "pattern": "/hp_micbutton[+-]"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/power/power_vsys"
+      },
+      {
+        "netclass": "Audio signals",
+        "pattern": "/audio/hp_.*"
+      },
+      {
+        "netclass": "Audio signals",
+        "pattern": "/audio/lo_.*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/audio/[ad]vdd"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/audio/micbias"
+      },
+      {
+        "netclass": "Audio signals",
+        "pattern": "/audio/hp_mic"
       }
     ]
   },
