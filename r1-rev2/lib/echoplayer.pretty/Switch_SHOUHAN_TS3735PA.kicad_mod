@@ -6,7 +6,7 @@
 	(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 	(tags "smd dome swich spst")
 	(property "Reference" "REF**"
-		(at 0 -3.5 0)
+		(at 0 -3.1 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "fc240bf8-c8a5-4773-be7d-7df86637e508")
@@ -18,7 +18,7 @@
 		)
 	)
 	(property "Value" "Switch_SHOUHAN_TS3735PA"
-		(at 0 3.5 0)
+		(at 0 2.7 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "0c84373d-3029-4288-b825-e0861540da03")
@@ -101,7 +101,7 @@
 		(uuid "5ed91d30-b933-440f-a0d4-d2b5088d833c")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 5 0)
+		(at 0 -2.7 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "53795ad4-db39-4c7a-8549-9c70376fbe27")

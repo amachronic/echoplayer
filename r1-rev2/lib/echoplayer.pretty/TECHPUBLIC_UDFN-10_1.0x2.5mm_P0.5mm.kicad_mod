@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "TECHPUBLIC_UDFN-10_1.0x2.5mm_P0.5mm"
-		(at 0 2.54 0)
+		(at 0 1.8 0)
 		(layer "F.Fab")
 		(uuid "b2133bb9-3fc2-4745-b505-780d7dbc02d4")
 		(effects

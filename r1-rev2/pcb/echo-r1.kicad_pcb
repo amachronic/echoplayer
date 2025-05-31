@@ -368,7 +368,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW8"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "f0581e0f-a048-4141-9ad3-024e5eb7bd3c")
@@ -380,7 +380,7 @@
 			)
 		)
 		(property "Value" "DPAD→"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "b8eb5c89-36e5-461f-b0ea-b84f24321684")
@@ -430,7 +430,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "b0f68106-0eb5-4822-be91-8a343a6a54b5")
+			(uuid "bde6df4a-6669-45d7-acd7-50a8a4eac100")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -441,7 +441,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "5bf03d03-641e-4526-a10e-d37903483578")
+			(uuid "e98d0987-fcae-4cc0-b3b4-229a1bb6eb3c")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -452,7 +452,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "156da896-f7d6-467a-bdb1-04b7992f6a44")
+			(uuid "f5b27489-16c7-42aa-b677-495d0b8332fb")
 		)
 		(fp_circle
 			(center 0 0)
@@ -463,10 +463,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "c74bd17f-26d4-46fa-8bde-f83839909ad2")
+			(uuid "22053649-7c25-406a-8942-3864b7d29e4f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "2426f474-1a7a-4747-91ba-593794b322ca")
@@ -495,7 +495,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "7cca79fc-c139-4371-895d-f629603c517a")
+			(uuid "9d1951f9-a523-41b0-85ed-4e83b4b89350")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -515,7 +515,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "e9b7b223-946a-4a9c-bd8e-d9daff22d94b")
+			(uuid "77946974-25e1-4781-8cce-be5db7b56b72")
 		)
 		(embedded_fonts no)
 	)
@@ -527,7 +527,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW1"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "735ae93d-72c7-49c8-b651-a4d3fe23a31b")
@@ -539,7 +539,7 @@
 			)
 		)
 		(property "Value" "A"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "d7cb3ab2-b6b9-404a-829b-666d8760fb65")
@@ -589,7 +589,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "59a3a318-fb1a-43da-834b-4dddff15f2ff")
+			(uuid "d6ab58b4-7c22-4a9e-9fbb-aeaabe271a7a")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -600,7 +600,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "5e5676be-70e5-4618-a553-40e8b66d1a53")
+			(uuid "dbd5b394-a32a-401c-a226-610b65827771")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -611,7 +611,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "8a42238d-da3e-4002-89cc-9adfece8d383")
+			(uuid "c2c8a1c0-a0cb-4ff8-815b-89dfcf0ac656")
 		)
 		(fp_circle
 			(center 0 0)
@@ -622,10 +622,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "ad28e224-14c9-4235-a55d-3c11197c9a6c")
+			(uuid "35bd8936-46c0-4e84-8010-94b6854988b4")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "1cd61242-ad97-4eb3-b424-34672a5a6d78")
@@ -654,7 +654,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "26085c59-89b1-48dd-90b2-5466fd9526a7")
+			(uuid "0805bacc-5bea-42a8-9b92-8177100c0ba9")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -674,7 +674,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "9103b93e-c4c4-422e-967e-defcd33fe116")
+			(uuid "01c5a787-6557-476e-b5a2-f4e202153a05")
 		)
 		(embedded_fonts no)
 	)
@@ -5341,7 +5341,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW5"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "567f3aa2-d469-4051-9945-db6b78a61cea")
@@ -5353,7 +5353,7 @@
 			)
 		)
 		(property "Value" "DPAD↑"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "7ba86a1c-3083-4605-bab8-e57d05c03a4b")
@@ -5403,7 +5403,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "2715371a-2d0b-4605-b193-f27ab902c4d7")
+			(uuid "00218254-ebb4-4474-8d30-ac678bb37cd7")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -5414,7 +5414,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "43226c89-777d-4c47-9568-7409334cdeac")
+			(uuid "46cf7524-fc33-4984-9dae-d3d474f57d8a")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -5425,7 +5425,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "872606ab-07c2-4bc2-8650-74fdc177f4f0")
+			(uuid "5f88d3c5-6cc2-4a20-a0e8-5e75dc426fef")
 		)
 		(fp_circle
 			(center 0 0)
@@ -5436,10 +5436,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "ce90dc1e-8079-46fb-8877-b82e9162d05b")
+			(uuid "b07a0be9-cd4b-4b18-a6a8-2d1df284babd")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "5444d696-c3a6-4bf3-a872-3dbc052ac0bd")
@@ -5468,7 +5468,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "455a6be1-5793-4b71-9bc0-5b7ad2e7e6af")
+			(uuid "41d7fe59-bcc3-4de0-9b84-82e7e1c02b1c")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -5488,7 +5488,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "c137b049-d9e3-4685-83b5-4e478f2850af")
+			(uuid "91a4a1f6-3943-4cf6-8758-9d0ae0221b33")
 		)
 		(embedded_fonts no)
 	)
@@ -8730,7 +8730,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW2"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "d3d60d7b-8ee7-40c8-ae00-3a4fcda316ae")
@@ -8742,7 +8742,7 @@
 			)
 		)
 		(property "Value" "B"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "3c0b11ce-9c24-4433-bd06-ea8463fc8216")
@@ -8792,7 +8792,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "b01bb531-1b79-4d24-9f38-8c8519a53434")
+			(uuid "9976dd54-2458-4e18-a5a7-7815593c0c63")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -8803,7 +8803,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "bf74b305-b652-43a6-9b7b-97254d8c16d3")
+			(uuid "c7b56988-079b-4815-9631-c75e44c7e01f")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -8814,7 +8814,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "b20e25b0-e83f-45c0-a4ad-b89eef4b731d")
+			(uuid "4390d469-5819-4356-8dae-10dcae82e581")
 		)
 		(fp_circle
 			(center 0 0)
@@ -8825,10 +8825,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "59b0a1db-ec76-42e5-b4fc-f3bab9ede526")
+			(uuid "738749f8-5bc9-4d7f-94ba-c175de12484d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "c98f6cf2-432a-4e46-a417-4c738163decd")
@@ -8857,7 +8857,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "6a9b7d08-f926-4c2e-aa07-8541842a6b08")
+			(uuid "9351d3e1-1d08-4cff-a0c0-af1b920f779f")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -8877,7 +8877,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "984b83d1-3c3a-48a2-aa85-05afed2e9826")
+			(uuid "54bcc432-caf1-45a5-a2a4-5afa9f05cc58")
 		)
 		(embedded_fonts no)
 	)
@@ -8889,7 +8889,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW10"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "3bab08ec-355f-4a62-8d3f-105f899f67dd")
@@ -8901,7 +8901,7 @@
 			)
 		)
 		(property "Value" "SELECT"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "964a108c-7efd-4431-b714-74d4b77502e3")
@@ -8951,7 +8951,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "6f5da68e-dc2c-4962-998d-9c0113c6eb3a")
+			(uuid "bad90d85-7fc7-495b-982b-1a896ed88cc1")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -8962,7 +8962,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "593a82a7-4f8b-4b76-a48d-0b39fedf35f0")
+			(uuid "28e8dc51-4acc-436a-a82d-1e28fe8145bf")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -8973,7 +8973,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "e1ab4dd1-67b3-4e7d-bf06-909e0f125e94")
+			(uuid "f7deb554-6531-49b4-8126-a1f7d813c2ea")
 		)
 		(fp_circle
 			(center 0 0)
@@ -8984,10 +8984,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "587627e4-a592-4e0f-b97b-789835b2c497")
+			(uuid "0b86e0ed-1f47-4c79-968a-90a34406f507")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "d6d786e8-43ff-4c31-9814-3f012f7b5d99")
@@ -9016,7 +9016,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "9f4c52f1-f123-4841-bdae-c6ff8d438050")
+			(uuid "953c416b-e224-4212-bf17-c91c1bd412a7")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -9036,7 +9036,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "17c4cc2c-a48c-420c-9246-34269d34022d")
+			(uuid "e308dcea-8ab3-47a9-9dca-8445dc86fdfe")
 		)
 		(embedded_fonts no)
 	)
@@ -10151,7 +10151,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW6"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "62ca669b-6e66-4a39-aee4-c0ede249cd62")
@@ -10163,7 +10163,7 @@
 			)
 		)
 		(property "Value" "DPAD↓"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "39772add-dc01-4910-b06d-f8299f7d7cbb")
@@ -10213,7 +10213,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "0295aaa1-6cba-476f-91ad-8612198826f1")
+			(uuid "4a94a6ee-80bc-4312-bf70-d7b6efcab83d")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -10224,7 +10224,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "d58d2acf-2fd6-4c1a-85f2-0c79b5df3262")
+			(uuid "94935c3a-0ed9-478b-9725-00fbd8f42229")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -10235,7 +10235,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "9f37fd6a-cab1-4b5f-8b0d-f9b2d1fa4788")
+			(uuid "d189fd2c-3475-45ab-b98d-411acedcb372")
 		)
 		(fp_circle
 			(center 0 0)
@@ -10246,10 +10246,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "65744a87-1c13-4ea3-b14c-eb4f253b8681")
+			(uuid "4dc74e74-fc0c-49c1-8f6f-9a35496d4a0a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "76ad3bb6-d435-47e3-a020-2a344d64a8e8")
@@ -10278,7 +10278,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "03eb33de-e8c2-468b-bf94-56eb173a96df")
+			(uuid "40842ae7-d8c3-423e-b11b-4e8976081835")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -10298,7 +10298,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "53f7f4d5-4cd6-470f-8ca0-6c111041712d")
+			(uuid "d80357e0-aa7e-473c-b7d8-c989d7f606fe")
 		)
 		(embedded_fonts no)
 	)
@@ -13059,7 +13059,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW7"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "1e3dc8f2-b536-457a-a8ad-71ceb4c2442b")
@@ -13071,7 +13071,7 @@
 			)
 		)
 		(property "Value" "DPAD←"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "6ff6d93e-d756-461d-ae26-5a6a3add20c3")
@@ -13121,7 +13121,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "b9579ab4-7a3b-4b13-8fb9-cdb29cc2bfec")
+			(uuid "ffce1555-f448-429e-9fb6-e082915610b5")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -13132,7 +13132,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "0ee3f509-25d2-4547-bc61-d0d132023e2f")
+			(uuid "6d9aa075-5fb0-42e3-8aeb-f856bd6f02f2")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -13143,7 +13143,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "b320ce18-34e8-481e-95e0-8a9c64ed1a4b")
+			(uuid "8a6271c7-bfe8-474c-9c04-36f887815cfc")
 		)
 		(fp_circle
 			(center 0 0)
@@ -13154,10 +13154,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "7c434bf4-3399-4b35-a1f1-20e037bbd7c1")
+			(uuid "ef4b1784-5977-426f-bd9e-4b0e12ed32fd")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "60d282a9-69ff-4e9e-9d85-e8e3c574ad38")
@@ -13186,7 +13186,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "6ce2d50e-2a8a-455d-863a-12336e6e3638")
+			(uuid "4a37116e-2954-47d8-a79b-3e3b72b72335")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -13206,7 +13206,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "49ff7cf2-91c0-496d-b2d9-0d019e88d3cf")
+			(uuid "0da084e5-dec9-4cbd-9ccc-8ad32cf69b0d")
 		)
 		(embedded_fonts no)
 	)
@@ -13949,7 +13949,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW3"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "7bf4032f-9c10-4411-b4cc-16bcf3b1eabc")
@@ -13961,7 +13961,7 @@
 			)
 		)
 		(property "Value" "X"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "6be52d7d-80bb-4d6f-baad-1009cce4ffb1")
@@ -14011,7 +14011,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "4ad542db-602b-482b-a74f-b9c94cc04fe5")
+			(uuid "68067c90-2106-44f1-adb5-6a0d7c893adc")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -14022,7 +14022,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "a545e7a7-3b3b-40d7-830c-c826778ccc7e")
+			(uuid "fb6e4c32-038d-4999-9862-53cec22b39fd")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -14033,7 +14033,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "786d7f02-88e7-410d-a984-f9c67aebaae8")
+			(uuid "480704f8-3ad6-44f5-9169-4ce4ad3750b0")
 		)
 		(fp_circle
 			(center 0 0)
@@ -14044,10 +14044,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "83df8f66-c73a-4aa1-9f7d-598691a76068")
+			(uuid "b951e831-67fe-47be-9066-be6076d1e680")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "2f26f594-aded-4c62-809e-8243cb4d8d32")
@@ -14076,7 +14076,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "36d05f36-064a-4e61-82d3-9ee0e61c9b0c")
+			(uuid "2af711d9-e101-44df-b7ed-1e95706c1c51")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -14096,7 +14096,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "2c8a50aa-9068-4054-bfff-92a0244b1dac")
+			(uuid "37d0b69f-dc09-40ec-af43-7bfd81306299")
 		)
 		(embedded_fonts no)
 	)
@@ -14912,7 +14912,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW9"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "8613244e-7f0c-4e7f-b583-2244f19fac39")
@@ -14924,7 +14924,7 @@
 			)
 		)
 		(property "Value" "START"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "a55d0538-952b-47b2-83f4-a28ea8e09384")
@@ -14974,7 +14974,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "66021100-75f3-4114-be4f-9a6d84eaebe2")
+			(uuid "96bccca7-6863-4e0a-bd71-d5f0d5611e21")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -14985,7 +14985,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "fdfc57b6-f867-441e-a552-b6808c241372")
+			(uuid "c90cc297-0c73-4842-b87c-b9f9a350d0f7")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -14996,7 +14996,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "37b2f94e-152d-4f63-881b-108f34c50141")
+			(uuid "5fcc977d-22af-4019-8931-be929a1cc442")
 		)
 		(fp_circle
 			(center 0 0)
@@ -15007,10 +15007,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "94a661cc-9b13-4720-b6bd-91b6773929ae")
+			(uuid "9c0c9062-5408-4c66-ae24-42ca85ac8ae6")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "3b16074c-7d57-4e60-99c4-9a53417d2c9b")
@@ -15039,7 +15039,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "535749d6-f797-4fb4-ae84-3d3c16129bdb")
+			(uuid "605e804e-037a-4734-8d8a-5121bb0f14d4")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -15059,7 +15059,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "83ca08b2-c7dc-4382-8339-cc0c2dcbd037")
+			(uuid "b2fe8f41-c762-4e81-b4ce-1271cc7bf748")
 		)
 		(embedded_fonts no)
 	)
@@ -16747,7 +16747,7 @@
 		(descr "3.7mm x 0.35mm SPST dome switch, SMD")
 		(tags "smd dome swich spst")
 		(property "Reference" "SW4"
-			(at 0 -3.5 0)
+			(at 0 -3.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "9ecfb33e-2764-48c7-abbf-c6fbb09d7f68")
@@ -16759,7 +16759,7 @@
 			)
 		)
 		(property "Value" "Y"
-			(at 0 3.5 0)
+			(at 0 2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "339e53ad-8cf9-464f-8464-7eb7cc394471")
@@ -16809,7 +16809,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "570087b8-bb46-4a90-954d-54dafadbee62")
+			(uuid "848f1447-6b6a-4e74-a377-fcfb79480d08")
 		)
 		(fp_rect
 			(start -2.1 -2.5)
@@ -16820,7 +16820,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "0a4538df-0408-4786-8abc-c8be0dcbb447")
+			(uuid "d8059237-50ff-4b49-9755-f757c4654076")
 		)
 		(fp_rect
 			(start -1.85 -1.85)
@@ -16831,7 +16831,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "1aa4f7ad-a9fb-48d5-8692-c3c570b307d8")
+			(uuid "01bab6ad-c743-4158-8a49-ab7fc8c6034d")
 		)
 		(fp_circle
 			(center 0 0)
@@ -16842,10 +16842,10 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "71b50bbd-6fde-4112-98a1-489b3c30f1f1")
+			(uuid "b5f3b1c6-9de4-4173-a99c-ba75c6a0bfdb")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5 0)
+			(at 0 -2.7 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "85d384ce-2c72-4805-a31f-0fb583423d9c")
@@ -16874,7 +16874,7 @@
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "7283fc08-2799-45b9-a55b-a9e02292b1d5")
+			(uuid "bd27700f-5186-47af-ad38-518106a6c11a")
 		)
 		(pad "2" smd rect
 			(at -1.35 1.525)
@@ -16894,7 +16894,7 @@
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
-			(uuid "9c6a8fca-af31-4c1d-8f6f-1c3f0878a269")
+			(uuid "bb5522bb-9c9f-4299-a2ad-71ad0449b429")
 		)
 		(embedded_fonts no)
 	)
@@ -26483,7 +26483,7 @@
 			)
 		)
 		(property "Value" "HOLD"
-			(at 0 -3.5 90)
+			(at 0 -2.2 90)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "3a509791-f4db-45c9-a069-30e98b8cfde1")
@@ -26535,7 +26535,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "00e071b5-e9c7-413e-a392-518e3856c4e1")
+			(uuid "89644db1-cbc9-4673-b13c-2a0b1fbb939f")
 		)
 		(fp_line
 			(start -3.6 0.5)
@@ -26545,7 +26545,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "74527577-f610-41ef-91c4-bad96c96fc27")
+			(uuid "ad7b1524-56f7-4e6d-b6a0-fba100450929")
 		)
 		(fp_line
 			(start 3.6 0.5)
@@ -26555,7 +26555,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "39894a79-47ef-4624-8fd3-1dc2e2867e13")
+			(uuid "3f9408bf-621d-4ff1-bc8a-2ba96173e50c")
 		)
 		(fp_line
 			(start 1.6 -1.5)
@@ -26565,7 +26565,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "0f852351-6def-4c8a-8ec3-4cc8e314bd82")
+			(uuid "430a016d-3c8a-486b-8e25-3bc25a5aafdb")
 		)
 		(fp_rect
 			(start -4.3 3)
@@ -26576,7 +26576,7 @@
 			)
 			(fill no)
 			(layer "B.CrtYd")
-			(uuid "16ca21ea-6d43-4e42-b208-c83b0cc8e2f1")
+			(uuid "8d334f0f-2443-4f31-b79d-5cdcb52bcc42")
 		)
 		(fp_line
 			(start -1.45 2.85)
@@ -26586,7 +26586,7 @@
 				(type dot)
 			)
 			(layer "B.Fab")
-			(uuid "82b80de9-8ad4-4b67-9033-aa90b7c5e6a5")
+			(uuid "cd00a056-2235-4c62-8803-1439fc825854")
 		)
 		(fp_line
 			(start -1.45 2.85)
@@ -26596,7 +26596,7 @@
 				(type dot)
 			)
 			(layer "B.Fab")
-			(uuid "6724301d-2310-483f-9eda-03cc564a2b41")
+			(uuid "dc14bef5-cab1-4528-8619-0eb849d12830")
 		)
 		(fp_line
 			(start -0.15 2.85)
@@ -26606,7 +26606,7 @@
 				(type dot)
 			)
 			(layer "B.Fab")
-			(uuid "03df982c-f058-41e0-9ef2-a8d64dde67ce")
+			(uuid "4a276242-2405-4f77-8504-4bef6710a3bf")
 		)
 		(fp_line
 			(start 0.15 2.85)
@@ -26616,7 +26616,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "808a8a58-9fc3-48aa-9484-2955fdcd102e")
+			(uuid "af8c44d6-1062-41f8-b002-03652f725ba3")
 		)
 		(fp_line
 			(start 0.15 2.85)
@@ -26626,7 +26626,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "5b6c8dbe-c346-4051-801b-c0495a8c721e")
+			(uuid "fcef9e8f-239a-44ad-b34e-898ed7d83b6b")
 		)
 		(fp_line
 			(start 1.45 2.85)
@@ -26636,7 +26636,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "269be37a-1cd4-4d11-93a6-9cfafdcf837a")
+			(uuid "965dba7a-4480-401b-8e6e-40106bc1e6cb")
 		)
 		(fp_line
 			(start -0.6 2.1)
@@ -26646,7 +26646,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "9ce5511f-d93d-4550-9134-fa336cd5f08e")
+			(uuid "6b56168e-77c0-4cf9-bb8d-ac2838ac4131")
 		)
 		(fp_rect
 			(start -3.45 1.4)
@@ -26657,7 +26657,7 @@
 			)
 			(fill no)
 			(layer "B.Fab")
-			(uuid "7b014006-d5e4-471e-b039-8d06d177db12")
+			(uuid "801a482d-090a-4bb5-a061-a295163d93ee")
 		)
 		(fp_poly
 			(pts
@@ -26669,10 +26669,10 @@
 			)
 			(fill yes)
 			(layer "B.Fab")
-			(uuid "e16b3e53-7093-4bd2-bef9-d6abfd3132f8")
+			(uuid "6e1d3638-a5b0-41a7-b454-9257c26182df")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "a9229c2f-8f38-48d7-9292-3d8ca5e8fcbe")
@@ -26689,14 +26689,14 @@
 			(size 0.85 0.85)
 			(drill 0.85)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "150f87ad-4062-4483-8771-271395883f41")
+			(uuid "cf07beba-f4e8-4f28-ae4c-66fc4e6bb476")
 		)
 		(pad "" np_thru_hole circle
 			(at 1.5 0 270)
 			(size 0.85 0.85)
 			(drill 0.85)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "5e489477-f5e5-44bc-b6a1-54cb66abc937")
+			(uuid "481df09a-66c2-4e50-b115-ba8070e9e3e4")
 		)
 		(pad "1" smd rect
 			(at -2.25 -1.95 270)
@@ -26732,7 +26732,7 @@
 			(at -3.675 -1.1 270)
 			(size 1.05 0.7)
 			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 128 "unconnected-(SW14-PadMP)_3")
+			(net 126 "unconnected-(SW14-PadMP)_1")
 			(pinfunction "MP")
 			(pintype "passive+no_connect")
 			(thermal_bridge_angle 45)
@@ -26742,31 +26742,31 @@
 			(at -3.675 1.1 270)
 			(size 1.05 0.7)
 			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 126 "unconnected-(SW14-PadMP)_1")
+			(net 125 "unconnected-(SW14-PadMP)")
 			(pinfunction "MP")
 			(pintype "passive+no_connect")
 			(thermal_bridge_angle 45)
-			(uuid "64bac8a8-c5ad-40dc-b9af-f57709e832cd")
+			(uuid "b1c4a810-86ac-43d2-81f8-a3af910d2268")
 		)
 		(pad "MP" smd rect
 			(at 3.675 -1.1 270)
+			(size 1.05 0.7)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(net 128 "unconnected-(SW14-PadMP)_3")
+			(pinfunction "MP")
+			(pintype "passive+no_connect")
+			(thermal_bridge_angle 45)
+			(uuid "b1c4a810-86ac-43d2-81f8-a3af910d2268")
+		)
+		(pad "MP" smd rect
+			(at 3.675 1.1 270)
 			(size 1.05 0.7)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net 127 "unconnected-(SW14-PadMP)_2")
 			(pinfunction "MP")
 			(pintype "passive+no_connect")
 			(thermal_bridge_angle 45)
-			(uuid "95d4117a-ef75-498e-b707-4222f8367bab")
-		)
-		(pad "MP" smd rect
-			(at 3.675 1.1 270)
-			(size 1.05 0.7)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 125 "unconnected-(SW14-PadMP)")
-			(pinfunction "MP")
-			(pintype "passive+no_connect")
-			(thermal_bridge_angle 45)
-			(uuid "1cb1661c-1178-4ace-b260-0a3da0a2fd0f")
+			(uuid "b1c4a810-86ac-43d2-81f8-a3af910d2268")
 		)
 		(embedded_fonts no)
 	)
@@ -29653,7 +29653,7 @@
 			)
 		)
 		(property "Value" "TYPE-C-31-M-12"
-			(at 0 0 0)
+			(at 0 -7.2 0)
 			(layer "B.Fab")
 			(uuid "41152dad-74bd-4ccc-87b7-e728b9a87e5d")
 			(effects
@@ -29705,7 +29705,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "c1226bea-edd1-4ed2-9768-c8c6b6fdc17d")
+			(uuid "52fb1371-5125-447d-99c0-939ba2b682d7")
 		)
 		(fp_line
 			(start -4.325 -0.8)
@@ -29715,7 +29715,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "029b03f3-9485-4cec-a9ff-6220eef83726")
+			(uuid "d12096aa-fa57-4858-ae99-b4d6d83b6eda")
 		)
 		(fp_line
 			(start 5 -5.79)
@@ -29725,7 +29725,7 @@
 				(type default)
 			)
 			(layer "Dwgs.User")
-			(uuid "b9391015-7344-41ab-bb35-34169dd74fdc")
+			(uuid "f0fe8294-658c-4f61-b0ce-93e1a6a88e14")
 		)
 		(fp_line
 			(start 0 -4.8)
@@ -29735,7 +29735,7 @@
 				(type default)
 			)
 			(layer "Dwgs.User")
-			(uuid "ea81452c-cd96-4fb9-b95c-a5d1644dc0e4")
+			(uuid "d6549db5-fc5c-4685-a8cb-d62dd3d6263a")
 		)
 		(fp_poly
 			(pts
@@ -29747,7 +29747,7 @@
 			)
 			(fill yes)
 			(layer "Dwgs.User")
-			(uuid "ef6d6416-e108-48c8-a27a-b685eb2ff8cb")
+			(uuid "8328b41a-b355-49f2-b088-029782f8d1fe")
 		)
 		(fp_rect
 			(start -4.9 1.7)
@@ -29758,7 +29758,7 @@
 			)
 			(fill no)
 			(layer "B.CrtYd")
-			(uuid "df0aa790-748d-4ca1-82ba-b7e21e9b089d")
+			(uuid "b45c11a8-0e91-466c-872d-b107eede7a4a")
 		)
 		(fp_line
 			(start 4.47 1.07)
@@ -29768,7 +29768,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "5219f4f9-46a0-43eb-bb28-85c01c426a9b")
+			(uuid "941a8ee2-d7b7-4a5c-8336-50b46b7157a9")
 		)
 		(fp_line
 			(start 4.47 1.07)
@@ -29778,7 +29778,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "64e0a56c-8e38-4086-a022-6d18442b8837")
+			(uuid "66e6780b-ee78-457f-b523-861ee7d1834d")
 		)
 		(fp_line
 			(start 4.47 -6.28)
@@ -29788,7 +29788,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "1df4b7b0-bf1d-43cc-bab0-ab94589832b1")
+			(uuid "efd7096e-d6c2-4ced-b391-11f94ab523e5")
 		)
 		(fp_line
 			(start -4.47 1.07)
@@ -29798,7 +29798,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "34e9335d-1d92-40dc-b506-2eab0d82e70c")
+			(uuid "47d82d8d-b355-416f-b08c-4eb58ee75548")
 		)
 		(fp_text user "PCB EDGE"
 			(at 0 -4.8 0)
@@ -29814,7 +29814,7 @@
 			)
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 -1.6 0)
 			(layer "B.Fab")
 			(uuid "35ed6a98-c8bf-42e8-87d2-4717fa9bdd0a")
 			(effects
@@ -29830,14 +29830,14 @@
 			(size 0.6 0.6)
 			(drill 0.6)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "8674509d-11a2-4c66-a210-0b921baac805")
+			(uuid "ac1d667e-97cd-4ede-b199-68edda7358f8")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.89 0 180)
 			(size 0.6 0.6)
 			(drill 0.6)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "95e006ba-6060-44b7-9ca5-04f98193ca6a")
+			(uuid "182a7c4d-e15b-4804-ab2d-a3e7745b2367")
 		)
 		(pad "A1" smd rect
 			(at -3.2 1.07 180)
@@ -30003,7 +30003,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "25eddaac-a94f-4b86-89e3-43ea1d0e0d11")
+			(uuid "1a5da79c-d6ed-461b-aafb-7e0224a179aa")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.325 -3.68 180)
@@ -30014,7 +30014,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "afb9da48-6706-4001-a9cb-b9f949e89377")
+			(uuid "1a5da79c-d6ed-461b-aafb-7e0224a179aa")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.325 0.5 180)
@@ -30025,7 +30025,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "17e37a31-7a17-429b-a4ac-7086ecde7154")
+			(uuid "1a5da79c-d6ed-461b-aafb-7e0224a179aa")
 		)
 		(embedded_fonts no)
 		(model "${KICAD6_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_HRO_TYPE-C-31-M-12.wrl"
@@ -31706,7 +31706,7 @@
 			)
 		)
 		(property "Value" "Conn_SWDUART"
-			(at 0 -17.57 90)
+			(at -2 -8 0)
 			(layer "B.Fab")
 			(uuid "3103f551-deb4-4c4c-b866-5d439f1af7a6")
 			(effects
@@ -34417,8 +34417,8 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Conn_01x02"
-			(at 0 -4.87 0)
+		(property "Value" "BATT"
+			(at 2 -1 90)
 			(layer "B.Fab")
 			(uuid "0685f930-f2cc-4f97-bc35-9a883320e5d2")
 			(effects
