@@ -6,8 +6,10 @@ and designed with free software. It's primarily designed to run
 [Rockbox](https://www.rockbox.org), a free music player firmware
 with support for many codecs, and a wide array of features.
 
-KiCAD 9.0 was used for the electrical design and PCB layout.
-The (unfinished) 3D-printable case is designed using FreeCAD 1.0.
+The PCB is designed with [KiCAD 9.0](https://www.kicad.org/),
+and there is an unfinished 3D-printable case is designed with
+[FreeCAD 1.0](https://www.freecad.org/).
+
 All designs are available under the CERN-OHL-S v2 license.
 
 The current version of the Echo player is called the Echo R1.
@@ -60,19 +62,19 @@ when it starts to wear out.
 
 ### Status
 
-The Rev1 prototype PCB is complete but has some problems (see the
-list of known issues below). The 3D-printed case for the Rev1 is
-unfinished.
+There are two versions of the R1 in the repo, the Rev1 and Rev2.
 
-Development is currently focused on development of the Rev2 PCB
-and fixing mechanical design issues.
+Rev1 is complete from an electrical standpoint but has a poorly
+thought out mechanical design. A very early Rockbox port exists
+but it is far from usable.
 
-### Known issues
+Rev2 is unfinished and focused mostly on solving the mechanical
+issues with Rev1 properly. It is a near total redesign from an
+electrical perspective, and uses a STM32H7R3 series CPU which
+was selected mainly to simplify routing.
 
-- ~~The backlight cannot be disabled, power is supplied to the LEDs
-  even when the boost converter is disabled.~~
-- ~~The current limit on the backlight LED driver is set too low
-  (20 mA paralleled to 4 LEDs, should be 20 mA per LED).~~
+### Known issues (R1-Rev1 only)
+
 - Reference designators in the schematics don't make much sense,
   there are gaps in the numbering and samed-valued components are
   not in contiguous ranges.
