@@ -1,0 +1,97 @@
+(footprint "NetTie_0.15mm_SMD"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Small inline net tie for 0.15mm track width")
+	(property "Reference" "REF**"
+		(at 0 -1.075 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f630ca3d-d083-45d1-826b-80559468d0c7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "NetTie_0.15mm_SMD"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3c5a21cb-0aea-47f8-a141-c189f73832ca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a2a00ad8-1e57-4091-b843-48c837fe6df3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a198f984-7263-45cb-8411-83e4c096bacc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b080635e-f906-4ecb-b180-f4676d4ca5bd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd exclude_from_bom allow_missing_courtyard)
+	(net_tie_pad_groups "1,2")
+	(fp_rect
+		(start -0.175 -0.075)
+		(end 0.175 0.075)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Cu")
+		(uuid "c97ff44a-f6b6-435b-bf60-263cb8f3980f")
+	)
+	(pad "1" smd circle
+		(at -0.175 0)
+		(size 0.15 0.15)
+		(layers "F.Cu")
+		(uuid "19abbc8c-063f-49fd-879b-7b49ea353ec8")
+	)
+	(pad "2" smd circle
+		(at 0.175 0)
+		(size 0.15 0.15)
+		(layers "F.Cu")
+		(uuid "3199f532-0293-4396-b87d-077a0430ec49")
+	)
+)
