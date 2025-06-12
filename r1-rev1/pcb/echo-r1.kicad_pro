@@ -58,7 +58,24 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|140200000|129242500|df75bdfe-bd0b-4f27-973c-43d77550938d|00000000-0000-0000-0000-000000000000",
+          "Fix later"
+        ],
+        [
+          "lib_footprint_mismatch|145882500|135870000|9a582909-12fb-481f-a420-50a3259ab4ca|00000000-0000-0000-0000-000000000000",
+          "Fix later"
+        ],
+        [
+          "lib_footprint_mismatch|167675000|60900000|b1308286-5fe7-4926-b4e3-5535e3602de3|00000000-0000-0000-0000-000000000000",
+          "Intentionally trimmed silkscreen"
+        ],
+        [
+          "silk_over_copper|164120576|148450000|56837dc1-e6d9-4615-9022-6c45da7fdb55|00000000-0000-0000-0000-000000000000",
+          "Cosmetic issue only"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -89,7 +106,7 @@
         "items_not_allowed": "error",
         "length_out_of_range": "error",
         "lib_footprint_issues": "warning",
-        "lib_footprint_mismatch": "ignore",
+        "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "mirrored_text_on_front_layer": "warning",
@@ -245,27 +262,27 @@
   "erc": {
     "erc_exclusions": [
       [
-        "lib_symbol_issues|1041400|1244600|3b779ea1-bbc4-4f39-ae20-f768da369818|00000000-0000-0000-0000-000000000000|||",
+        "lib_symbol_mismatch|1041400|1244600|3b779ea1-bbc4-4f39-ae20-f768da369818|00000000-0000-0000-0000-000000000000|||",
         ""
       ],
       [
-        "lib_symbol_issues|1295400|533400|941bdeb3-12c2-4158-88d2-7ecd742727bd|00000000-0000-0000-0000-000000000000|||",
+        "lib_symbol_mismatch|1295400|533400|941bdeb3-12c2-4158-88d2-7ecd742727bd|00000000-0000-0000-0000-000000000000|||",
         ""
       ],
       [
-        "lib_symbol_issues|1295400|965200|16f1bb64-bfdc-4114-bdb1-253e573ffc25|00000000-0000-0000-0000-000000000000|||",
+        "lib_symbol_mismatch|1295400|965200|16f1bb64-bfdc-4114-bdb1-253e573ffc25|00000000-0000-0000-0000-000000000000|||",
         ""
       ],
       [
-        "lib_symbol_issues|1651000|1092200|1a9a8227-cd17-4e59-8e1a-cb795b9bd7f3|00000000-0000-0000-0000-000000000000|||",
+        "lib_symbol_mismatch|1651000|1092200|1a9a8227-cd17-4e59-8e1a-cb795b9bd7f3|00000000-0000-0000-0000-000000000000|||",
         ""
       ],
       [
-        "lib_symbol_issues|2133600|1473200|cf9dc651-31ab-4b58-9d0f-d7a5401a97b5|00000000-0000-0000-0000-000000000000|||",
+        "lib_symbol_mismatch|2133600|1473200|cf9dc651-31ab-4b58-9d0f-d7a5401a97b5|00000000-0000-0000-0000-000000000000|||",
         ""
       ],
       [
-        "lib_symbol_issues|2235200|584200|12d38c82-f62e-4172-990b-0dd1328cb900|00000000-0000-0000-0000-000000000000|||",
+        "lib_symbol_mismatch|2235200|584200|12d38c82-f62e-4172-990b-0dd1328cb900|00000000-0000-0000-0000-000000000000|||",
         ""
       ]
     ],
@@ -490,10 +507,12 @@
   },
   "libraries": {
     "pinned_footprint_libs": [
-      "echoplayer"
+      "echoplayer",
+      "ep2"
     ],
     "pinned_symbol_libs": [
-      "echoplayer"
+      "echoplayer",
+      "ep2"
     ]
   },
   "meta": {
