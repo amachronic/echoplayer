@@ -7,7 +7,7 @@ and designed with free software. It's primarily designed to run
 with support for many codecs, and a wide array of features.
 
 The PCB is designed with [KiCAD 9.0](https://www.kicad.org/),
-and there is an unfinished 3D-printable case is designed with
+and there is an unfinished 3D-printable case designed with
 [FreeCAD 1.0](https://www.freecad.org/).
 
 All designs are available under the CERN-OHL-S v2 license.
