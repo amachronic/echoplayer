@@ -8,7 +8,7 @@ with support for many codecs, and a wide array of features.
 
 The PCB is designed with [KiCAD 9.0](https://www.kicad.org/),
 and there is an unfinished 3D-printable case designed with
-[FreeCAD 1.0](https://www.freecad.org/).
+[build123d](https://github.com/gumyr/build123d).
 
 All designs are available under the CERN-OHL-S v2 license.
 
