@@ -38,3 +38,14 @@ out/
 
 # FreeCAD backup files
 *.FCBak
+
+# Python stuff
+.venv/
+__pycache__/
+*.egg-info/
+
+# Case model exports
+*.stl
+*.stp
+*.step
+*.gltf
