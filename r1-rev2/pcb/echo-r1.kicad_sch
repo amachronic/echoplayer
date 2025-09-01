@@ -12361,6 +12361,10 @@
 		(uuid "98ecca9c-580b-4474-99a1-a13ab8eb17cb")
 	)
 	(no_connect
+		(at 388.62 160.02)
+		(uuid "9d06a538-488a-4a95-a633-3230ad7454e0")
+	)
+	(no_connect
 		(at 297.18 142.24)
 		(uuid "a35cbba9-f308-4839-9156-d7421259446e")
 	)
@@ -12391,10 +12395,6 @@
 	(no_connect
 		(at 388.62 139.7)
 		(uuid "f65b814d-e4fa-4658-b746-351a9d2939ed")
-	)
-	(no_connect
-		(at 388.62 167.64)
-		(uuid "f6d6d327-a55d-43e8-a4e6-0c31011762c8")
 	)
 	(no_connect
 		(at 388.62 109.22)
@@ -16940,16 +16940,6 @@
 	)
 	(wire
 		(pts
-			(xy 403.86 160.02) (xy 388.62 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e0b08c06-1aec-417e-9b99-38b9ddde7763")
-	)
-	(wire
-		(pts
 			(xy 281.94 200.66) (xy 294.64 200.66)
 		)
 		(stroke
@@ -17510,6 +17500,16 @@
 	)
 	(wire
 		(pts
+			(xy 388.62 167.64) (xy 403.86 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "faa031e7-9e18-469e-8693-2113ac81020a")
+	)
+	(wire
+		(pts
 			(xy 165.1 193.04) (xy 165.1 182.88)
 		)
 		(stroke
@@ -17607,16 +17607,6 @@
 			(justify right bottom)
 		)
 		(uuid "0c0d4872-da49-443e-9b62-16007d1ad6b7")
-	)
-	(label "lcd.dcx"
-		(at 403.86 160.02 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0e76f2ec-1c15-449b-8254-b490e074fb88")
 	)
 	(label "usb_hs_d-"
 		(at 281.94 147.32 0)
@@ -18447,6 +18437,16 @@
 			(justify left bottom)
 		)
 		(uuid "72372521-64de-4d8b-a356-5bcdd6948f16")
+	)
+	(label "lcd.dcx"
+		(at 403.86 167.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7293ec2c-27ae-400f-a27e-2b1b0cb1a886")
 	)
 	(label "xspi.cs"
 		(at 231.14 78.74 180)
