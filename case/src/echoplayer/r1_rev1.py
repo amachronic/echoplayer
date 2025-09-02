@@ -203,7 +203,9 @@ class Params:
     bconn_depth: float
 
     battbox_thickness: float
-    battbox_clearance: float
+    battbox_clearance_xz: float
+    battbox_clearance_y: float
+    bconn_clearance: float
 
     lshell_column_diameter: float
     lshell_column_hole_diameter: float
@@ -417,7 +419,9 @@ def get_params() -> Params:
         lshell_column_inpcb_diameter = 3.8,
         lshell_column_hole_diameter = 2.4,
         battbox_thickness = 2,
-        battbox_clearance = 0.4,
+        battbox_clearance_xz = 0.4,
+        battbox_clearance_y = 0.4,
+        bconn_clearance = 0.4,
     )
 
 def get_pcb_datums(params: Params) -> DatumSet:
@@ -998,26 +1002,39 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
         )
     )
 
-    # TODO: need to leave a cutout for the connector
-    # TODO: asymmetric clearance in Y would be better here
-    # the connector spring force needs to keep the battery in place and ideally the
-    # back plate should also hold the connector to reduce stress on the solder joints.
+    # Space for the battery
     battbox -= (
         Pos(datums.ushell.pcb_battery_origin.project_to_plane(datums.ushell.pcb_battery_back)) *
-        Pos(X = -params.battbox_clearance,
-            Y = -params.battbox_clearance,
-            Z = -0.2) *
+        Pos(X = -params.battbox_clearance_xz,
+            Y = -params.battbox_clearance_y,
+            Z = -params.battbox_clearance_xz) *
         Box(
-            datums.ushell.box_dimension("pcb_battery", "x") + params.battbox_clearance*2,
-            datums.ushell.box_dimension("pcb_battery", "y") + params.battbox_clearance*2,
-            datums.ushell.box_dimension("pcb_battery", "z"),
+            datums.ushell.box_dimension("pcb_battery", "x") + params.battbox_clearance_xz*2,
+            datums.ushell.box_dimension("pcb_battery", "y") + params.battbox_clearance_y,
+            datums.ushell.box_dimension("pcb_battery", "z") + params.battbox_clearance_xz*2,
+            align = Align.MIN,
+        )
+    )
+
+    # Battery connector
+    bconn_to_batt_dist_y = (datums.ushell.pcb.battery_bottom.origin.Y -
+                            datums.ushell.pcb.bconn_top.origin.Y)
+    battbox -= (
+        Pos(datums.ushell.pcb_bconn_origin.project_to_plane(datums.ushell.pcb_bconn_back)) *
+        Pos(X = -params.bconn_clearance,
+            Y = -params.bconn_clearance,
+            Z = -params.bconn_clearance) *
+        Box(
+            datums.ushell.pcb.box_dimension("bconn", "x") + params.bconn_clearance*2,
+            datums.ushell.pcb.box_dimension("bconn", "y") + params.bconn_clearance + bconn_to_batt_dist_y - params.battbox_clearance_y,
+            datums.ushell.pcb.box_dimension("bconn", "z") + params.bconn_clearance*2,
             align = Align.MIN,
         )
     )
 
     # Columns for the screws holding the upper/lower shell together
     column_height = (datums.ushell.pcb_front_origin.Z -
-                     datums.plate_front.origin.Z - params.pcb.thickness)
+                     datums.plate_back.origin.Z - params.pcb.thickness)
 
     column = Cylinder(
         params.lshell_column_diameter/2,
@@ -1034,26 +1051,32 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
     # TODO this needs to extend into the back plate
     column_hole = Cylinder(
         params.lshell_column_hole_diameter/2,
-        column_height + params.pcb.thickness,
+        column_height,
         align = (Align.CENTER, Align.CENTER, Align.MIN)
     )
 
-    column -= column_hole
+    column_hole += (
+        Pos(Z = column_height) *
+        Cylinder(
+            params.lshell_column_hole_diameter/4,
+            params.pcb.thickness,
+            align = (Align.CENTER, Align.CENTER, Align.MIN),
+        )
+    )
 
     columns = []
+    column_holes = []
     for pos in (datums.volume_pos, datums.dpad_pos):
-        pos = pos.project_to_plane(datums.plate_front)
-
-        battbox -= Pos(pos) * column_hole
+        pos = pos.project_to_plane(datums.plate_back)
         columns.append(Pos(pos) * column)
+        column_holes.append(Pos(pos) * column_hole)
 
     shell += itertools.chain(
         columns,
-        [
-            battbox,
-        ]
+        battbox,
     )
 
+    shell -= column_holes
     return shell
 
 
