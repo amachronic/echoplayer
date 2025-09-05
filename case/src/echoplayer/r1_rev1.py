@@ -202,6 +202,9 @@ class Params:
     bconn_height: float
     bconn_depth: float
 
+    batt_spring_dist: float
+    batt_spring_tolerance: float
+
     battbox_thickness: float
     battbox_depth: float
     battbox_clearance_xz: float
@@ -416,6 +419,8 @@ def get_params() -> Params:
         bconn_width = 9,
         bconn_height = 3.5,
         bconn_depth = 4.6,
+        batt_spring_dist = 0.8,
+        batt_spring_tolerance = 0.2,
         lshell_column_diameter = 4.2,
         lshell_column_inpcb_diameter = 3.8,
         lshell_column_hole_diameter = 2.4,
@@ -1021,6 +1026,10 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
     # Battery connector
     bconn_to_batt_dist_y = (datums.ushell.pcb.battery_bottom.origin.Y -
                             datums.ushell.pcb.bconn_top.origin.Y)
+
+    # Specified spring compression is 0.8mm +/- 0.2mm
+    assert abs(bconn_to_batt_dist_y - params.batt_spring_dist) <= params.batt_spring_tolerance
+
     battbox -= (
         Pos(datums.ushell.pcb_bconn_origin.project_to_plane(datums.ushell.pcb_bconn_back)) *
         Pos(X = -params.bconn_clearance,
