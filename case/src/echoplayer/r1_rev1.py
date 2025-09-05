@@ -203,6 +203,7 @@ class Params:
     bconn_depth: float
 
     battbox_thickness: float
+    battbox_depth: float
     battbox_clearance_xz: float
     battbox_clearance_y: float
     bconn_clearance: float
@@ -409,7 +410,7 @@ def get_params() -> Params:
         battery_dz = 1.6, # TODO: this is pressed on the chip w/ 4.6mm connectore
         battery_width = 34.3,
         battery_height = 53.5,
-        battery_thickness = 2, # TODO
+        battery_thickness = 5.8,
         bconn_dx = 39.5,
         bconn_dy = 24.4,
         bconn_width = 9,
@@ -419,6 +420,7 @@ def get_params() -> Params:
         lshell_column_inpcb_diameter = 3.8,
         lshell_column_hole_diameter = 2.4,
         battbox_thickness = 2,
+        battbox_depth = 3.9,
         battbox_clearance_xz = 0.4,
         battbox_clearance_y = 0.4,
         bconn_clearance = 0.4,
@@ -986,9 +988,6 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
         align = Align.MIN,
     )
 
-    batt_midpoint_Z = (datums.ushell.pcb_battery_front.origin.Z +
-                       datums.ushell.pcb_battery_back.origin.Z) / 2
-
     # Battery box
     battbox = (
         Pos(datums.ushell.pcb_battery_origin.project_to_plane(datums.plate_front)) *
@@ -997,13 +996,13 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
         Box(
             datums.ushell.box_dimension("pcb_battery", "x") + params.battbox_thickness*2,
             datums.ushell.box_dimension("pcb_battery", "y") + params.battbox_thickness*2,
-            batt_midpoint_Z - datums.plate_front.origin.Z,
+            params.battbox_depth,
             align = Align.MIN,
         )
     )
 
     # Space for the battery
-    battbox -= (
+    battbox_hole = (
         Pos(datums.ushell.pcb_battery_origin.project_to_plane(datums.ushell.pcb_battery_back)) *
         Pos(X = -params.battbox_clearance_xz,
             Y = -params.battbox_clearance_y,
@@ -1015,6 +1014,9 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
             align = Align.MIN,
         )
     )
+
+    shell -= battbox_hole
+    battbox -= battbox_hole
 
     # Battery connector
     bconn_to_batt_dist_y = (datums.ushell.pcb.battery_bottom.origin.Y -
