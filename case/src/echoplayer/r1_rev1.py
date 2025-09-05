@@ -151,6 +151,7 @@ class Params:
     wall_thickness_bottom: float
     wall_thickness_front: float
     wall_thickness_back: float
+    wall_thickness_side: float
 
     h3_support_diameter: float
     volume_support_diameter: float
@@ -211,9 +212,9 @@ class Params:
     battbox_clearance_y: float
     bconn_clearance: float
 
-    lshell_column_diameter: float
-    lshell_column_hole_diameter: float
-    lshell_column_inpcb_diameter: float
+    lshell_cornersquare_thickness: float
+    lshell_cornersquare_diameter: float
+    lshell_cornersquare_wall_clearance: float
 
     @property
     def inner_width(self) -> float:
@@ -224,11 +225,6 @@ class Params:
         return (self.pcb.height +
                 self.pcb.clearance_top +
                 self.pcb.clearance_bottom)
-
-    @property
-    def wall_thickness_side(self) -> float:
-        assert self.outer_width > self.inner_width
-        return (self.outer_width - self.inner_width) / 2
 
     @property
     def inner_origin_dx(self) -> float:
@@ -359,6 +355,7 @@ def get_params() -> Params:
         wall_thickness_bottom = 2,
         wall_thickness_front = 2,
         wall_thickness_back = 2,
+        wall_thickness_side = 2.4,
         h3_support_diameter = 7,
         volume_support_diameter = 8,
         h5_support_diameter = 4.8,
@@ -421,9 +418,9 @@ def get_params() -> Params:
         bconn_depth = 4.6,
         batt_spring_dist = 0.8,
         batt_spring_tolerance = 0.2,
-        lshell_column_diameter = 4.2,
-        lshell_column_inpcb_diameter = 3.8,
-        lshell_column_hole_diameter = 2.4,
+        lshell_cornersquare_diameter = 5,
+        lshell_cornersquare_thickness = 2.5,
+        lshell_cornersquare_wall_clearance = 0.3,
         battbox_thickness = 2,
         battbox_depth = 3.9,
         battbox_clearance_xz = 0.4,
@@ -1043,51 +1040,40 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
         )
     )
 
-    # Columns for the screws holding the upper/lower shell together
-    column_height = (datums.ushell.pcb_front_origin.Z -
-                     datums.plate_back.origin.Z - params.pcb.thickness)
-
-    column = Cylinder(
-        params.lshell_column_diameter/2,
-        column_height,
-        align = (Align.CENTER, Align.CENTER, Align.MIN)
+    # Add squares on the corners to hold mounting screws
+    square = Box(params.lshell_cornersquare_thickness,
+                 params.lshell_cornersquare_diameter,
+                 params.lshell_cornersquare_diameter,
+                 align = Align.MIN)
+    square -= (
+        Pos(X = params.lshell_cornersquare_diameter/2,
+            Y = params.lshell_cornersquare_diameter/2,
+            Z = params.lshell_cornersquare_diameter/2) * (
+                Cylinder(params.support_heat_insert_diameter/2,
+                         params.lshell_cornersquare_thickness,
+                         align = (Align.CENTER, Align.CENTER, Align.MAX))
+                .rotate(Axis.Y, 90)
+            )
     )
 
-    column += Pos(Z = column_height) * Cylinder(
-        params.lshell_column_inpcb_diameter/2,
-        params.pcb.thickness,
-        align = (Align.CENTER, Align.CENTER, Align.MIN)
-    )
+    squares = []
+    for corner_x, corner_y in ((0, 0), (0, 1), (1, 0), (1, 1)):
+        adj_x = params.lshell_cornersquare_thickness + params.lshell_cornersquare_wall_clearance*2
+        adj_y = params.lshell_cornersquare_diameter + params.lshell_cornersquare_wall_clearance*2
 
-    # TODO this needs to extend into the back plate
-    column_hole = Cylinder(
-        params.lshell_column_hole_diameter/2,
-        column_height,
-        align = (Align.CENTER, Align.CENTER, Align.MIN)
-    )
+        pos = datums.ushell.inner_origin.project_to_plane(datums.plate_front)
+        pos += Vector(X = (params.inner_width - adj_x) * corner_x,
+                      Y = (params.inner_height - adj_y) * corner_y)
+        pos += Vector(X = params.lshell_cornersquare_wall_clearance,
+                      Y = params.lshell_cornersquare_wall_clearance)
 
-    column_hole += (
-        Pos(Z = column_height) *
-        Cylinder(
-            params.lshell_column_hole_diameter/4,
-            params.pcb.thickness,
-            align = (Align.CENTER, Align.CENTER, Align.MIN),
-        )
-    )
-
-    columns = []
-    column_holes = []
-    for pos in (datums.volume_pos, datums.dpad_pos):
-        pos = pos.project_to_plane(datums.plate_back)
-        columns.append(Pos(pos) * column)
-        column_holes.append(Pos(pos) * column_hole)
+        squares.append(Pos(pos) * square)
 
     shell += itertools.chain(
-        columns,
+        squares,
         battbox,
     )
 
-    shell -= column_holes
     return shell
 
 
