@@ -212,9 +212,10 @@ class Params:
     battbox_clearance_y: float
     bconn_clearance: float
 
+    lshell_wall_clearance: float
+    lshell_shadowline_depth: float
     lshell_cornersquare_thickness: float
     lshell_cornersquare_diameter: float
-    lshell_cornersquare_wall_clearance: float
 
     @property
     def inner_width(self) -> float:
@@ -418,14 +419,15 @@ def get_params() -> Params:
         bconn_depth = 4.6,
         batt_spring_dist = 0.8,
         batt_spring_tolerance = 0.2,
-        lshell_cornersquare_diameter = 5,
-        lshell_cornersquare_thickness = 2.5,
-        lshell_cornersquare_wall_clearance = 0.3,
         battbox_thickness = 2,
         battbox_depth = 3.9,
         battbox_clearance_xz = 0.4,
         battbox_clearance_y = 0.4,
         bconn_clearance = 0.4,
+        lshell_wall_clearance = 0.3,
+        lshell_shadowline_depth = 1.0,
+        lshell_cornersquare_diameter = 5,
+        lshell_cornersquare_thickness = 2.5,
     )
 
 def get_pcb_datums(params: Params) -> DatumSet:
@@ -990,6 +992,19 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
         align = Align.MIN,
     )
 
+    pos = datums.ushell.inner_origin.project_to_plane(datums.plate_front)
+    shell += (
+        Pos(X = pos.X + params.lshell_wall_clearance,
+            Y = pos.Y + params.lshell_wall_clearance,
+            Z = datums.box_dimension("plate", "z")) *
+        Box(
+            datums.ushell.box_dimension("inner_wall", "x") - params.lshell_wall_clearance*2,
+            datums.ushell.box_dimension("inner_wall", "y") - params.lshell_wall_clearance*2,
+            params.lshell_shadowline_depth,
+            align = Align.MIN,
+        )
+    )
+
     # Battery box
     battbox = (
         Pos(datums.ushell.pcb_battery_origin.project_to_plane(datums.plate_front)) *
@@ -1058,14 +1073,14 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
 
     squares = []
     for corner_x, corner_y in ((0, 0), (0, 1), (1, 0), (1, 1)):
-        adj_x = params.lshell_cornersquare_thickness + params.lshell_cornersquare_wall_clearance*2
-        adj_y = params.lshell_cornersquare_diameter + params.lshell_cornersquare_wall_clearance*2
+        adj_x = params.lshell_cornersquare_thickness + params.lshell_wall_clearance*2
+        adj_y = params.lshell_cornersquare_diameter + params.lshell_wall_clearance*2
 
         pos = datums.ushell.inner_origin.project_to_plane(datums.plate_front)
         pos += Vector(X = (params.inner_width - adj_x) * corner_x,
                       Y = (params.inner_height - adj_y) * corner_y)
-        pos += Vector(X = params.lshell_cornersquare_wall_clearance,
-                      Y = params.lshell_cornersquare_wall_clearance)
+        pos += Vector(X = params.lshell_wall_clearance,
+                      Y = params.lshell_wall_clearance)
 
         squares.append(Pos(pos) * square)
 
