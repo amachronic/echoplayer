@@ -13,6 +13,7 @@ from build123d import (
     Circle,
     Color,
     Compound,
+    CounterSinkHole,
     Cylinder,
     Line,
     Pos,
@@ -177,6 +178,7 @@ class Params:
     card_slot_dz: float
 
     support_screw_diameter: float
+    support_screw_head_diameter: float
     support_heat_insert_diameter: float
     support_screw_depth: float
 
@@ -381,6 +383,7 @@ def get_params() -> Params:
         card_clearance = 0.5,
         card_slot_dz = 1,
         support_screw_diameter = 2,
+        support_screw_head_diameter = 3.8,
         support_heat_insert_diameter = 3,
         support_screw_depth = 3,
         face_button_diameter = {
@@ -958,12 +961,35 @@ def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
             )
         )
 
+    # Cut screw holes for mounting back plate
+    corner_hole = CounterSinkHole(
+        params.support_screw_diameter/2,
+        params.support_screw_head_diameter/2,
+        params.wall_thickness_side,
+    )
+
+    corner_holes = []
+    for corner_x, corner_y in ((0, 0), (0, 1), (1, 0), (1, 1)):
+        adj_y = params.lshell_wall_clearance + params.lshell_cornersquare_diameter/2
+
+        pos = datums.inner_origin
+        pos += Vector(X = -params.wall_thickness_side,
+                      Y = adj_y)
+        pos += Vector(X = (params.inner_width + params.wall_thickness_side*2) * corner_x,
+                      Y = (params.inner_height - adj_y*2) * corner_y,
+                      Z = params.lshell_cornersquare_diameter/2)
+
+        hole = corner_hole.rotate(Axis.Y, corner_x*180 - 90)
+
+        corner_holes.append(Pos(pos) * hole)
+
     # CSG to generate case
     if has_lcd_cover:
         shell -= lcd_cover_pocket
 
     shell -= itertools.chain(
         face_button_holes,
+        corner_holes,
         [
             lcd_module_pocket,
             lcd_support_gap_pocket,
