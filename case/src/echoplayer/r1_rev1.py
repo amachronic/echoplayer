@@ -413,7 +413,7 @@ def get_params() -> Params:
         face_button_case_clearance = 0.25,
         face_button_dome_tip_clearance = 0.1,
         outer_depth = 18.6, # TODO
-        battery_dx = 14.2,
+        battery_dx = 17.2,
         battery_dy = 28.7,
         battery_dz = 1.6, # TODO: this is pressed on the chip w/ 4.6mm connectore
         battery_width = 34.3,
