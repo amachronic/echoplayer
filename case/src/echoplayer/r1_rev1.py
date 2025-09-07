@@ -99,7 +99,6 @@ class PcbParams:
     height: float
     thickness: float
 
-    clearance_side: float
     clearance_top: float
     clearance_bottom: float
     clearance_front: float
@@ -220,8 +219,12 @@ class Params:
     lshell_debugheader_top_clearance: float
 
     @property
+    def pcb_attachment_offset_dx(self) -> float:
+        return (self.inner_width - self.pcb.width)/2
+
+    @property
     def inner_width(self) -> float:
-        return self.pcb.width + self.pcb.clearance_side*2
+        return self.outer_width - self.wall_thickness_side*2
 
     @property
     def inner_height(self) -> float:
@@ -316,7 +319,6 @@ def get_params() -> Params:
             width = 55,
             height = 95,
             thickness = 1.6,
-            clearance_side = 0.8,
             clearance_top = 0.8,
             clearance_bottom = 0.2,
             clearance_front = 3,
@@ -564,7 +566,7 @@ def get_upper_shell_datums(params: Params,
 
     ds.add_point("pcb_attachment",
                  origin = ds.inner_origin,
-                 dX = params.pcb.clearance_side,
+                 dX = params.pcb_attachment_offset_dx,
                  dY = params.pcb.clearance_bottom,
                  Z = ds.lcd_support_back.origin.Z - params.pcb.clearance_front)
 
@@ -817,22 +819,22 @@ def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
                                    datums.lcd_support_back.origin.Z)
     assert lower_inner_pocket_maxdepth > params.wall_thickness_front
 
-    lower_inner_pocket_pcb_edge_offset = params.pcb.edge_clearance_front
-    lower_inner_pocket_pcb_edge_offset += params.pcb.clearance_side
+    lower_inner_pocket_pcb_edge_offset_x = params.pcb_attachment_offset_dx + params.pcb.edge_clearance_front
+    lower_inner_pocket_pcb_edge_offset_y = params.pcb.clearance_bottom + params.pcb.edge_clearance_front
 
     lower_inner_pocket_width = params.inner_width
-    lower_inner_pocket_width -= lower_inner_pocket_pcb_edge_offset * 2
+    lower_inner_pocket_width -= lower_inner_pocket_pcb_edge_offset_x*2
 
     lower_inner_pocket_height = datums.lcd_support_gap_pocket_bottom.origin.Y - datums.inner_origin.Y
-    lower_inner_pocket_height -= lower_inner_pocket_pcb_edge_offset
+    lower_inner_pocket_height -= lower_inner_pocket_pcb_edge_offset_y
 
     lower_inner_pocket_depth = lower_inner_pocket_maxdepth - params.wall_thickness_front
 
     lower_inner_pocket = (
         plane_at(datums.lcd_support_back,
                  projected_origin = datums.inner_origin) *
-        Pos(X = lower_inner_pocket_pcb_edge_offset,
-            Y = lower_inner_pocket_pcb_edge_offset) *
+        Pos(X = lower_inner_pocket_pcb_edge_offset_x,
+            Y = lower_inner_pocket_pcb_edge_offset_y) *
         Box(lower_inner_pocket_width,
             lower_inner_pocket_height,
             lower_inner_pocket_depth,
