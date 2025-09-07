@@ -216,6 +216,8 @@ class Params:
     lshell_shadowline_depth: float
     lshell_cornersquare_thickness: float
     lshell_cornersquare_diameter: float
+    lshell_debugheader_side_clearance: float
+    lshell_debugheader_top_clearance: float
 
     @property
     def inner_width(self) -> float:
@@ -428,6 +430,8 @@ def get_params() -> Params:
         lshell_shadowline_depth = 1.0,
         lshell_cornersquare_diameter = 5,
         lshell_cornersquare_thickness = 2.5,
+        lshell_debugheader_top_clearance = 0.3,
+        lshell_debugheader_side_clearance = 0.3,
     )
 
 def get_pcb_datums(params: Params) -> DatumSet:
@@ -992,6 +996,7 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
         align = Align.MIN,
     )
 
+    # Shadow line to minimize visibility of seam with front shell
     pos = datums.ushell.inner_origin.project_to_plane(datums.plate_front)
     shell += (
         Pos(X = pos.X + params.lshell_wall_clearance,
@@ -1002,6 +1007,25 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
             datums.ushell.box_dimension("inner_wall", "y") - params.lshell_wall_clearance*2,
             params.lshell_shadowline_depth,
             align = Align.MIN,
+        )
+    )
+
+    # Plate for covering debug header
+    pos = datums.ushell.pcb.debug_header_left.origin.project_to_plane(datums.plate_front)
+    shell += (
+        Pos(X = pos.X, Z = pos.Z) *
+        Pos(X = params.lshell_debugheader_side_clearance,
+            Y = datums.ushell.box_dimension("outer_wall", "y")) *
+        Box(
+            (params.debug_header_width +
+             params.debug_header_clearance_side*2 -
+             params.lshell_debugheader_side_clearance*2),
+            (params.wall_thickness_top +
+             params.lshell_wall_clearance),
+            (datums.ushell.pcb_front_origin.Z -
+             datums.plate_front.origin.Z -
+             params.lshell_debugheader_top_clearance),
+            align = (Align.MIN, Align.MAX, Align.MIN)
         )
     )
 
