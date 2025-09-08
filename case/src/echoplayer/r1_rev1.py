@@ -16,6 +16,7 @@ from build123d import (
     CounterSinkHole,
     Cylinder,
     Line,
+    Plane,
     Pos,
     RectangleRounded,
     Sketch,
@@ -216,7 +217,10 @@ class Params:
     lshell_wall_clearance: float
     lshell_shadowline_depth: float
     lshell_cornersquare_thickness: float
+    lshell_cornersquare_thickness_jack: float
+    lshell_cornersquare_hole_depth: float
     lshell_cornersquare_diameter: float
+    lshell_cornersquare_y_extend: float
     lshell_debugheader_side_clearance: float
     lshell_debugheader_top_clearance: float
 
@@ -433,8 +437,11 @@ def get_params() -> Params:
         bconn_clearance = 0.4,
         lshell_wall_clearance = 0.3,
         lshell_shadowline_depth = 1.0,
-        lshell_cornersquare_diameter = 5,
-        lshell_cornersquare_thickness = 2.5,
+        lshell_cornersquare_diameter = 6,
+        lshell_cornersquare_y_extend = 3,
+        lshell_cornersquare_thickness = 4,
+        lshell_cornersquare_thickness_jack = 2.5,
+        lshell_cornersquare_hole_depth = 2.5,
         lshell_debugheader_top_clearance = 0.3,
         lshell_debugheader_side_clearance = 0.3,
     )
@@ -1108,25 +1115,30 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
     )
 
     # Add squares on the corners to hold mounting screws
-    square = Box(params.lshell_cornersquare_thickness,
-                 params.lshell_cornersquare_diameter,
-                 params.lshell_cornersquare_diameter,
-                 align = Align.MIN)
-    square -= (
-        Pos(X = params.lshell_cornersquare_diameter/2,
-            Y = params.lshell_cornersquare_diameter/2,
-            Z = params.lshell_cornersquare_diameter/2) * (
-                Cylinder(params.support_heat_insert_diameter/2,
-                         params.lshell_cornersquare_thickness,
-                         align = (Align.CENTER, Align.CENTER, Align.MAX))
-                .rotate(Axis.Y, 90)
-            )
-    )
-
     squares = []
     for corner_x, corner_y in ((0, 0), (0, 1), (1, 0), (1, 1)):
-        adj_x = params.lshell_cornersquare_thickness + params.lshell_wall_clearance*2
-        adj_y = params.lshell_cornersquare_diameter + params.lshell_wall_clearance*2
+        thickness = params.lshell_cornersquare_thickness
+        if corner_x == 0 and corner_y == 0:
+            thickness = params.lshell_cornersquare_thickness_jack
+
+        square = Box(thickness,
+                     params.lshell_cornersquare_diameter + params.lshell_cornersquare_y_extend,
+                     params.lshell_cornersquare_diameter,
+                     align = Align.MIN)
+        square -= (
+            Pos(X = corner_x * thickness,
+                Y = params.lshell_cornersquare_diameter/2,
+                Z = params.lshell_cornersquare_diameter/2) * (
+                    Cylinder(params.support_heat_insert_diameter/2,
+                             params.lshell_cornersquare_hole_depth,
+                             align = (Align.CENTER, Align.CENTER,
+                                      Align.MIN if corner_x == 0 else Align.MAX))
+                    .rotate(Axis.Y, 90)
+                )
+        )
+
+        adj_x = thickness + params.lshell_wall_clearance*2
+        adj_y = params.lshell_wall_clearance*2
 
         pos = datums.ushell.inner_origin.project_to_plane(datums.plate_front)
         pos += Vector(X = (params.inner_width - adj_x) * corner_x,
@@ -1134,7 +1146,11 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
         pos += Vector(X = params.lshell_wall_clearance,
                       Y = params.lshell_wall_clearance)
 
-        squares.append(Pos(pos) * square)
+        msquare = square
+        if corner_y > 0:
+            msquare = square.mirror(Plane.XZ)
+
+        squares.append(Pos(pos) * msquare)
 
     shell += itertools.chain(
         squares,
