@@ -201,6 +201,11 @@ class Params:
     side_pcb_button_presser_height: float
     side_pcb_button_presser_depth: float
 
+    side_button_width: float
+    side_button_depth: float
+    side_button_corner_radius: float
+    side_button_clearance: float
+
     battery_dx: float
     battery_dy: float
     battery_dz: float
@@ -434,6 +439,10 @@ def get_params() -> Params:
         side_pcb_button_presser_width = 1.8,
         side_pcb_button_presser_height = 1.2,
         side_pcb_button_presser_depth = 0.8,
+        side_button_width = 10,
+        side_button_depth = 2.5,
+        side_button_corner_radius = 1,
+        side_button_clearance = 0.3,
         battery_dx = 17.2,
         battery_dy = 28.7,
         battery_dz = 1.6, # TODO: this is pressed on the chip w/ 4.6mm connector
@@ -505,15 +514,33 @@ def get_pcb_datums(params: Params) -> DatumSet:
                  dX = params.pcb.vol_button_dx,
                  dY = params.pcb.vol_up_button_dy)
 
+    ds.add_point("button_vol_up_press_pos",
+                 origin = ds.button_vol_up_pos,
+                 dX = (params.side_pcb_button_body_height +
+                       params.side_pcb_button_presser_height),
+                 dZ = -params.side_pcb_button_body_depth/2)
+
     ds.add_point("button_vol_dn_pos",
                  origin = ds.back_origin,
                  dX = params.pcb.vol_button_dx,
                  dY = params.pcb.vol_dn_button_dy)
 
+    ds.add_point("button_vol_dn_press_pos",
+                 origin = ds.button_vol_dn_pos,
+                 dX = (params.side_pcb_button_body_height +
+                       params.side_pcb_button_presser_height),
+                 dZ = -params.side_pcb_button_body_depth/2)
+
     ds.add_point("button_power_pos",
                  origin = ds.back_origin,
                  dX = params.pcb.power_button_dx,
                  dY = params.pcb.power_button_dy)
+
+    ds.add_point("button_power_press_pos",
+                 origin = ds.button_power_pos,
+                 dY = (params.side_pcb_button_body_height +
+                       params.side_pcb_button_presser_height),
+                 dZ = -params.side_pcb_button_body_depth/2)
 
     # NOTE: while not part of the PCB there's no better place for this
     ds.add_point("battery_origin",
@@ -715,6 +742,17 @@ def make_dpad_arrow_face(width: float,
     ]
 
     return make_face([Line(v, vn) for v, vn in zip(verts, verts[1:])])
+
+def make_side_button_face(width: float,
+                          height: float,
+                          corner_radius: float,
+                          edge_offset: float|None = None):
+    if edge_offset:
+        width += edge_offset*2
+        height += edge_offset*2
+        corner_radius += edge_offset
+
+    return RectangleRounded(width, height, corner_radius)
 
 
 def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
@@ -1000,6 +1038,25 @@ def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
             )
         )
 
+    # Cut holes for side buttons (volume and power)
+    side_button_face = make_side_button_face(params.side_button_width,
+                                             params.side_button_depth,
+                                             params.side_button_corner_radius,
+                                             params.side_button_clearance)
+    side_button_face = side_button_face.rotate(Axis.X, -90)
+    side_button_hole = extrude(side_button_face, amount = 10)
+    side_button_data = [
+        ("vol_up", -90),
+        ("vol_dn", -90),
+        ("power",    0),
+    ]
+
+    side_button_holes = []
+    for b_name, rotation in side_button_data:
+        pos = Pos(datums.pcb.get_point(f"button_{b_name}_press_pos"))
+        hole = pos * side_button_hole.rotate(Axis.Z, rotation)
+        side_button_holes.append(hole)
+
     # Cut screw holes for mounting back plate
     corner_hole = CounterSinkHole(
         params.support_screw_diameter/2,
@@ -1028,6 +1085,7 @@ def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
 
     shell -= itertools.chain(
         face_button_holes,
+        side_button_holes,
         corner_holes,
         [
             lcd_module_pocket,
