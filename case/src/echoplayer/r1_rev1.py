@@ -1339,10 +1339,23 @@ def make_pcb(params: PcbParams,
 
 
 def make_battery(params: Params) -> Compound:
-    batt = Box(params.battery_width,
-               params.battery_height,
-               params.battery_thickness,
-               align = (Align.MIN, Align.MIN, Align.MAX))
+    batt = (
+        Pos(X = params.battery_thickness/2) *
+        Box(
+            params.battery_width - params.battery_thickness,
+            params.battery_height,
+            params.battery_thickness,
+            align = (Align.MIN, Align.MIN, Align.MAX)
+        )
+    )
+
+    side = Cylinder(params.battery_thickness/2,
+                    params.battery_height,
+                    align = (Align.MIN, Align.MAX, Align.MAX),
+                    rotation = (90, 0, 0))
+
+    batt += side
+    batt += Pos(X = params.battery_width - params.battery_thickness) * side
 
     return batt
 
