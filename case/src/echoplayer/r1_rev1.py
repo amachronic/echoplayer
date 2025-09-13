@@ -112,9 +112,11 @@ class PcbParams:
     usbc_conn_dx: float
     card_conn_dx: float
 
+    vol_button_dx: float
     vol_up_button_dy: float
     vol_dn_button_dy: float
     power_button_dx: float
+    power_button_dy: float
     hold_sw_pos1_dx: float
     hold_sw_pos2_dx: float
 
@@ -191,6 +193,13 @@ class Params:
     face_button_lip_height: float
     face_button_case_clearance: float
     face_button_dome_tip_clearance: float
+
+    side_pcb_button_body_width: float
+    side_pcb_button_body_height: float
+    side_pcb_button_body_depth: float
+    side_pcb_button_presser_width: float
+    side_pcb_button_presser_height: float
+    side_pcb_button_presser_depth: float
 
     battery_dx: float
     battery_dy: float
@@ -333,9 +342,11 @@ def get_params() -> Params:
             hp_jack_dx = 15,
             usbc_conn_dx = 27.5,
             card_conn_dx = 46.9,
+            vol_button_dx = 51.15,
             vol_up_button_dy = 77.5,
             vol_dn_button_dy = 62.5,
             power_button_dx = 7.5,
+            power_button_dy = 91.15,
             hold_sw_pos1_dx = 16.7,
             hold_sw_pos2_dx = 18.3,
             buttons = {
@@ -367,6 +378,7 @@ def get_params() -> Params:
         wall_thickness_front = 2,
         wall_thickness_back = 2,
         wall_thickness_side = 2.4,
+        outer_depth = 19.6,
         h3_support_diameter = 7,
         volume_support_diameter = 8,
         h5_support_diameter = 4.8,
@@ -416,7 +428,12 @@ def get_params() -> Params:
         face_button_lip_height = 1.4,
         face_button_case_clearance = 0.25,
         face_button_dome_tip_clearance = 0.1,
-        outer_depth = 19.6,
+        side_pcb_button_body_width = 4.7,
+        side_pcb_button_body_height = 2.3,
+        side_pcb_button_body_depth = 1.9,
+        side_pcb_button_presser_width = 1.8,
+        side_pcb_button_presser_height = 1.2,
+        side_pcb_button_presser_depth = 0.8,
         battery_dx = 17.2,
         battery_dy = 28.7,
         battery_dz = 1.6, # TODO: this is pressed on the chip w/ 4.6mm connector
@@ -482,6 +499,21 @@ def get_pcb_datums(params: Params) -> DatumSet:
                      origin = ds.front_origin,
                      dX = b_params.x,
                      dY = b_params.y)
+
+    ds.add_point("button_vol_up_pos",
+                 origin = ds.back_origin,
+                 dX = params.pcb.vol_button_dx,
+                 dY = params.pcb.vol_up_button_dy)
+
+    ds.add_point("button_vol_dn_pos",
+                 origin = ds.back_origin,
+                 dX = params.pcb.vol_button_dx,
+                 dY = params.pcb.vol_dn_button_dy)
+
+    ds.add_point("button_power_pos",
+                 origin = ds.back_origin,
+                 dX = params.pcb.power_button_dx,
+                 dY = params.pcb.power_button_dy)
 
     # NOTE: while not part of the PCB there's no better place for this
     ds.add_point("battery_origin",
@@ -1367,6 +1399,22 @@ def make_battery_connector(params: Params) -> Compound:
 
     return bconn
 
+def make_side_pcb_button(params: Params) -> Compound:
+    body = Box(params.side_pcb_button_body_width,
+               params.side_pcb_button_body_height,
+               params.side_pcb_button_body_depth,
+               align = (Align.CENTER, Align.MIN, Align.MAX))
+
+    body += (
+        Pos(Y = params.side_pcb_button_body_height,
+            Z = -params.side_pcb_button_body_depth/2) *
+        Box(params.side_pcb_button_presser_width,
+            params.side_pcb_button_presser_height,
+            params.side_pcb_button_presser_depth,
+            align = (Align.CENTER, Align.MIN, Align.CENTER))
+    )
+
+    return body
 
 def build() -> list[Object]:
     objects: list[Object] = []
@@ -1420,5 +1468,21 @@ def build() -> list[Object]:
         compound = bconn,
         manufacturable = False,
     ))
+
+    side_pcb_button = make_side_pcb_button(params)
+    table = (
+        ("volume-up",   -90, ushell_ds.pcb.button_vol_up_pos),
+        ("volume-down", -90, ushell_ds.pcb.button_vol_dn_pos),
+        ("power",         0, ushell_ds.pcb.button_power_pos),
+    )
+
+    for name, angle, pos in table:
+        btn = Pos(pos) * side_pcb_button.rotate(Axis.Z, angle)
+        btn.color = Color(0.6, 0.6, 0.6, 1)
+        objects.append(Object(
+            name = f"pcb-button-{name}",
+            compound = btn,
+            manufacturable = False,
+        ))
 
     return objects
