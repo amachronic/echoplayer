@@ -18,10 +18,12 @@ from build123d import (
     Line,
     Plane,
     Pos,
+    Rectangle,
     RectangleRounded,
     Sketch,
     Vector,
     extrude,
+    chamfer,
     fillet,
     loft,
     make_face,
@@ -202,9 +204,18 @@ class Params:
     side_pcb_button_presser_depth: float
 
     side_button_width: float
-    side_button_depth: float
+    side_button_height: float
     side_button_corner_radius: float
     side_button_clearance: float
+    side_button_lip_pocket_depth: float
+
+    side_button_presser_width: float
+    side_button_presser_height: float
+    side_button_presser_length: float
+    side_button_lip_size: float
+    side_button_lip_chamfer_size: float
+    side_button_lip_extra_length: float
+    side_button_outer_extra_length: float
 
     battery_dx: float
     battery_dy: float
@@ -310,6 +321,14 @@ class Params:
     @property
     def card_slot_corner_radius(self) -> float:
         return self.card_corner_radius + self.card_clearance
+
+    @property
+    def side_button_lip_width(self) -> float:
+        return self.side_button_width + 2*(self.side_button_lip_size + self.side_button_clearance)
+
+    @property
+    def side_button_lip_height(self) -> float:
+        return self.side_button_height + 2*(self.side_button_lip_size + self.side_button_clearance)
 
 
 def get_params() -> Params:
@@ -441,9 +460,24 @@ def get_params() -> Params:
         side_pcb_button_presser_height = 1.2,
         side_pcb_button_presser_depth = 0.8,
         side_button_width = 10,
-        side_button_depth = 2.5,
+        side_button_height = 2.5,
         side_button_corner_radius = 1,
-        side_button_clearance = 0.3,
+        side_button_clearance = 0.2,
+        # Lip pocket depth minus extra length needs
+        # to be >= PCB button face to PCB edge distance
+        side_button_lip_pocket_depth = 1,
+        side_button_presser_width = 4,
+        side_button_presser_height = 1.5,
+        # Presser length needs to be >= A+B where
+        #   A = PCB button face to PCB edge distance
+        #   B = PCB button travel distance
+        side_button_presser_length = 0.8,
+        side_button_lip_size = 0.5,
+        side_button_lip_chamfer_size = 0.5,
+        # Extra length added to lip to increase part thickness
+        side_button_lip_extra_length = 0.2,
+        # Must be >= PCB button travel distance
+        side_button_outer_extra_length = 0.6,
         battery_dx = 17.2,
         battery_dy = 28.7,
         battery_dz = 1.6, # TODO: this is pressed on the chip w/ 4.6mm connector
@@ -756,6 +790,19 @@ def make_side_button_face(width: float,
 
     return RectangleRounded(width, height, corner_radius)
 
+def make_side_button_inner_face(width: float,
+                                height: float,
+                                chamfer_size: float,
+                                edge_offset: float|None = None):
+    if edge_offset:
+        width += edge_offset*2
+        height += edge_offset*2
+        chamfer_size += edge_offset
+
+    face = Rectangle(width, height)
+    return chamfer(face.vertices(), chamfer_size)
+
+
 
 def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
     # Flag for LCD cover / no cover
@@ -1042,21 +1089,33 @@ def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
 
     # Cut holes for side buttons (volume and power)
     side_button_face = make_side_button_face(params.side_button_width,
-                                             params.side_button_depth,
+                                             params.side_button_height,
                                              params.side_button_corner_radius,
                                              params.side_button_clearance)
     side_button_face = side_button_face.rotate(Axis.X, -90)
     side_button_hole = extrude(side_button_face, amount = 10)
+
+    # Pocket for lip to allow clearance for assembly
+    side_button_lip_face = make_side_button_inner_face(params.side_button_lip_width,
+                                                       params.side_button_lip_height,
+                                                       params.side_button_lip_chamfer_size,
+                                                       params.side_button_clearance)
+    side_button_lip_face = side_button_lip_face.rotate(Axis.X, -90)
+
+    wall_dist_vol = abs(datums.pcb.button_vol_up_press_pos.X - datums.inner_wall_right.origin.X)
+    wall_dist_pwr = abs(datums.pcb.button_power_press_pos.Y - datums.inner_wall_top.origin.Y)
     side_button_data = [
-        ("vol_up", -90),
-        ("vol_dn", -90),
-        ("power",    0),
+        ("vol_up", -90, wall_dist_vol),
+        ("vol_dn", -90, wall_dist_vol),
+        ("power",    0, wall_dist_pwr),
     ]
 
     side_button_holes = []
-    for b_name, rotation in side_button_data:
+    for b_name, rotation, wall_dist in side_button_data:
         pos = Pos(datums.pcb.get_point(f"button_{b_name}_press_pos"))
-        hole = pos * side_button_hole.rotate(Axis.Z, rotation)
+        hole = side_button_hole + extrude(side_button_lip_face,
+                                          amount=wall_dist + params.side_button_lip_pocket_depth)
+        hole = pos * hole.rotate(Axis.Z, rotation)
         side_button_holes.append(hole)
 
     # Cut screw holes for mounting back plate
@@ -1408,6 +1467,46 @@ def make_dome_buttons(params: Params, upper_shell_datums: DatumSet) -> list[Obje
     return objects
 
 
+def make_side_button(params: Params,
+                     wall_dist: float,
+                     wall_thickness: float) -> Compound:
+    # Part origin is at the button's press_pos
+
+    # Extrude the presser
+    press_face = Rectangle(params.side_button_presser_width,
+                           params.side_button_presser_height)
+    part = (
+        extrude(press_face, params.side_button_presser_length)
+        .rotate(Axis.X, -90)
+    )
+
+    # Extrude lip which rests on inner surface of case
+    lip_face = make_side_button_inner_face(params.side_button_lip_width,
+                                           params.side_button_lip_height,
+                                           params.side_button_lip_chamfer_size)
+    lip_length = wall_dist - params.side_button_presser_length
+    lip_length += params.side_button_lip_extra_length
+    part += (
+        Pos(Y = params.side_button_presser_length) *
+        extrude(lip_face, lip_length)
+        .rotate(Axis.X, -90)
+    )
+
+    # Extrude the outer button face which passes through the case wall
+    outer_face = make_side_button_face(params.side_button_width,
+                                       params.side_button_height,
+                                       params.side_button_corner_radius)
+    outer_length = wall_thickness - params.side_button_lip_extra_length
+    outer_length += params.side_button_outer_extra_length
+    part += (
+        Pos(Y = params.side_button_presser_length + lip_length) *
+        extrude(outer_face, outer_length)
+        .rotate(Axis.X, -90)
+    )
+
+    return part
+
+
 def make_pcb(params: PcbParams,
              datums: DatumSet) -> Compound:
     pcb = Box(
@@ -1531,20 +1630,44 @@ def build() -> list[Object]:
         manufacturable = False,
     ))
 
+
     side_pcb_button = make_side_pcb_button(params)
+
+    wall_dist_vol = abs(ushell_ds.pcb.button_vol_up_press_pos.X - ushell_ds.inner_wall_right.origin.X)
+    wall_dist_pwr = abs(ushell_ds.pcb.button_power_press_pos.Y - ushell_ds.inner_wall_top.origin.Y)
+
+    side_vol_button = make_side_button(params, wall_dist_vol, params.wall_thickness_side)
+    side_pwr_button = make_side_button(params, wall_dist_pwr, params.wall_thickness_top)
+
     table = (
-        ("volume-up",   -90, ushell_ds.pcb.button_vol_up_pos),
-        ("volume-down", -90, ushell_ds.pcb.button_vol_dn_pos),
-        ("power",         0, ushell_ds.pcb.button_power_pos),
+        ("volume-up",   -90, "vol_up", side_vol_button, False, True),
+        ("volume-down", -90, "vol_dn", side_vol_button, False, True),
+        ("volume",        0, "vol_up", side_vol_button, True,  False),
+        ("power",         0, "power",  side_pwr_button, True,  True),
     )
 
-    for name, angle, pos in table:
-        btn = Pos(pos) * side_pcb_button.rotate(Axis.Z, angle)
-        btn.color = Color(0.6, 0.6, 0.6, 1)
+    for name, angle, dname, body, _, rendered in table:
+        if not rendered:
+            continue
+
+        pcb_pos = ushell_ds.pcb.get_point(f"button_{dname}_pos")
+        pcb_btn = Pos(pcb_pos) * side_pcb_button.rotate(Axis.Z, angle)
+        pcb_btn.color = Color(0.6, 0.6, 0.6, 1)
         objects.append(Object(
             name = f"pcb-button-{name}",
-            compound = btn,
+            compound = pcb_btn,
             manufacturable = False,
+        ))
+
+    for name, angle, dname, body, exported, rendered in table:
+        press_pos = ushell_ds.pcb.get_point(f"button_{dname}_press_pos")
+        btn = Pos(press_pos) * body.rotate(Axis.Z, angle)
+        btn.color = Color(0.2, 0.2, 0.2, 1)
+        objects.append(Object(
+            name = f"button-{name}",
+            compound = btn,
+            exportable = exported,
+            renderable = rendered,
         ))
 
     return objects
