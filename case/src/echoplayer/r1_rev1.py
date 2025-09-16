@@ -232,6 +232,7 @@ class Params:
     lshell_shadowline_depth: float
     lshell_cornersquare_thickness: float
     lshell_cornersquare_thickness_jack: float
+    lshell_cornersquare_thickness_power: float
     lshell_cornersquare_hole_depth: float
     lshell_cornersquare_diameter: float
     lshell_cornersquare_y_extend: float
@@ -467,6 +468,7 @@ def get_params() -> Params:
         lshell_cornersquare_y_extend = 3,
         lshell_cornersquare_thickness = 4,
         lshell_cornersquare_thickness_jack = 2.5,
+        lshell_cornersquare_thickness_power = 2.5,
         lshell_cornersquare_hole_depth = 2.5,
         lshell_debugheader_top_clearance = 0.3,
         lshell_debugheader_side_clearance = 0.3,
@@ -1210,6 +1212,8 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
         thickness = params.lshell_cornersquare_thickness
         if corner_x == 0 and corner_y == 0:
             thickness = params.lshell_cornersquare_thickness_jack
+        elif corner_x == 0 and corner_y == 1:
+            thickness = params.lshell_cornersquare_thickness_power
 
         square = Box(thickness,
                      params.lshell_cornersquare_diameter + params.lshell_cornersquare_y_extend,
