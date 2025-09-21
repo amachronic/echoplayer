@@ -239,6 +239,13 @@ class Params:
     battbox_clearance_y: float
     bconn_clearance: float
 
+    battframe_thickness: float
+    battframe_wall_height: float
+    battframe_support_diameter: float
+    battframe_support_hole_diameter: float
+    battframe_support_above_hole_diameter: float
+    battframe_support_z_clearance: float
+
     lshell_wall_clearance: float
     lshell_shadowline_depth: float
     lshell_cornersquare_thickness: float
@@ -403,7 +410,7 @@ def get_params() -> Params:
         wall_thickness_front = 2,
         wall_thickness_back = 2,
         wall_thickness_side = 2.4,
-        outer_depth = 19.6,
+        outer_depth = 21.1,
         h3_support_diameter = 7,
         volume_support_diameter = 8,
         h5_support_diameter = 4.8,
@@ -480,7 +487,7 @@ def get_params() -> Params:
         side_button_outer_extra_length = 0.6,
         battery_dx = 17.2,
         battery_dy = 28.7,
-        battery_dz = 1.6, # TODO: this is pressed on the chip w/ 4.6mm connector
+        battery_dz = 2.8,
         battery_width = 34.3,
         battery_height = 53.5,
         battery_thickness = 5.8,
@@ -488,14 +495,20 @@ def get_params() -> Params:
         bconn_dy = 24.4,
         bconn_width = 9,
         bconn_height = 3.5,
-        bconn_depth = 4.6,
+        bconn_depth = 6.8,
         batt_spring_dist = 0.8,
         batt_spring_tolerance = 0.2,
         battbox_thickness = 2,
-        battbox_depth = 3.9,
+        battbox_depth = 4,
         battbox_clearance_xz = 0.4,
         battbox_clearance_y = 0.4,
         bconn_clearance = 0.4,
+        battframe_thickness = 1,
+        battframe_wall_height = 1,
+        battframe_support_diameter = 3.8,
+        battframe_support_hole_diameter = 2.2,
+        battframe_support_above_hole_diameter = 4.2,
+        battframe_support_z_clearance = 0.2,
         lshell_wall_clearance = 0.3,
         lshell_shadowline_depth = 1.0,
         lshell_cornersquare_diameter = 6,
@@ -739,6 +752,21 @@ def get_lower_shell_datums(params: Params,
 
     ds.add_reference("ushell", ushell_ds,
                      Pos(ds.ushell_attachment - ushell_ds.outer_origin))
+
+    return ds
+
+def get_battery_frame_datums(params: Params,
+                             ushell_ds: DatumSet) -> DatumSet:
+    ds = DatumSet()
+
+    ds.add_point("ushell_attachment",
+                 dX = params.battbox_thickness,
+                 dY = params.battbox_thickness,
+                 dZ = params.battframe_wall_height)
+
+    pt = ushell_ds.pcb.box_point("battery", align = (-1, -1, 1))
+    ds.add_reference("ushell", ushell_ds,
+                     Pos(ds.ushell_attachment - pt))
 
     ds.add_alias("volume_pos", "pcb_hole_volume_pos", "ushell")
     ds.add_alias("dpad_pos", "pcb_hole_dpad_pos", "ushell")
@@ -1312,6 +1340,97 @@ def make_lower_shell(params: Params, datums: DatumSet) -> Compound:
 
     return shell
 
+def make_battery_frame(params: Params, datums: DatumSet) -> Compound:
+    thickness = params.battframe_thickness + params.battframe_wall_height
+
+    # Main body supporting the battery
+    frame = Box(
+        datums.ushell.box_dimension("pcb_battery", "x") + params.battbox_thickness*2,
+        datums.ushell.box_dimension("pcb_battery", "y") + params.battbox_thickness*2,
+        thickness,
+        align = Align.MIN,
+    )
+
+    frame -= (
+        Pos(X = params.battbox_thickness,
+            Y = params.battbox_thickness) *
+        Box(
+            datums.ushell.box_dimension("pcb_battery", "x") + params.battbox_clearance_xz,
+            datums.ushell.box_dimension("pcb_battery", "y") + params.battbox_clearance_y,
+            params.battframe_wall_height,
+            align = Align.MIN,
+        )
+    )
+
+    # Avoid volume up/down buttons
+    for pos in (datums.ushell.pcb.button_vol_up_pos, datums.ushell.pcb.button_vol_dn_pos):
+        frame -= (
+            Pos(X = pos.X - params.bconn_clearance,
+                Y = pos.Y) *
+            Box(
+                params.side_pcb_button_body_height + params.bconn_clearance*2,
+                params.side_pcb_button_body_width + params.bconn_clearance*2,
+                thickness,
+                align = (Align.MIN, Align.CENTER, Align.MIN)
+            )
+        )
+
+    # Support columns
+    support_length = datums.ushell.pcb_front_origin.Z - params.battframe_support_z_clearance
+    table = (
+        (datums.dpad_pos,   0),
+        (datums.volume_pos, params.battframe_wall_height),
+    )
+
+    for pos, zoffset in table:
+        loc = Pos(X = pos.X, Y = pos.Y, Z = zoffset)
+        frame += loc * (
+            Pos(Y = params.battframe_support_diameter/4) *
+            Box(
+                params.battframe_support_diameter,
+                params.battframe_support_diameter/2,
+                thickness - zoffset,
+                align = (Align.CENTER, Align.CENTER, Align.MIN),
+            ) +
+            Cylinder(
+                params.battframe_support_diameter/2,
+                support_length - zoffset,
+                align = (Align.CENTER, Align.CENTER, Align.MIN),
+            )
+        )
+
+        frame -= loc * Cylinder(
+            params.battframe_support_hole_diameter/2,
+            support_length,
+            align = (Align.CENTER, Align.CENTER, Align.MIN),
+        )
+
+        if zoffset > 0:
+            frame -= loc * Pos(Z = -zoffset) * Cylinder(
+                params.battframe_support_above_hole_diameter/2,
+                zoffset,
+                align = (Align.CENTER, Align.CENTER, Align.MIN),
+            )
+
+    # Battery connector
+    bconn_to_batt_dist_y = (datums.ushell.pcb.battery_bottom.origin.Y -
+                            datums.ushell.pcb.bconn_top.origin.Y)
+
+    frame -= (
+        Pos(datums.ushell.pcb_bconn_origin.project_to_plane(datums.ushell.pcb_bconn_back)) *
+        Pos(X = -params.bconn_clearance,
+            Y = -params.bconn_clearance,
+            Z = -params.bconn_clearance) *
+        Box(
+            datums.ushell.pcb.box_dimension("bconn", "x") + params.bconn_clearance*2,
+            datums.ushell.pcb.box_dimension("bconn", "y") + params.bconn_clearance + bconn_to_batt_dist_y - params.battbox_clearance_y,
+            datums.ushell.pcb.box_dimension("bconn", "z") + params.bconn_clearance*2,
+            align = Align.MIN,
+        )
+    )
+
+    return frame
+
 
 def mkface_dpad(params: DpadButtonParams,
                 clearance: float):
@@ -1583,6 +1702,7 @@ def build() -> list[Object]:
     pcb_ds = get_pcb_datums(params)
     ushell_ds = get_upper_shell_datums(params, pcb_ds)
     lshell_ds = get_lower_shell_datums(params, ushell_ds)
+    bframe_ds = get_battery_frame_datums(params, ushell_ds)
 
     upper_shell = make_upper_shell(params, ushell_ds)
     upper_shell.color = Color(0.8, 0.8, 0.8, 1)
@@ -1600,6 +1720,14 @@ def build() -> list[Object]:
         datums = lshell_ds,
         datums_xform = lshell_loc,
         compound = lower_shell,
+    ))
+
+    bframe_loc = bframe_ds.get_ref("ushell").loc.inverse()
+    bframe = bframe_loc * make_battery_frame(params, bframe_ds)
+    bframe.color = Color(0.5, 0.5, 0.7, 1)
+    objects.append(Object(
+        name = "battery-frame",
+        compound = bframe,
     ))
 
     objects += make_dome_buttons(params, ushell_ds)
