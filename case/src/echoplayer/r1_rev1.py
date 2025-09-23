@@ -207,6 +207,7 @@ class Params:
     side_button_height: float
     side_button_corner_radius: float
     side_button_clearance: float
+    side_button_inner_clearance: float
     side_button_lip_pocket_depth: float
 
     side_button_presser_width: float
@@ -469,7 +470,8 @@ def get_params() -> Params:
         side_button_width = 10,
         side_button_height = 2.5,
         side_button_corner_radius = 1,
-        side_button_clearance = 0.2,
+        side_button_clearance = 0.3,
+        side_button_inner_clearance = 0.5,
         # Lip pocket depth minus extra length needs
         # to be >= PCB button face to PCB edge distance
         side_button_lip_pocket_depth = 1,
@@ -1124,10 +1126,8 @@ def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
     side_button_hole = extrude(side_button_face, amount = 10)
 
     # Pocket for lip to allow clearance for assembly
-    side_button_lip_face = make_side_button_inner_face(params.side_button_lip_width,
-                                                       params.side_button_lip_height,
-                                                       params.side_button_lip_chamfer_size,
-                                                       params.side_button_clearance)
+    side_button_lip_face = Rectangle(params.side_button_lip_width + params.side_button_inner_clearance*2,
+                                     params.side_button_lip_height + params.side_button_inner_clearance*2)
     side_button_lip_face = side_button_lip_face.rotate(Axis.X, -90)
 
     wall_dist_vol = abs(datums.pcb.button_vol_up_press_pos.X - datums.inner_wall_right.origin.X)
