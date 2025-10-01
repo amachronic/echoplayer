@@ -246,6 +246,7 @@ class Params:
     battframe_support_hole_diameter: float
     battframe_support_above_hole_diameter: float
     battframe_support_z_clearance: float
+    battframe_connector_y_clearance: float
 
     lshell_wall_clearance: float
     lshell_shadowline_depth: float
@@ -501,16 +502,17 @@ def get_params() -> Params:
         batt_spring_dist = 0.8,
         batt_spring_tolerance = 0.2,
         battbox_thickness = 2,
-        battbox_depth = 4,
+        battbox_depth = 3,
         battbox_clearance_xz = 0.4,
         battbox_clearance_y = 0.4,
         bconn_clearance = 0.4,
         battframe_thickness = 1,
-        battframe_wall_height = 1,
+        battframe_wall_height = 2,
         battframe_support_diameter = 3.8,
         battframe_support_hole_diameter = 2.2,
-        battframe_support_above_hole_diameter = 4.2,
+        battframe_support_above_hole_diameter = 10,
         battframe_support_z_clearance = 0.2,
+        battframe_connector_y_clearance = 2,
         lshell_wall_clearance = 0.3,
         lshell_shadowline_depth = 1.0,
         lshell_cornersquare_diameter = 6,
@@ -1406,8 +1408,9 @@ def make_battery_frame(params: Params, datums: DatumSet) -> Compound:
         )
 
         if zoffset > 0:
-            frame -= loc * Pos(Z = -zoffset) * Cylinder(
-                params.battframe_support_above_hole_diameter/2,
+            frame -= loc * Pos(Z = -zoffset) * Box(
+                params.battframe_support_above_hole_diameter,
+                params.battframe_support_above_hole_diameter,
                 zoffset,
                 align = (Align.CENTER, Align.CENTER, Align.MIN),
             )
@@ -1423,7 +1426,9 @@ def make_battery_frame(params: Params, datums: DatumSet) -> Compound:
             Z = -params.bconn_clearance) *
         Box(
             datums.ushell.pcb.box_dimension("bconn", "x") + params.bconn_clearance*2,
-            datums.ushell.pcb.box_dimension("bconn", "y") + params.bconn_clearance + bconn_to_batt_dist_y - params.battbox_clearance_y,
+            (datums.ushell.pcb.box_dimension("bconn", "y") +
+             params.bconn_clearance + bconn_to_batt_dist_y +
+             params.battframe_connector_y_clearance),
             datums.ushell.pcb.box_dimension("bconn", "z") + params.bconn_clearance*2,
             align = Align.MIN,
         )
