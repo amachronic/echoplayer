@@ -209,6 +209,7 @@ class Params:
     side_button_clearance: float
     side_button_inner_clearance: float
     side_button_lip_pocket_depth: float
+    side_button_dz: float
 
     side_button_presser_width: float
     side_button_presser_height: float
@@ -476,12 +477,13 @@ def get_params() -> Params:
         # Lip pocket depth minus extra length needs
         # to be >= PCB button face to PCB edge distance
         side_button_lip_pocket_depth = 1,
+        side_button_dz = 0.4,
         side_button_presser_width = 4,
         side_button_presser_height = 1.5,
         # Presser length needs to be >= A+B where
         #   A = PCB button face to PCB edge distance
         #   B = PCB button travel distance
-        side_button_presser_length = 0.8,
+        side_button_presser_length = 1,
         side_button_lip_size = 0.5,
         side_button_lip_chamfer_size = 0.5,
         # Extra length added to lip to increase part thickness
@@ -571,7 +573,7 @@ def get_pcb_datums(params: Params) -> DatumSet:
                  origin = ds.button_vol_up_pos,
                  dX = (params.side_pcb_button_body_height +
                        params.side_pcb_button_presser_height),
-                 dZ = -params.side_pcb_button_body_depth/2)
+                 dZ = -params.side_pcb_button_body_depth/2 - params.side_button_dz)
 
     ds.add_point("button_vol_dn_pos",
                  origin = ds.back_origin,
@@ -582,7 +584,7 @@ def get_pcb_datums(params: Params) -> DatumSet:
                  origin = ds.button_vol_dn_pos,
                  dX = (params.side_pcb_button_body_height +
                        params.side_pcb_button_presser_height),
-                 dZ = -params.side_pcb_button_body_depth/2)
+                 dZ = -params.side_pcb_button_body_depth/2 - params.side_button_dz)
 
     ds.add_point("button_power_pos",
                  origin = ds.back_origin,
@@ -593,7 +595,7 @@ def get_pcb_datums(params: Params) -> DatumSet:
                  origin = ds.button_power_pos,
                  dY = (params.side_pcb_button_body_height +
                        params.side_pcb_button_presser_height),
-                 dZ = -params.side_pcb_button_body_depth/2)
+                 dZ = -params.side_pcb_button_body_depth/2 - params.side_button_dz)
 
     # NOTE: while not part of the PCB there's no better place for this
     ds.add_point("battery_origin",
