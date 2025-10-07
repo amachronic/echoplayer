@@ -196,6 +196,9 @@ class Params:
     face_button_case_clearance: float
     face_button_dome_tip_clearance: float
 
+    startsel_button_smd_height: float
+    startsel_button_outer_height: float
+
     side_pcb_button_body_width: float
     side_pcb_button_body_height: float
     side_pcb_button_body_depth: float
@@ -460,6 +463,8 @@ def get_params() -> Params:
         face_button_lip_height = 1.4,
         face_button_case_clearance = 0.25,
         face_button_dome_tip_clearance = 0.1,
+        startsel_button_smd_height = 2.4, # includes case clearance
+        startsel_button_outer_height = 1.5,
         side_pcb_button_body_width = 4.7,
         side_pcb_button_body_height = 2.3,
         side_pcb_button_body_depth = 1.9,
@@ -1492,6 +1497,33 @@ def make_dome_button(
     # Assemble part
     return btn_part + lip_part + press_part - tip_hole
 
+def make_startselect_button(
+    mkface: Callable[[float], Sketch],
+    smd_button_height: float,
+    button_height: float,
+    enclosed_height: float,
+    enclosure_thickness: float,
+    lip_size: float,
+) -> Compound:
+    # Part origin
+    oz = smd_button_height
+
+    # Compute available height inside the enclosure
+    inside_height = enclosed_height - smd_button_height
+
+    # Button which extends out of the enclosure
+    btn_face   = Pos(Z = oz + inside_height) * mkface(0)
+    btn_height = enclosure_thickness + button_height
+    btn_part   = extrude(btn_face, amount = btn_height)
+
+    # Press face with lip matching the button profile
+    press_face = Pos(Z = oz) * mkface(lip_size)
+    press_part = extrude(press_face, amount = inside_height)
+
+    # Assemble part
+    return btn_part + press_part
+
+
 def make_dome_buttons(params: Params, upper_shell_datums: DatumSet) -> list[Object]:
     objects: list[Object] = []
 
@@ -1541,7 +1573,32 @@ def make_dome_buttons(params: Params, upper_shell_datums: DatumSet) -> list[Obje
         for bdiam, mkface_circ in mkface_circ_fn.items()
     }
 
-    for diam, button in circ_button.items():
+    # Start/select buttons use a different design
+    startsel_button_diameter = {
+        "start":  params.face_button_diameter["start"],
+        "select": params.face_button_diameter["select"],
+    }
+
+    mkface_startsel_fn = {
+        bdiam: mkface_circle(diameter = bdiam,
+                             clearance = params.face_button_case_clearance)
+        for bdiam in set(startsel_button_diameter.values())
+    }
+
+    startsel_args = {
+        "smd_button_height": params.startsel_button_smd_height,
+        "button_height": params.startsel_button_outer_height,
+        "enclosed_height": face_button_enclosed_height,
+        "enclosure_thickness": params.wall_thickness_front,
+        "lip_size": params.face_button_lip_size,
+    }
+
+    startsel_button = {
+        bdiam: make_startselect_button(mkface = mkface_startsel, **startsel_args)
+        for bdiam, mkface_startsel in mkface_startsel_fn.items()
+    }
+
+    for diam, button in itertools.chain(circ_button.items(), startsel_button.items()):
         objects.append(Object(
             name = f"button-dome-circular-{diam}mm",
             compound = button,
@@ -1554,6 +1611,8 @@ def make_dome_buttons(params: Params, upper_shell_datums: DatumSet) -> list[Obje
         ("b",          0),
         ("x",          0),
         ("y",          0),
+        ("start",      0),
+        ("select",     0),
         ("dpad_up",    0),
         ("dpad_left",  90),
         ("dpad_down",  180),
@@ -1563,12 +1622,16 @@ def make_dome_buttons(params: Params, upper_shell_datums: DatumSet) -> list[Obje
     for bname, rot_angle in dome_button_data:
         if bname in "abxy":
             button = circ_button[params.face_button_diameter[bname]]
+        elif bname in ["start", "select"]:
+            button = startsel_button[params.face_button_diameter[bname]]
         else:
             button = dpad_button
 
         button = button.rotate(Axis.Z, rot_angle)
         button = button.translate(upper_shell_datums.point(f"pcb_button_{bname}_pos"))
-        button = button.translate(Vector(0, 0, params.contact_dome.height))
+
+        if bname not in ["start", "select"]:
+            button = button.translate(Vector(0, 0, params.contact_dome.height))
 
         button.name = "button-" + bname.replace("_", "-")
         button.color = Color(0.6, 0.6, 0.6, 1)
