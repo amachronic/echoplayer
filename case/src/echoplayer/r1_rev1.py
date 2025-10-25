@@ -1396,6 +1396,14 @@ def make_battery_frame(params: Params, datums: DatumSet) -> Compound:
             )
         )
 
+        # add this to volume support for pressing the PCB down
+        if zoffset != 0:
+            frame += loc * Cylinder(
+                params.battframe_support_diameter/2 + 0.6,
+                support_length - zoffset - 1.4,
+                align = (Align.CENTER, Align.CENTER, Align.MIN),
+            )
+
         frame -= loc * Cylinder(
             params.battframe_support_hole_diameter/2,
             support_length,
