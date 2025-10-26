@@ -212,7 +212,6 @@ class Params:
     side_button_clearance: float
     side_button_inner_clearance: float
     side_button_lip_pocket_depth: float
-    side_button_dz: float
 
     side_button_presser_width: float
     side_button_presser_height: float
@@ -221,6 +220,11 @@ class Params:
     side_button_lip_chamfer_size: float
     side_button_lip_extra_length: float
     side_button_outer_extra_length: float
+
+    side_button_support_dz: float
+    side_button_support_pcb_clearance: float
+    side_button_support_width: float
+    side_button_support_depth: float
 
     battery_dx: float
     battery_dy: float
@@ -479,7 +483,6 @@ def get_params() -> Params:
         # Lip pocket depth minus extra length needs
         # to be >= PCB button face to PCB edge distance
         side_button_lip_pocket_depth = 1,
-        side_button_dz = 0.4,
         side_button_presser_width = 4,
         side_button_presser_height = 1.5,
         # Presser length needs to be >= A+B where
@@ -491,7 +494,12 @@ def get_params() -> Params:
         # Extra length added to lip to increase part thickness
         side_button_lip_extra_length = 0.2,
         # Must be >= PCB button travel distance
-        side_button_outer_extra_length = 0.6,
+        side_button_outer_extra_length = 1.0,
+        side_button_support_dz = 0.3,
+        side_button_support_pcb_clearance = 0.3,
+        side_button_support_width = 15,
+        side_button_support_depth = 6,
+
         battery_dx = 17.2,
         battery_dy = 28.7,
         battery_dz = 2.8,
@@ -568,11 +576,21 @@ def get_pcb_datums(params: Params) -> DatumSet:
                  dX = params.pcb.vol_button_dx,
                  dY = params.pcb.vol_up_button_dy)
 
+    side_button_zoffset = -(params.side_button_lip_height/2 +
+                            params.side_button_inner_clearance +
+                            params.side_button_support_dz)
+
     ds.add_point("button_vol_up_press_pos",
                  origin = ds.button_vol_up_pos,
                  dX = (params.side_pcb_button_body_height +
                        params.side_pcb_button_presser_height),
-                 dZ = -params.side_pcb_button_body_depth/2 - params.side_button_dz)
+                 dZ = side_button_zoffset)
+
+    ds.add_point("button_vol_up_support_pos",
+                 origin = ds.button_vol_up_pos,
+                 dX = (params.side_pcb_button_body_height +
+                       params.side_pcb_button_presser_height),
+                 dZ = -params.side_button_support_dz)
 
     ds.add_point("button_vol_dn_pos",
                  origin = ds.back_origin,
@@ -583,7 +601,13 @@ def get_pcb_datums(params: Params) -> DatumSet:
                  origin = ds.button_vol_dn_pos,
                  dX = (params.side_pcb_button_body_height +
                        params.side_pcb_button_presser_height),
-                 dZ = -params.side_pcb_button_body_depth/2 - params.side_button_dz)
+                 dZ = side_button_zoffset)
+
+    ds.add_point("button_vol_dn_support_pos",
+                 origin = ds.button_vol_dn_pos,
+                 dX = (params.side_pcb_button_body_height +
+                       params.side_pcb_button_presser_height),
+                 dZ = -params.side_button_support_dz)
 
     ds.add_point("button_power_pos",
                  origin = ds.back_origin,
@@ -594,7 +618,13 @@ def get_pcb_datums(params: Params) -> DatumSet:
                  origin = ds.button_power_pos,
                  dY = (params.side_pcb_button_body_height +
                        params.side_pcb_button_presser_height),
-                 dZ = -params.side_pcb_button_body_depth/2 - params.side_button_dz)
+                 dZ = side_button_zoffset)
+
+    ds.add_point("button_power_support_pos",
+                 origin = ds.button_power_pos,
+                 dY = (params.side_pcb_button_body_height +
+                       params.side_pcb_button_presser_height),
+                 dZ = -params.side_button_support_dz)
 
     # NOTE: while not part of the PCB there's no better place for this
     ds.add_point("battery_origin",
@@ -1130,24 +1160,47 @@ def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
 
     # Pocket for lip to allow clearance for assembly
     side_button_lip_face = Rectangle(params.side_button_lip_width + params.side_button_inner_clearance*2,
-                                     params.side_button_lip_height + params.side_button_inner_clearance*2)
+                                     params.side_button_lip_height + params.side_button_inner_clearance*4/3)
+    side_button_lip_face = Pos(Y = -params.side_button_inner_clearance/3) * side_button_lip_face
     side_button_lip_face = side_button_lip_face.rotate(Axis.X, -90)
 
     wall_dist_vol = abs(datums.pcb.button_vol_up_press_pos.X - datums.inner_wall_right.origin.X)
+    pcb_dist_vol  = abs(datums.pcb.button_vol_up_press_pos.X - datums.pcb.board_right.origin.X)
     wall_dist_pwr = abs(datums.pcb.button_power_press_pos.Y - datums.inner_wall_top.origin.Y)
+    pcb_dist_pwr  = abs(datums.pcb.button_power_press_pos.Y - datums.pcb.board_top.origin.Y)
     side_button_data = [
-        ("vol_up", -90, wall_dist_vol),
-        ("vol_dn", -90, wall_dist_vol),
-        ("power",    0, wall_dist_pwr),
+        ("vol_up", -90, wall_dist_vol, pcb_dist_vol),
+        ("vol_dn", -90, wall_dist_vol, pcb_dist_vol),
+        ("power",    0, wall_dist_pwr, pcb_dist_pwr),
     ]
 
     side_button_holes = []
-    for b_name, rotation, wall_dist in side_button_data:
+    side_button_supports = []
+    for b_name, rotation, wall_dist, pcb_dist in side_button_data:
         pos = Pos(datums.pcb.get_point(f"button_{b_name}_press_pos"))
         hole = side_button_hole + extrude(side_button_lip_face,
                                           amount=wall_dist + params.side_button_lip_pocket_depth)
         hole = pos * hole.rotate(Axis.Z, rotation)
         side_button_holes.append(hole)
+
+        support_size = wall_dist - pcb_dist - params.side_button_support_pcb_clearance
+        pos = Pos(datums.pcb.get_point(f"button_{b_name}_support_pos"))
+        if rotation == 0:
+            loc = Pos(Y = wall_dist) * pos
+            support = Box(params.side_button_support_width,
+                          support_size,
+                          params.side_button_support_depth,
+                          align = (Align.CENTER, Align.MAX, Align.MIN))
+        else:
+            loc = Pos(X = wall_dist) * pos
+            support = Box(support_size,
+                          params.side_button_support_width,
+                          params.side_button_support_depth,
+                          align = (Align.MAX, Align.CENTER, Align.MIN))
+
+        support = loc * support
+
+        side_button_supports.append(support)
 
     # Cut screw holes for mounting back plate
     corner_hole = CounterSinkHole(
@@ -1195,6 +1248,7 @@ def make_upper_shell(params: Params, datums: DatumSet) -> Compound:
     shell += itertools.chain(
         upper_pcb_supports,
         lower_pcb_supports,
+        side_button_supports,
         [
             lower_pcb_edge_support,
         ]
@@ -1657,22 +1711,14 @@ def make_side_button(params: Params,
                      wall_thickness: float) -> Compound:
     # Part origin is at the button's press_pos
 
-    # Extrude the presser
-    press_face = Rectangle(params.side_button_presser_width,
-                           params.side_button_presser_height)
-    part = (
-        extrude(press_face, params.side_button_presser_length)
-        .rotate(Axis.X, -90)
-    )
-
     # Extrude lip which rests on inner surface of case
     lip_face = make_side_button_inner_face(params.side_button_lip_width,
                                            params.side_button_lip_height,
                                            params.side_button_lip_chamfer_size)
     lip_length = wall_dist - params.side_button_presser_length
     lip_length += params.side_button_lip_extra_length
-    part += (
-        Pos(Y = params.side_button_presser_length) *
+    lip_length += params.side_button_presser_length
+    part = (
         extrude(lip_face, lip_length)
         .rotate(Axis.X, -90)
     )
@@ -1684,7 +1730,7 @@ def make_side_button(params: Params,
     outer_length = wall_thickness - params.side_button_lip_extra_length
     outer_length += params.side_button_outer_extra_length
     part += (
-        Pos(Y = params.side_button_presser_length + lip_length) *
+        Pos(Y = lip_length) *
         extrude(outer_face, outer_length)
         .rotate(Axis.X, -90)
     )
