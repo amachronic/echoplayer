@@ -30,6 +30,9 @@ fp-info-cache
 *.xml
 *.csv
 
+# Exported gerbers
+out/
+
 # LibreOffice lock files
 *.ods#
 
