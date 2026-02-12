@@ -7,8 +7,9 @@
 	(title_block
 		(title "LCD FPC connector & backlight driver")
 		(date "2024-11-14")
-		(rev "Rev1")
+		(rev "Rev1.1")
 		(comment 1 "Author: Aidan MacDonald")
+		(comment 2 "Status: Development")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic_MountingPin:Conn_01x35_MountingPin"
