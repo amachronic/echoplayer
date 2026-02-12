@@ -9,6 +9,8 @@
 		(date "2024-11-14")
 		(rev "Rev1")
 		(comment 1 "Author: Aidan MacDonald")
+		(comment 2 "Status: Released")
+		(comment 3 "NOT RECOMMENDED FOR MANUFACTURE")
 	)
 	(lib_symbols
 		(symbol "Mechanical:MountingHole"

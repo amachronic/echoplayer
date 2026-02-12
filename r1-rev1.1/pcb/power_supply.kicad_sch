@@ -7,8 +7,9 @@
 	(title_block
 		(title "Power supply / battery charger")
 		(date "2024-11-14")
-		(rev "Rev1")
+		(rev "Rev1.1")
 		(comment 1 "Author: Aidan MacDonald")
+		(comment 2 "Status: Development")
 	)
 	(lib_symbols
 		(symbol "Battery_Management:TP4057"
