@@ -1486,6 +1486,12 @@ def make_battery_frame(params: Params, datums: DatumSet) -> Compound:
                 5, 18, 1.8,
                 align = (Align.MAX, Align.CENTER, Align.MIN),
             )
+        else:
+            # HACK needed so dpad pivot screw isn't overly long
+            frame -= loc * Box(
+                5, 8, 1.5,
+                align = (Align.CENTER, Align.CENTER, Align.MIN),
+            )
 
         frame -= loc * Cylinder(
             params.battframe_support_hole_diameter/2,
