@@ -1472,6 +1472,13 @@ def make_battery_frame(params: Params, datums: DatumSet) -> Compound:
                 align = (Align.CENTER, Align.CENTER, Align.MIN),
             )
 
+            # HACK provide clearance between head of screw and battery
+            frame -= loc * Cylinder(
+                radius = 6,
+                height = 0.4,
+                align = (Align.CENTER, Align.CENTER, Align.MIN),
+            )
+
     # Battery connector
     bconn_to_batt_dist_y = (datums.ushell.pcb.battery_bottom.origin.Y -
                             datums.ushell.pcb.bconn_top.origin.Y)
