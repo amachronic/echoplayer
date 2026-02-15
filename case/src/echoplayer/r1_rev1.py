@@ -436,7 +436,7 @@ def get_params() -> Params:
         card_height = 1.8,
         card_corner_radius = 0.5,
         card_clearance = 0.5,
-        card_slot_dz = 1,
+        card_slot_dz = 1.8,
         support_screw_diameter = 2,
         support_screw_head_diameter = 3.8,
         support_heat_insert_diameter = 3,
