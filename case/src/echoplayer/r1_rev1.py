@@ -1458,13 +1458,6 @@ def make_battery_frame(params: Params, datums: DatumSet) -> Compound:
                 align = (Align.CENTER, Align.CENTER, Align.MIN),
             )
 
-        frame -= loc * Cylinder(
-            params.battframe_support_hole_diameter/2,
-            support_length,
-            align = (Align.CENTER, Align.CENTER, Align.MIN),
-        )
-
-        if zoffset > 0:
             frame -= loc * Pos(Z = -zoffset) * Box(
                 params.battframe_support_above_hole_diameter,
                 params.battframe_support_above_hole_diameter,
@@ -1473,11 +1466,32 @@ def make_battery_frame(params: Params, datums: DatumSet) -> Compound:
             )
 
             # HACK provide clearance between head of screw and battery
+            s_head_thickness = 0.6
+
             frame -= loc * Cylinder(
                 radius = 6,
-                height = 0.4,
+                height = s_head_thickness,
                 align = (Align.CENTER, Align.CENTER, Align.MIN),
             )
+
+            # reinforce very thin piece created by above hack
+            for dy in (-1.85, 1.85):
+                frame += loc * Pos(Y = dy, Z = s_head_thickness) * Box(
+                    5, 5, 1.8,
+                    align = (Align.CENTER, Align.CENTER, Align.MIN),
+                )
+
+            # main reinforcement
+            frame += loc * Pos(X = -0.65, Z = s_head_thickness) * Box(
+                5, 18, 1.8,
+                align = (Align.MAX, Align.CENTER, Align.MIN),
+            )
+
+        frame -= loc * Cylinder(
+            params.battframe_support_hole_diameter/2,
+            support_length,
+            align = (Align.CENTER, Align.CENTER, Align.MIN),
+        )
 
     # Battery connector
     bconn_to_batt_dist_y = (datums.ushell.pcb.battery_bottom.origin.Y -
