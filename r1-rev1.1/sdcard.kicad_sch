@@ -517,183 +517,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "echoplayer:CESD3V3AP-ES"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at -1.524 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "CESD3V3AP-ES"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409051031_ElecSuper-CESD3V3AP-ES_C5199223.pdf"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Unidirectional dual ESD protection diode array, 3.3V, Common Anode, SOT-23"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CESD3V3AP-ES_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.016) (xy -1.27 -1.016) (xy -0.762 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.016) (xy -1.27 0) (xy 0.762 -1.016) (xy 0.762 1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CESD3V3AP-ES_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 2.54)
-					(name "K1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CESD3V3AP-ES_2_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 2.54)
-					(name "K2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -796,6 +619,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "TODO: ESD diodes"
+		(exclude_from_sim no)
+		(at 152.908 121.666 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "70a4ef2d-e00c-42dc-bc25-a1c97cd0cd24")
+	)
 	(text "Decoupling, might not be needed"
 		(exclude_from_sim no)
 		(at 189.23 114.554 0)
@@ -805,70 +638,6 @@
 			)
 		)
 		(uuid "de3c7742-a72d-49ef-a1c5-ca9540816037")
-	)
-	(junction
-		(at 147.32 106.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "133b292e-5d15-4eae-ad4e-9b2af782ec83")
-	)
-	(junction
-		(at 154.94 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "30bcfb8f-7004-4161-8540-941bf2444cc8")
-	)
-	(junction
-		(at 132.08 129.54)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6663f3a5-edfa-4236-9273-2b6296f56a24")
-	)
-	(junction
-		(at 162.56 91.44)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "70564168-5c4e-4e51-a611-34fbfbb45684")
-	)
-	(junction
-		(at 132.08 134.62)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "900193dd-ffcd-4e8f-b1e5-c7e060a9a20b")
-	)
-	(junction
-		(at 167.64 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "93c7f541-8d7f-4841-9743-b409818c9ef8")
-	)
-	(junction
-		(at 144.78 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9c63e30c-febd-478b-a4c3-4cf6784e0970")
-	)
-	(junction
-		(at 132.08 124.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b5532369-295f-4481-bbda-a4cee41e978d")
-	)
-	(junction
-		(at 152.4 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b8daf42c-fdee-497a-bad1-d11a3430fb36")
-	)
-	(junction
-		(at 160.02 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cb184354-2a75-4cd0-a429-c4c6a4f26b0a")
-	)
-	(no_connect
-		(at 170.18 129.54)
-		(uuid "a3c58a3d-a08a-4a51-909f-44e5c29e4704")
 	)
 	(bus_entry
 		(at 198.12 106.68)
@@ -936,33 +705,13 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 119.38) (xy 132.08 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06205055-6f83-46cb-a9a1-dda2bd847474")
-	)
-	(wire
-		(pts
-			(xy 152.4 96.52) (xy 198.12 96.52)
+			(xy 142.24 96.52) (xy 198.12 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "0bd181f1-f6b2-4717-aaeb-e64348dbaa1b")
-	)
-	(wire
-		(pts
-			(xy 142.24 104.14) (xy 144.78 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c2f629a-abca-46b9-b4a2-a67b0a326807")
 	)
 	(bus
 		(pts
@@ -976,27 +725,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 104.14) (xy 144.78 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11b911d1-0998-4529-8a37-28db7b83418b")
-	)
-	(wire
-		(pts
-			(xy 147.32 106.68) (xy 147.32 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c3cd0e5-5eb6-4267-b969-bd4ffaea1fa1")
-	)
-	(wire
-		(pts
-			(xy 170.18 99.06) (xy 167.64 99.06)
+			(xy 142.24 99.06) (xy 170.18 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1016,7 +745,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 106.68) (xy 147.32 106.68)
+			(xy 142.24 106.68) (xy 198.12 106.68)
 		)
 		(stroke
 			(width 0)
@@ -1026,53 +755,13 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 101.6) (xy 154.94 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b25fd55-a02b-4e1f-957d-6d8c2f48ca51")
-	)
-	(wire
-		(pts
-			(xy 162.56 91.44) (xy 198.12 91.44)
+			(xy 142.24 91.44) (xy 198.12 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2ba627a7-5e15-4374-a9e4-0dfe3dc5dd75")
-	)
-	(wire
-		(pts
-			(xy 142.24 96.52) (xy 152.4 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f2e90fe-d088-403d-ad8e-7e333db71a9a")
-	)
-	(wire
-		(pts
-			(xy 152.4 96.52) (xy 152.4 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3397ff8c-bb88-475d-ab2b-5011205651dc")
-	)
-	(wire
-		(pts
-			(xy 132.08 134.62) (xy 132.08 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3bbc61d8-c050-49df-97a2-c3aba46a8f70")
 	)
 	(bus
 		(pts
@@ -1084,66 +773,6 @@
 		)
 		(uuid "40495a0a-96d8-4038-9d13-9dba4b98b3b0")
 	)
-	(wire
-		(pts
-			(xy 142.24 88.9) (xy 160.02 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b5159f8-6ac0-473c-9cb9-7a54eae92d6c")
-	)
-	(wire
-		(pts
-			(xy 132.08 124.46) (xy 132.08 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d011b94-0723-4019-bac4-ce4805bf9500")
-	)
-	(wire
-		(pts
-			(xy 160.02 88.9) (xy 160.02 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4feba78d-6e2f-4281-8ff4-995ba9748611")
-	)
-	(wire
-		(pts
-			(xy 167.64 99.06) (xy 142.24 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "687acb4f-460a-4675-98e6-87c476e817aa")
-	)
-	(wire
-		(pts
-			(xy 132.08 119.38) (xy 132.08 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69f0c66f-42db-4134-bcfa-02c51929216c")
-	)
-	(wire
-		(pts
-			(xy 160.02 129.54) (xy 132.08 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e58281b-65cb-4684-9563-16bb2078866a")
-	)
 	(bus
 		(pts
 			(xy 200.66 99.06) (xy 200.66 101.6)
@@ -1153,26 +782,6 @@
 			(type default)
 		)
 		(uuid "718b6198-f99e-4b06-8299-dfdd1a4ff770")
-	)
-	(wire
-		(pts
-			(xy 167.64 99.06) (xy 167.64 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80da156e-5081-421b-b85c-a0fc61783d8c")
-	)
-	(wire
-		(pts
-			(xy 162.56 91.44) (xy 162.56 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8dfd9468-0ee0-433a-a10c-25fee13b2255")
 	)
 	(bus
 		(pts
@@ -1186,23 +795,13 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 104.14) (xy 198.12 104.14)
+			(xy 142.24 104.14) (xy 198.12 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "9fb1fa1c-84ea-4451-913f-dd86a573504a")
-	)
-	(wire
-		(pts
-			(xy 147.32 106.68) (xy 198.12 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad475da6-c00f-4bb6-8eda-3d7dbc083d98")
 	)
 	(bus
 		(pts
@@ -1213,16 +812,6 @@
 			(type default)
 		)
 		(uuid "bb5bc1f3-5a24-455d-a131-5658ed7d9004")
-	)
-	(wire
-		(pts
-			(xy 154.94 101.6) (xy 154.94 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be923649-3a86-4633-a177-8338c1bd3b94")
 	)
 	(bus
 		(pts
@@ -1246,23 +835,13 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 101.6) (xy 198.12 101.6)
+			(xy 142.24 101.6) (xy 198.12 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c2dde443-791e-4618-9a73-3882b083c784")
-	)
-	(wire
-		(pts
-			(xy 152.4 124.46) (xy 132.08 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c35ae3a2-1411-44a3-8561-b46d91756fa6")
 	)
 	(bus
 		(pts
@@ -1276,16 +855,6 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 134.62) (xy 167.64 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd409181-f0e7-4f1c-86f6-6da05d2398d1")
-	)
-	(wire
-		(pts
 			(xy 182.88 116.84) (xy 185.42 116.84)
 		)
 		(stroke
@@ -1296,33 +865,13 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 88.9) (xy 198.12 88.9)
+			(xy 142.24 88.9) (xy 198.12 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e8e166ba-7017-41b8-a13f-72c7ee437388")
-	)
-	(wire
-		(pts
-			(xy 132.08 129.54) (xy 132.08 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "effa61ef-a9e2-4b09-9ea5-50c84c280c6f")
-	)
-	(wire
-		(pts
-			(xy 142.24 91.44) (xy 162.56 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4ab9191-a490-4399-be70-9c49c0bcc7fa")
 	)
 	(label "sdmmc.d1"
 		(at 185.42 88.9 0)
@@ -1427,90 +976,6 @@
 			(justify left)
 		)
 		(uuid "f004aef4-accc-4f2c-ae87-a8678e5f8056")
-	)
-	(symbol
-		(lib_id "echoplayer:CESD3V3AP-ES")
-		(at 170.18 132.08 270)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "169b9196-5b06-4c2f-adc3-fe3fa9670d94")
-		(property "Reference" "D4"
-			(at 172.72 130.5559 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "CESD3V3AP-ES"
-			(at 172.72 133.0959 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 175.26 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409051031_ElecSuper-CESD3V3AP-ES_C5199223.pdf"
-			(at 165.1 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unidirectional dual ESD protection diode array, 3.3V, Common Anode, SOT-23"
-			(at 170.18 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C5199223"
-			(at 170.18 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "380538cf-101c-48e4-b157-6b75460af538")
-		)
-		(pin "3"
-			(uuid "84362c8c-9bed-4d8c-b400-ab289dc557fb")
-		)
-		(pin "1"
-			(uuid "f7602d36-57f3-4377-a501-9f023da771ff")
-		)
-		(instances
-			(project "echo-r1-rev1.1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
-					(reference "D4")
-					(unit 2)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -1657,172 +1122,6 @@
 		)
 	)
 	(symbol
-		(lib_id "echoplayer:CESD3V3AP-ES")
-		(at 160.02 127 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "382f7e8f-aff5-4f81-bc34-272acaac28d2")
-		(property "Reference" "D3"
-			(at 157.48 125.4759 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CESD3V3AP-ES"
-			(at 157.48 128.0159 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 154.94 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409051031_ElecSuper-CESD3V3AP-ES_C5199223.pdf"
-			(at 165.1 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unidirectional dual ESD protection diode array, 3.3V, Common Anode, SOT-23"
-			(at 160.02 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C5199223"
-			(at 160.02 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "202336f1-2176-42f2-ba19-5325ad2d8796")
-		)
-		(pin "3"
-			(uuid "22c7fc5d-eadb-4f10-a005-eea793815aff")
-		)
-		(pin "1"
-			(uuid "3bc19f9c-4bf2-4075-bb6b-9f68e0aea195")
-		)
-		(instances
-			(project "echo-r1-rev1.1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "echoplayer:CESD3V3AP-ES")
-		(at 162.56 127 270)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "64d85334-f562-48a5-a6f8-e802113dc838")
-		(property "Reference" "D3"
-			(at 165.1 125.4759 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "CESD3V3AP-ES"
-			(at 165.1 128.0159 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 167.64 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409051031_ElecSuper-CESD3V3AP-ES_C5199223.pdf"
-			(at 157.48 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unidirectional dual ESD protection diode array, 3.3V, Common Anode, SOT-23"
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C5199223"
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "03c73687-3735-46f2-aa62-a991292998ea")
-		)
-		(pin "3"
-			(uuid "84362c8c-9bed-4d8c-b400-ab289dc557fc")
-		)
-		(pin "1"
-			(uuid "f7602d36-57f3-4377-a501-9f023da77200")
-		)
-		(instances
-			(project "echo-r1-rev1.1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
-					(reference "D3")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:Micro_SD_Card_Det1")
 		(at 119.38 96.52 180)
 		(unit 1)
@@ -1924,254 +1223,6 @@
 		)
 	)
 	(symbol
-		(lib_id "echoplayer:CESD3V3AP-ES")
-		(at 154.94 121.92 270)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "756725ad-dcc4-484e-a394-0e0df1d243ce")
-		(property "Reference" "D2"
-			(at 157.48 120.3959 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "CESD3V3AP-ES"
-			(at 157.48 122.9359 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 160.02 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409051031_ElecSuper-CESD3V3AP-ES_C5199223.pdf"
-			(at 149.86 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unidirectional dual ESD protection diode array, 3.3V, Common Anode, SOT-23"
-			(at 154.94 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C5199223"
-			(at 154.94 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "94899761-ccfc-4665-a3df-980706798ece")
-		)
-		(pin "3"
-			(uuid "84362c8c-9bed-4d8c-b400-ab289dc557fd")
-		)
-		(pin "1"
-			(uuid "f7602d36-57f3-4377-a501-9f023da77201")
-		)
-		(instances
-			(project "echo-r1-rev1.1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
-					(reference "D2")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "echoplayer:CESD3V3AP-ES")
-		(at 152.4 121.92 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7bca21cf-61df-4217-b260-7a4ad8dc88e4")
-		(property "Reference" "D2"
-			(at 149.86 120.3959 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CESD3V3AP-ES"
-			(at 149.86 122.9359 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 147.32 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409051031_ElecSuper-CESD3V3AP-ES_C5199223.pdf"
-			(at 157.48 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unidirectional dual ESD protection diode array, 3.3V, Common Anode, SOT-23"
-			(at 152.4 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C5199223"
-			(at 152.4 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "202336f1-2176-42f2-ba19-5325ad2d8797")
-		)
-		(pin "3"
-			(uuid "56f78245-d19e-41c9-91ba-2bc8493bfe0e")
-		)
-		(pin "1"
-			(uuid "77551790-34d2-4561-9222-33b750aa2d56")
-		)
-		(instances
-			(project "echo-r1-rev1.1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "echoplayer:CESD3V3AP-ES")
-		(at 144.78 116.84 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c4a48966-7546-48c6-9b91-3afd1547d913")
-		(property "Reference" "D1"
-			(at 142.24 115.3159 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CESD3V3AP-ES"
-			(at 142.24 117.8559 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 139.7 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409051031_ElecSuper-CESD3V3AP-ES_C5199223.pdf"
-			(at 149.86 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unidirectional dual ESD protection diode array, 3.3V, Common Anode, SOT-23"
-			(at 144.78 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C5199223"
-			(at 144.78 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "202336f1-2176-42f2-ba19-5325ad2d8795")
-		)
-		(pin "3"
-			(uuid "84362c8c-9bed-4d8c-b400-ab289dc557fe")
-		)
-		(pin "1"
-			(uuid "f7602d36-57f3-4377-a501-9f023da77202")
-		)
-		(instances
-			(project ""
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 99.06 83.82 270)
 		(unit 1)
@@ -2239,88 +1290,6 @@
 		)
 	)
 	(symbol
-		(lib_id "echoplayer:CESD3V3AP-ES")
-		(at 167.64 132.08 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d9e9fd5c-a272-455c-91b2-4033fba46dbd")
-		(property "Reference" "D4"
-			(at 165.1 130.5559 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CESD3V3AP-ES"
-			(at 165.1 133.0959 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409051031_ElecSuper-CESD3V3AP-ES_C5199223.pdf"
-			(at 172.72 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unidirectional dual ESD protection diode array, 3.3V, Common Anode, SOT-23"
-			(at 167.64 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C5199223"
-			(at 167.64 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "202336f1-2176-42f2-ba19-5325ad2d8798")
-		)
-		(pin "3"
-			(uuid "648715d1-0fbe-4ba4-80dc-6906db11b713")
-		)
-		(pin "1"
-			(uuid "e5630840-1640-4814-ad9e-b6f23d395f4f")
-		)
-		(instances
-			(project "echo-r1-rev1.1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 170.18 93.98 90)
 		(unit 1)
@@ -2381,156 +1350,6 @@
 			(project ""
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
 					(reference "#PWR042")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "echoplayer:CESD3V3AP-ES")
-		(at 147.32 116.84 270)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f8461db9-1459-4fcd-937d-854fcd9c1299")
-		(property "Reference" "D1"
-			(at 149.86 115.3159 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "CESD3V3AP-ES"
-			(at 149.86 117.8559 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 152.4 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2409051031_ElecSuper-CESD3V3AP-ES_C5199223.pdf"
-			(at 142.24 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unidirectional dual ESD protection diode array, 3.3V, Common Anode, SOT-23"
-			(at 147.32 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C5199223"
-			(at 147.32 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "202336f1-2176-42f2-ba19-5325ad2d8799")
-		)
-		(pin "3"
-			(uuid "84362c8c-9bed-4d8c-b400-ab289dc557ff")
-		)
-		(pin "1"
-			(uuid "f7602d36-57f3-4377-a501-9f023da77203")
-		)
-		(instances
-			(project ""
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
-					(reference "D1")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 132.08 137.16 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fbc8d206-20bd-4d97-a2b2-d39565885444")
-		(property "Reference" "#PWR041"
-			(at 132.08 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 132.08 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 132.08 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c461dd0b-a6cd-4b84-af5e-f274c01652d4")
-		)
-		(instances
-			(project "echo-r1-rev1.1"
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/36f6adaf-1713-488c-a8b8-43e5711e2802"
-					(reference "#PWR041")
 					(unit 1)
 				)
 			)
