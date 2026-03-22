@@ -25,3 +25,11 @@ The schematic shows the actual connectivity with notes on
 how to construct a custom adapter.
 
 Github issue: #12
+
+## 3. ESD diode capacitance exceeds SDMMC bus limit
+
+Diodes D1-D4 should be left unpopulated since they add
+too much capacitance and cause the SDMMC bus to fail at
+higher speeds.
+
+Github issue: #27
