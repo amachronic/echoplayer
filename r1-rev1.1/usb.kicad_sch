@@ -2571,16 +2571,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 93.98) (xy 139.7 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09247f2d-14e6-4a1a-8433-9be4fcffb12b")
-	)
-	(wire
-		(pts
 			(xy 162.56 63.5) (xy 162.56 76.2)
 		)
 		(stroke
@@ -2738,16 +2728,6 @@
 			(type default)
 		)
 		(uuid "4447d990-3516-4167-a856-56d342001f25")
-	)
-	(wire
-		(pts
-			(xy 139.7 93.98) (xy 139.7 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48ebb4de-09c3-4995-bae5-4924d7d403e5")
 	)
 	(wire
 		(pts
@@ -3701,6 +3681,17 @@
 			(justify left)
 		)
 		(uuid "285ebb3b-3ecb-4e5f-94c5-0683f0e7e93c")
+	)
+	(hierarchical_label "power_3v3"
+		(shape input)
+		(at 144.78 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "546a99e5-f27b-4e0d-a2df-1541a813df27")
 	)
 	(hierarchical_label "usbphy_refclk_24m"
 		(shape input)
@@ -5168,72 +5159,6 @@
 			(project ""
 				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/2bbed0e1-7a0b-4278-85a9-f432ea240e72"
 					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 139.7 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "aa24139c-2d29-4a35-bed7-09ae9a475930")
-		(property "Reference" "#PWR033"
-			(at 139.7 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 139.7 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 139.7 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "413c1aa3-60d8-4d6e-ad7c-17d62d697ffb")
-		)
-		(instances
-			(project ""
-				(path "/aa241847-30f4-429d-a148-6a6e39ba98e0/2bbed0e1-7a0b-4278-85a9-f432ea240e72"
-					(reference "#PWR033")
 					(unit 1)
 				)
 			)
