@@ -2314,7 +2314,7 @@
 		(path "/36f6adaf-1713-488c-a8b8-43e5711e2802/d9e9fd5c-a272-455c-91b2-4033fba46dbd")
 		(sheetname "/sd/")
 		(sheetfile "sdcard.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom dnp)
 		(fp_line
 			(start 0 1.56)
 			(end -0.65 1.56)
@@ -24704,7 +24704,7 @@
 		(path "/36f6adaf-1713-488c-a8b8-43e5711e2802/64d85334-f562-48a5-a6f8-e802113dc838")
 		(sheetname "/sd/")
 		(sheetfile "sdcard.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom dnp)
 		(fp_line
 			(start 0.65 -1.56)
 			(end 0 -1.56)
@@ -29800,7 +29800,7 @@
 		(path "/36f6adaf-1713-488c-a8b8-43e5711e2802/f8461db9-1459-4fcd-937d-854fcd9c1299")
 		(sheetname "/sd/")
 		(sheetfile "sdcard.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom dnp)
 		(fp_line
 			(start 0.65 -1.56)
 			(end 0 -1.56)
@@ -40115,7 +40115,7 @@
 		(path "/36f6adaf-1713-488c-a8b8-43e5711e2802/7bca21cf-61df-4217-b260-7a4ad8dc88e4")
 		(sheetname "/sd/")
 		(sheetfile "sdcard.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom dnp)
 		(fp_line
 			(start 0.65 -1.56)
 			(end 0 -1.56)
