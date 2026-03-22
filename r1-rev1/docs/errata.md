@@ -13,3 +13,15 @@ the DWC2 USB core to go into host mode unless the FDMOD
 bit is set by software to force the core to device mode.
 
 Github issue: #9
+
+## 2. HP/LO jacks have incorrect pinout
+
+Due to a mistake in the pin assignment for the 3.5mm jack
+footprint, both jacks are incorrectly wired and will not
+work with standard headphones. To get normal audio output
+a custom 4-pin TRRS male-to-female adapter is needed.
+
+The schematic shows the actual connectivity with notes on
+how to construct a custom adapter.
+
+Github issue: #12
