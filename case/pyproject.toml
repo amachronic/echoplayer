@@ -6,6 +6,8 @@ requires-python = ">=3.11"
 dependencies = [
     "ocp_vscode == 2.8.9",
     "build123d == 0.9.1",
+    # fails to declare maximum version bounds on cadquery-ocp
+    "ocpsvg < 0.7",
 ]
 
 [project.optional-dependencies]
@@ -26,12 +28,12 @@ env_list = ["mypy", "ruff", "test"]
 
 [tool.tox.env.mypy]
 description = "run type checker"
-deps = ["mypy >= 1.16.1"]
+deps = ["mypy >= 1.16.1, < 1.20"]
 commands = [["mypy", "src"]]
 
 [tool.tox.env.ruff]
 description = "run linter"
-deps = ["ruff >= 0.12.1"]
+deps = ["ruff >= 0.12.1, < 0.16"]
 commands = [["ruff", "check", "src"]]
 
 [tool.tox.env.test]
