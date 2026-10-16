@@ -30,6 +30,9 @@ fp-info-cache
 *.xml
 *.csv
 
+# KiCAD 10 history directory
+.history/
+
 # Exported gerbers
 out/
 
