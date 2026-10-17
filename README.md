@@ -1,3 +1,3 @@
 # NOTICE
 
-Development has moved to ![SourceHut](https://sr.ht/~aidanm/echoplayer).
+Development has moved to [SourceHut](https://sr.ht/~aidanm/echoplayer).
